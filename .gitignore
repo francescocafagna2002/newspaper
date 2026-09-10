@@ -1,0 +1,7 @@
+# Large derived data — exceeds GitHub's 100 MB hard limit.
+# Regenerate from store/input_data with the pipeline (see data_addition/Readme.md).
+data_addition/load_property_daily.csv
+data_addition/train_property_sequences.csv
+
+__pycache__/
+*.pyc
