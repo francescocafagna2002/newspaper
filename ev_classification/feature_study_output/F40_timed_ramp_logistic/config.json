@@ -1,0 +1,14 @@
+{
+  "experiment": "F40_timed_ramp_logistic",
+  "kind": "logistic",
+  "family": "timed",
+  "feature_config": {
+    "window": "evening_overnight",
+    "ramp_kw": 2.0,
+    "persistence_hours": 1.5
+  },
+  "C": 0.01,
+  "class_weight": null,
+  "threshold": 0.17130060976044925,
+  "selection": "mean five-fold development customer AP; threshold from pooled development OOF"
+}

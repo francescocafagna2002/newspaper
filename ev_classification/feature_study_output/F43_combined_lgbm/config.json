@@ -1,0 +1,29 @@
+{
+  "experiment": "F43_combined_lgbm",
+  "kind": "lightgbm",
+  "family": "combined",
+  "feature_config": {
+    "timed": {
+      "window": "evening_overnight",
+      "ramp_kw": 2.0,
+      "persistence_hours": 1.5
+    },
+    "distribution": {
+      "window": "late_afternoon_night",
+      "power_floor_kw": 5.0,
+      "level_tolerance_kw": 1.0
+    }
+  },
+  "parameters": {
+    "num_leaves": 3,
+    "learning_rate": 0.03,
+    "n_estimators": 120,
+    "min_child_samples": 20,
+    "colsample_bytree": 0.7,
+    "reg_alpha": 1.0,
+    "reg_lambda": 10.0
+  },
+  "class_weight": "balanced",
+  "threshold": 0.5419654036958813,
+  "selection": "mean five-fold development customer AP; threshold from pooled development OOF"
+}

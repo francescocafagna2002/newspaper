@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-09-10T23:00:52.321605+00:00",
+  "source_identity": "69a33762f866aeca210389e6866fedd3aa01c65af74cfe72b4225c92f2658fbc",
+  "original_run_identity": "58bd932a3b44b9669cfd358fa2160175774da912711031976d3f792238b783c6",
+  "original_split_hash": "0a23d1fa16b378d23acfe6d6a1fe0e6c056ed50eb9347c025a1eb4b7b5e7ae83",
+  "seed": 20260910,
+  "inner_folds": 5,
+  "history_cap": 12,
+  "minimum_history": 2,
+  "code_hashes": {
+    "feature_study.py": "9adcb226e774067f72fcbe9b6e1ea114087695b837ddc5d61da57d834fc921e4",
+    "run_feature_study.py": "21d8caad5ced32926205d25bde04cfb7bac00e303f31b896968e30ccd6128487",
+    "plan_classify_features.md": "9a6a998480fe169fe56850fb81ae34862721dada6970eb8b52cc0474135607b9"
+  },
+  "commit": "98fd25363b9a18ac4cbdcae005fc2bb2b2b36ba6",
+  "python": "3.13.13 (main, Apr  8 2026, 14:29:01) [GCC 13.3.0]",
+  "evaluation_status": "post-test validation reuse; original final test prohibited",
+  "run_identity": "4d4d77f8d2262cb267044cd7e16bb806b72609fdd58603d826b3f35b5ffff377"
+}

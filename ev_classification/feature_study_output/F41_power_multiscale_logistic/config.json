@@ -1,0 +1,14 @@
+{
+  "experiment": "F41_power_multiscale_logistic",
+  "kind": "logistic",
+  "family": "distribution",
+  "feature_config": {
+    "window": "late_afternoon_night",
+    "power_floor_kw": 5.0,
+    "level_tolerance_kw": 1.0
+  },
+  "C": 0.01,
+  "class_weight": null,
+  "threshold": 0.16358906506530152,
+  "selection": "mean five-fold development customer AP; threshold from pooled development OOF"
+}

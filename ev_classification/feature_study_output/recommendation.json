@@ -1,0 +1,5 @@
+{
+  "recommended": "E02_logistic",
+  "best_new_point_estimate": "F41_power_multiscale_logistic",
+  "validation_reuse": true
+}

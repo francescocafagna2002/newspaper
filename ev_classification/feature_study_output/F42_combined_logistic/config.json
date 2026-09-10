@@ -1,0 +1,21 @@
+{
+  "experiment": "F42_combined_logistic",
+  "kind": "logistic",
+  "family": "combined",
+  "feature_config": {
+    "timed": {
+      "window": "evening_overnight",
+      "ramp_kw": 2.0,
+      "persistence_hours": 1.5
+    },
+    "distribution": {
+      "window": "late_afternoon_night",
+      "power_floor_kw": 5.0,
+      "level_tolerance_kw": 1.0
+    }
+  },
+  "C": 0.01,
+  "class_weight": null,
+  "threshold": 0.1769400162621682,
+  "selection": "mean five-fold development customer AP; threshold from pooled development OOF"
+}
