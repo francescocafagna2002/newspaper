@@ -22,18 +22,19 @@ produces something worth showing:
 
 Usage::
 
-    python -m newspaper.models.wpb noise    --month 2025-07
-    python -m newspaper.models.wpb profiles --month 2025-07 --month 2025-01
-    python -m newspaper.models.wpb labelled --summer 2025-07 --winter 2025-01
-    python -m newspaper.models.wpb detect   --summer 2025-07 --winter 2025-01
-    python -m newspaper.models.wpb inject   --month 2025-07
-    python -m newspaper.models.wpb figures  --summer 2025-07 --winter 2025-01
+    python -m newspaper.models.heat_pump_boiler.wpb noise    --month 2025-07
+    python -m newspaper.models.heat_pump_boiler.wpb profiles --month 2025-07 --month 2025-01
+    python -m newspaper.models.heat_pump_boiler.wpb labelled --summer 2025-07 --winter 2025-01
+    python -m newspaper.models.heat_pump_boiler.wpb detect   --summer 2025-07 --winter 2025-01
+    python -m newspaper.models.heat_pump_boiler.wpb inject   --month 2025-07
+    python -m newspaper.models.heat_pump_boiler.wpb figures  --summer 2025-07 --winter 2025-01
 """
 from __future__ import annotations
 
 import argparse
 import csv
 import json
+import zlib
 from collections import defaultdict
 from pathlib import Path
 
@@ -42,7 +43,7 @@ import pandas as pd
 
 from . import config as C
 from . import wpb_core as W
-from .stream import iter_chunks
+from ..pv.features.stream import iter_chunks
 
 PROFILES = C.ARTIFACTS / "wpb_profiles_{ym}.npz"
 RAW = C.ARTIFACTS / "wpb_raw_{ym}.npz"
@@ -79,7 +80,7 @@ def labelled_wpb_meters() -> pd.DataFrame:
         ["gp_nr", "mp_id", "plz", "ort", "kanton"]
     ].copy()
     out["label"] = "wpb"
-    return out.reset_index(drop=True)
+    return out.drop_duplicates(["gp_nr", "mp_id"]).reset_index(drop=True)
 
 
 # --------------------------------------------------------------------------- #
@@ -96,32 +97,52 @@ def _collect_days(
     """
     days: dict[str, list] = defaultdict(list)
     plz: dict[str, str] = {}
+    seen_dates: dict[str, set] = defaultdict(set)
+    invalid_dates = duplicate_days = 0
     for meta, values in iter_chunks(path, obis=C.OBIS_IMPORT):
         ids = meta["mp_id"].to_numpy()
         pz = meta["plz"].to_numpy()
+        dates = pd.to_datetime(meta["date"], format="%d.%m.%Y", errors="coerce")
         for i, mp in enumerate(ids):
             if meters is not None:
                 if mp not in meters:
                     continue
-            elif sample_every > 1 and (hash(mp) % sample_every):
+            elif sample_every > 1 and (zlib.crc32(mp.encode("utf-8")) % sample_every):
                 continue
-            days[mp].append(values[i])
+            day = dates.iloc[i]
+            if pd.isna(day):
+                invalid_dates += 1
+                continue
+            if day in seen_dates[mp]:
+                duplicate_days += 1
+                continue
+            seen_dates[mp].add(day)
+            days[mp].append(values[i].copy())
             plz.setdefault(mp, pz[i])
+    print(f"{path.parent.name}: skipped {duplicate_days} duplicate meter-days, "
+          f"{invalid_dates} invalid dates", flush=True)
     return days, plz
 
 
 def build_profiles(ym: str, meters=None, sample_every: int = 1,
                    keep_raw: int = 400) -> Path:
+    if sample_every < 1 or keep_raw < 0:
+        raise ValueError("sample_every must be positive and keep_raw nonnegative")
     export = {e.ym: e for e in C.discover_monthly_exports()}[ym]
     days, plz = _collect_days(export.path, meters, sample_every)
 
     mp_ids, p10s, p50s, p90s, n_days, noise, plzs = [], [], [], [], [], [], []
     raw_ids, raw_days = [], []
-    for mp, lst in days.items():
+    for meter_index, (mp, lst) in enumerate(days.items()):
+        if meter_index and meter_index % 10000 == 0:
+            print(f"{ym}: profiled {meter_index:,}/{len(days):,} meters", flush=True)
         arr = np.vstack(lst)
+        arr[~np.isfinite(arr) | (arr < 0)] = np.nan
+        arr = arr[np.isfinite(arr).sum(axis=1) >= 72]
         if arr.shape[0] < 10:          # too few days to trust a p10 envelope
             continue
         q = W.day_quantile_profiles(arr)
+        q[:, np.isfinite(arr).sum(axis=0) < 10] = np.nan
         mp_ids.append(mp)
         p10s.append(q[0]); p50s.append(q[1]); p90s.append(q[2])
         n_days.append(arr.shape[0])
@@ -134,9 +155,11 @@ def build_profiles(ym: str, meters=None, sample_every: int = 1,
     out = Path(str(PROFILES).format(ym=ym))
     np.savez_compressed(
         out, mp_id=np.array(mp_ids), plz=np.array(plzs),
-        p10=np.array(p10s, dtype=np.float32), p50=np.array(p50s, dtype=np.float32),
-        p90=np.array(p90s, dtype=np.float32),
+        p10=np.array(p10s, dtype=np.float32).reshape(-1, 96), p50=np.array(p50s, dtype=np.float32).reshape(-1, 96),
+        p90=np.array(p90s, dtype=np.float32).reshape(-1, 96),
         n_days=np.array(n_days), noise=np.array(noise, dtype=np.float32),
+        profile_version=np.array(2),
+        sample_every=np.array(sample_every), labelled_only=np.array(meters is not None),
     )
     if raw_ids:
         rawout = Path(str(RAW).format(ym=ym))
@@ -149,7 +172,10 @@ def build_profiles(ym: str, meters=None, sample_every: int = 1,
 
 
 def load_profiles(ym: str):
-    return np.load(Path(str(PROFILES).format(ym=ym)), allow_pickle=False)
+    # NpzFile indexing decompresses a whole array on EVERY access. Materialize
+    # once so the meter loop stays linear in population size.
+    with np.load(Path(str(PROFILES).format(ym=ym)), allow_pickle=False) as z:
+        return {name: z[name] for name in z.files}
 
 
 def load_raw(ym: str):
@@ -163,6 +189,8 @@ def load_raw(ym: str):
 def cmd_noise(args):
     z = load_profiles(args.month)
     noise = z["noise"][~np.isnan(z["noise"])]
+    if not len(noise):
+        raise ValueError("No finite noise estimates: go/no-go cannot be assessed")
     frac = float((noise < WPB_SLOT_KWH / 2).mean())
     rows = [{
         "month": args.month, "n_meters": len(noise),
@@ -213,6 +241,12 @@ def cmd_detect(args):
         evidence[str(mp)] = ev
 
     df = pd.DataFrame(rows).sort_values("wpb_score", ascending=False)
+    scope = C.ARTIFACTS / "wpb_gwr_baserate_plz.csv"
+    if scope.exists():
+        ag_postcodes = set(pd.read_csv(scope, dtype={"plz": str})["plz"])
+        df = df[df.plz.isin(ag_postcodes)].copy()
+        retained = set(df.mp_id)
+        evidence = {mp: ev for mp, ev in evidence.items() if mp in retained}
     df.to_csv(PREDICTIONS, index=False)
     EVIDENCE.write_text(json.dumps(evidence, indent=1), encoding="utf-8")
     flagged = (df["wpb_score"] >= args.threshold).mean()
@@ -226,41 +260,55 @@ def cmd_detect(args):
 # --------------------------------------------------------------------------- #
 # Stage 4 - donor-based injection
 # --------------------------------------------------------------------------- #
+def _donor_event(day: np.ndarray, plateau: W.Plateau):
+    """Extract the daily contiguous event overlapping the stable donor core.
+
+    The one-hour padding locates start-time jitter; it is not itself part of
+    the event. Include slots at >= half the donor core's power, subtracting
+    its standing load. Unrelated runs are excluded. Missing events stay absent.
+    """
+    pad = W.SLOTS_PER_HOUR
+    win = np.arange(plateau.start_slot-pad, plateau.start_slot+plateau.n_slots+pad) % 96
+    excess = np.maximum(day[win] - plateau.baseline_kwh_slot, 0)
+    mask = np.isfinite(excess) & (excess >= plateau.amplitude_kw / 8)
+    edges = np.diff(np.r_[False, mask, False].astype(int))
+    runs = list(zip(np.flatnonzero(edges == 1), np.flatnonzero(edges == -1)))
+    runs = [(a,b) for a,b in runs if a < pad+plateau.n_slots and b > pad]
+    if not runs:
+        return 0, np.array([], dtype=float)
+    a,b = max(runs, key=lambda ab: min(ab[1],pad+plateau.n_slots)-max(ab[0],pad))
+    return int(win[a]), excess[a:b]
+
+
 def _retrofit(host: np.ndarray, donor: np.ndarray, plateau: W.Plateau,
               target_kw: float, rng) -> np.ndarray:
-    """Add the donor's hot-water event to the host as if it ran on a heat pump.
+    """Energy-conserving event perturbation, not a thermodynamic retrofit.
 
-    Per donor day we take the real excess over the donor's standing load in a
-    window around its plateau, keep that day's energy ``E`` unchanged, and
-    spread it over ``E / (target_kw/4)`` slots. Power drops, duration grows,
-    kWh stay put - the physical signature of swapping a resistance element
-    for a heat pump on the same tank.
+    Preserve the extracted daily event's electrical energy and its start-time
+    jitter. Stretch its shape to target *mean event power*, excluding padding.
+    A real COP>1 retrofit would reduce electrical energy; this experiment
+    deliberately follows the handover's fixed-electrical-energy specification.
     """
-    pad = W.SLOTS_PER_HOUR  # widen by 1 h so each day's own jitter is captured
-    win = (np.arange(plateau.start_slot - pad,
-                     plateau.start_slot + plateau.n_slots + pad)) % W.SLOTS_PER_DAY
-    base = float(np.nanmin(np.nanmean(donor, axis=0)))
-    per_slot = target_kw / W.KW_PER_KWH_SLOT
-
+    if target_kw <= 0:
+        raise ValueError("target_kw must be positive")
+    per_slot = target_kw / 4
     out = host.copy()
     for k in range(host.shape[0]):
-        ex = np.clip(donor[rng.integers(donor.shape[0])][win] - base, 0, None)
-        energy = float(np.nansum(ex))
-        n_new = int(round(energy / per_slot))
-        if n_new < 1 or energy <= 0:
+        start, event = _donor_event(donor[rng.integers(donor.shape[0])], plateau)
+        energy = float(event.sum())
+        if energy <= 0:
             continue
-        # Resample the day's real shape to the stretched length, then restore
-        # its energy so the retrofit is strictly energy-conserving.
-        stretched = np.interp(
-            np.linspace(0, len(ex) - 1, n_new), np.arange(len(ex)), ex
-        )
-        total = float(stretched.sum())
-        if total <= 0:
-            continue
-        stretched *= energy / total
-        idx = (np.arange(win[0], win[0] + n_new)) % W.SLOTS_PER_DAY
-        out[k, idx] += stretched
+        n_new = max(1, int(round(energy / per_slot)))
+        stretched = np.interp(np.linspace(0,len(event)-1,n_new),np.arange(len(event)),event)
+        stretched *= energy / stretched.sum()
+        np.add.at(out[k], np.arange(start,start+n_new)%96, stretched)
     return out
+
+
+def noise_bands(values):
+    """Fixed physical bands also work when many meters have identical noise."""
+    return pd.cut(values, [-np.inf, WPB_SLOT_KWH / 2, WPB_SLOT_KWH, np.inf],
+                  labels=["quiet", "mid", "noisy"])
 
 
 def cmd_inject(args):
@@ -294,10 +342,17 @@ def cmd_inject(args):
     ids, mats = load_raw(args.month)
     donors, hosts = [], []
     for mp, arr in zip(ids, mats):
+        arr = arr[np.isfinite(arr).all(axis=1)]
+        if len(arr) < 10:
+            continue
         p10, p50, _ = W.day_quantile_profiles(arr)
         ps = W.find_plateaus(p10, p50)
-        if ps and ps[0].amplitude_kw >= W.RESISTANCE_KW_MIN:
-            donors.append((mp, arr, ps[0]))
+        resistance = next((p for p in ps if W.classify(p) == "resistance_boiler"
+                           and p.duration_h <= 3 and p.amplitude_kw <= 4), None)
+        if resistance is not None:
+            energies = [_donor_event(day, resistance)[1].sum() for day in arr]
+            if 0 < np.median(energies) <= 12:
+                donors.append((mp, arr, resistance))
         elif not any(W.classify(p) == "wpb_candidate" for p in ps):
             hosts.append((mp, arr, W.night_noise(arr)))
     print(f"{len(donors)} donors, {len(hosts)} candidate hosts")
@@ -306,12 +361,15 @@ def cmd_inject(args):
               "rectangle; report the curve as optimistic.")
 
     rng = np.random.default_rng(C.SEED)
+    assignments = rng.integers(max(1, len(donors)), size=min(len(hosts), args.n_hosts))
     rows = []
     for target_kw in args.amplitudes:
-        for mp, arr, noise in hosts[: args.n_hosts]:
+        for host_index, (mp, arr, noise) in enumerate(hosts[: args.n_hosts]):
+            host_rng = np.random.default_rng(C.SEED + host_index)
+            donor_id = "synthetic"
             if donors:
-                _, darr, dp = donors[int(rng.integers(len(donors)))]
-                injected = _retrofit(arr, darr, dp, target_kw, rng)
+                donor_id, darr, dp = donors[assignments[host_index]]
+                injected = _retrofit(arr, darr, dp, target_kw, host_rng)
             else:
                 idx = (np.arange(91, 91 + 16)) % 96
                 injected = arr.copy()
@@ -320,16 +378,20 @@ def cmd_inject(args):
             hit = any(
                 W.classify(p) == "wpb_candidate" for p in W.find_plateaus(p10, p50)
             )
+            delta = injected - arr
             rows.append({"target_kw": target_kw, "mp_id": mp,
+                         "donor_mp_id": donor_id,
+                         "injected_daily_kwh": float(np.nanmean(np.nansum(delta, axis=1))),
+                         "injected_peak_kw": float(np.nanmedian(np.nanmax(delta, axis=1)) * 4),
                          "night_noise_kwh_slot": round(float(noise), 4),
                          "recovered": int(hit), "donor_based": bool(donors)})
 
+    if not rows:
+        raise ValueError("No injection hosts available; retain more raw meters")
     df = pd.DataFrame(rows)
     df.to_csv(INJECT_CSV, index=False)
     print(f"\n{len(df)} injections -> {INJECT_CSV.name}\n")
-    q = df["night_noise_kwh_slot"].quantile([0.33, 0.66]).to_list()
-    df["noise_band"] = pd.cut(df["night_noise_kwh_slot"],
-                              [-np.inf, *q, np.inf], labels=["quiet", "mid", "noisy"])
+    df["noise_band"] = noise_bands(df["night_noise_kwh_slot"])
     print(df.pivot_table(index="target_kw", columns="noise_band",
                          values="recovered", aggfunc="mean", observed=False)
             .round(3).to_string())
@@ -430,9 +492,7 @@ def cmd_figures(args):
     if INJECT_CSV.exists():
         d = pd.read_csv(INJECT_CSV)
         fig, ax = plt.subplots(figsize=(8, 4))
-        for band, g in d.groupby(pd.qcut(d["night_noise_kwh_slot"], 3,
-                                         labels=["quiet", "mid", "noisy"],
-                                         duplicates="drop"), observed=False):
+        for band, g in d.groupby(noise_bands(d["night_noise_kwh_slot"]), observed=False):
             m = g.groupby("target_kw")["recovered"].mean()
             ax.plot(m.index, m.values, marker="o", label=f"{band} hosts")
         ax.set(xlabel="injected plateau amplitude (kW)",

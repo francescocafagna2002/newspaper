@@ -1,6 +1,6 @@
 """Build the WPB slide deck from the artifacts produced by ``wpb.py``.
 
-    python -m newspaper.models.wpb_slides
+    python -m models.heat_pump_boiler.wpb_slides
 
 Reads whatever exists in ``models/artifacts`` and skips the rest, so it can
 be run at any stage and still produce a usable deck. Requires ``python-pptx``.
@@ -86,8 +86,8 @@ def build() -> str:
     _title_slide(
         prs,
         "Finding the Wärmepumpenboiler",
-        "A heat-pump water heater leaves a 0.5 kW, 4-hour, every-night "
-        "fingerprint — and almost nobody has a list of them.",
+        "A physical, interpretable search for a small daily hot-water load "
+        "in four years of 15-minute meter data.",
     )
 
     _bullets(prs, "The device, and why it is not the heat pump", [
@@ -139,7 +139,7 @@ def build() -> str:
             "add it to an unlabelled household, and see if we find it.")
 
     if wpb.PREDICTIONS.exists():
-        df = pd.read_csv(wpb.PREDICTIONS)
+        df = pd.read_csv(wpb.PREDICTIONS, low_memory=False)
         hi = df[df["wpb_score"] >= 0.8]
         lines = [
             f"{len(df):,} meters scored; {len(hi):,} flagged at score ≥ 0.8 "
@@ -163,13 +163,31 @@ def build() -> str:
             "Every row carries its evidence: amplitude, duration, start time, "
             "kWh/day, and why.",
         ]
-        _bullets(prs, "Result", lines,
+        household_path = C.ARTIFACTS / "wpb_household_predictions.csv"
+        if household_path.exists():
+            hh = pd.read_csv(household_path, low_memory=False)
+            lines.insert(0, f"{int(hh['wpb_flag'].sum()):,} of {len(hh):,} mapped "
+                         "households flagged in the latest pair.")
+        _bullets(prs, "Population result", lines,
                  "Inspectable evidence, not a black-box label.")
+
+    corr_path = C.ARTIFACTS / "wpb_gwr_correlations.csv"
+    if corr_path.exists():
+        corr = pd.read_csv(corr_path)
+        row = corr[(corr.min_meters == 30) & (corr.reference == "gwr_hp_rate")].iloc[0]
+        _bullets(prs, "External comparison does not confirm the flags", [
+            f"Across {int(row.n_postcodes)} postcodes with ≥30 meters, "
+            f"Spearman ρ = {row.rho:.2f} (p = {row.pvalue:.2f}).",
+            "The GWR field covers all hot-water heat pumps, including combined "
+            "space-heating systems; it is a broader ecological comparator.",
+            "The weak association is inconclusive and provides no accuracy claim.",
+        ])
 
     _bullets(prs, "What we are not claiming", [
         "No accuracy figure — 4 positives and no confirmed negatives.",
-        "A PV-controlled WPB runs at midday and is invisible in net import.",
-        "  and GIGI is ~9:1 PV-skewed, so this is a bias, not just a miss",
+        "A PV-controlled WPB can run at midday and be invisible in grid import.",
+        "  GIGI is ~9:1 PV-skewed, so this creates selection bias",
+        "None of the four labelled meters passes the year-round threshold.",
         "Detected duration is a lower bound: start jitter erodes the p10 core.",
         "Next: 4-year change detection finds the install date; the "
         "Elektroboiler→WPB swap is the most legible fingerprint in the data.",

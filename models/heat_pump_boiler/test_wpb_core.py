@@ -14,8 +14,8 @@ from pathlib import Path
 
 import numpy as np
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from models import wpb_core as W  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from models.heat_pump_boiler import wpb_core as W  # noqa: E402
 
 
 def make_household(

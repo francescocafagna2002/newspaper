@@ -1,0 +1,2 @@
+month,n_meters,wpb_slot_kwh,noise_p25,noise_median,noise_p75,frac_meters_below_half_wpb
+2025-07,3281,0.125,0.0059,0.0104,0.0163,0.9546

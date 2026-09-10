@@ -4,13 +4,12 @@ Energy Data Hackdays 2026 · AEW "Energy Fingerprints" · drafted 2026-09-10
 after a `$grill-me` round. Companion to [`pv_mvp_plan.md`](pv_mvp_plan.md);
 data caveats it shares are in [`data_problems.md`](data_problems.md).
 
-> **Status.** Detector logic is implemented and unit-tested
-> ([`../models/wpb_core.py`](../models/wpb_core.py),
-> [`../tests/test_wpb_core.py`](../tests/test_wpb_core.py)) and the pipeline
-> runs end to end on a synthetic export
-> ([`../models/wpb.py`](../models/wpb.py)). **Nothing here has touched the
-> real 77 GB exports** — they are not present in the environment this was
-> written in. Every number below is a design target, not a measurement.
+> **Status (2026-09-10).** Complete through the planned deliverables. The
+> pipeline processed all 43 available real exports (2023-01 through 2026-07),
+> produced annual and latest-pair predictions, ran the injection and GWR
+> validation legs, and generated figures and slides. Measured results and
+> limitations are in [`WPB_REPORT.md`](WPB_REPORT.md). The install-date,
+> ripple-control, and vacation-window ideas remain optional follow-up work.
 
 ## 1. What we are detecting, and why it is not the heat pump
 

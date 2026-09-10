@@ -1,5 +1,10 @@
 # Implementation handover — Wärmepumpenboiler detector
 
+> **Completed 2026-09-10.** This document describes the original handover
+> state. The implementation, full 43-month run, GWR comparison, report, and
+> slide deck are now complete. See [`WPB_REPORT.md`](WPB_REPORT.md) and
+> [`README.md`](README.md) for current commands and measured results.
+
 **Audience:** a coding agent with no prior context on this project.
 **Read this file top to bottom before writing code.** It is self-contained:
 every measured number, parsing quirk and design constraint you need is here.

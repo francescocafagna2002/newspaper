@@ -1,0 +1,443 @@
+April 2023: skipped 0 duplicate meter-days, 0 invalid dates
+Februar 2023: skipped 0 duplicate meter-days, 0 invalid dates
+Januar 2023: skipped 0 duplicate meter-days, 0 invalid dates
+März 2023: skipped 0 duplicate meter-days, 0 invalid dates
+Mai 2023: skipped 0 duplicate meter-days, 0 invalid dates
+Juni 2023: skipped 0 duplicate meter-days, 0 invalid dates
+2023-01: profiled 10,000/27,267 meters
+2023-03: profiled 10,000/28,305 meters
+2023-06: profiled 10,000/30,007 meters
+2023-01: profiled 20,000/27,267 meters
+2023-04: profiled 10,000/28,551 meters
+2023-03: profiled 20,000/28,305 meters
+2023-06: profiled 20,000/30,007 meters
+2023-01: 25784 meters -> wpb_profiles_2023-01.npz  (raw kept for 0)
+2023-02: profiled 10,000/27,746 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2023-01', 'n_meters': 25784, 'n_candidates': 4167, 'n_resistance': 1702, 'quiet_fraction': 0.7966568414520633, 'cached': False, 'seconds': 49.8}
+2023-03: 26999 meters -> wpb_profiles_2023-03.npz  (raw kept for 0)
+2023-06: profiled 30,000/30,007 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2023-06: 28303 meters -> wpb_profiles_2023-06.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2023-03', 'n_meters': 26999, 'n_candidates': 3591, 'n_resistance': 1194, 'quiet_fraction': 0.8156968776621356, 'cached': False, 'seconds': 55.3}
+{'month': '2023-06', 'n_meters': 28303, 'n_candidates': 1818, 'n_resistance': 655, 'quiet_fraction': 0.9617708370137441, 'cached': False, 'seconds': 56.4}
+2023-04: profiled 20,000/28,551 meters
+2023-02: profiled 20,000/27,746 meters
+2023-05: profiled 10,000/29,247 meters
+Juli 2023: skipped 0 duplicate meter-days, 0 invalid dates
+2023-04: 27421 meters -> wpb_profiles_2023-04.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2023-02: 26342 meters -> wpb_profiles_2023-02.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2023-04', 'n_meters': 27421, 'n_candidates': 3111, 'n_resistance': 1443, 'quiet_fraction': 0.8360016046096058, 'cached': False, 'seconds': 83.8}
+August 2023: skipped 0 duplicate meter-days, 0 invalid dates
+2023-07: profiled 10,000/30,648 meters
+{'month': '2023-02', 'n_meters': 26342, 'n_candidates': 3972, 'n_resistance': 1783, 'quiet_fraction': 0.8042669501176828, 'cached': False, 'seconds': 85.3}
+September 2023: skipped 0 duplicate meter-days, 0 invalid dates
+2023-08: profiled 10,000/31,662 meters
+2023-07: profiled 20,000/30,648 meters
+2023-09: profiled 10,000/33,188 meters
+2023-08: profiled 20,000/31,662 meters
+2023-07: profiled 30,000/30,648 meters
+2023-07: 29235 meters -> wpb_profiles_2023-07.npz  (raw kept for 2000)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2023-08: profiled 30,000/31,662 meters
+{'month': '2023-07', 'n_meters': 29235, 'n_candidates': 1618, 'n_resistance': 601, 'quiet_fraction': 0.9655549854626304, 'cached': False, 'seconds': 54.8}
+2023-09: profiled 20,000/33,188 meters
+2023-08: 29799 meters -> wpb_profiles_2023-08.npz  (raw kept for 0)
+2023-05: profiled 20,000/29,247 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2023-08', 'n_meters': 29799, 'n_candidates': 1956, 'n_resistance': 628, 'quiet_fraction': 0.9574146783449109, 'cached': False, 'seconds': 55.2}
+2023-09: profiled 30,000/33,188 meters
+Oktober 2023: skipped 0 duplicate meter-days, 0 invalid dates
+2023-09: 31127 meters -> wpb_profiles_2023-09.npz  (raw kept for 0)
+November 2023: skipped 0 duplicate meter-days, 0 invalid dates
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2023-09', 'n_meters': 31127, 'n_candidates': 2193, 'n_resistance': 673, 'quiet_fraction': 0.9564044077488997, 'cached': False, 'seconds': 66.0}
+2023-11: profiled 10,000/36,603 meters
+2023-11: profiled 20,000/36,603 meters
+Dezember 2023: skipped 0 duplicate meter-days, 0 invalid dates
+Januar 2024: skipped 0 duplicate meter-days, 0 invalid dates
+2023-05: 27975 meters -> wpb_profiles_2023-05.npz  (raw kept for 0)
+2023-11: profiled 30,000/36,603 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2023-12: profiled 10,000/37,388 meters
+{'month': '2023-05', 'n_meters': 27975, 'n_candidates': 2190, 'n_resistance': 764, 'quiet_fraction': 0.9098123324396783, 'cached': False, 'seconds': 148.3}
+2024-01: profiled 10,000/38,054 meters
+2023-11: 33922 meters -> wpb_profiles_2023-11.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2023-10: profiled 10,000/34,971 meters
+Februar 2024: skipped 0 duplicate meter-days, 0 invalid dates
+2023-12: profiled 20,000/37,388 meters
+{'month': '2023-11', 'n_meters': 33922, 'n_candidates': 5445, 'n_resistance': 1871, 'quiet_fraction': 0.8130416838629798, 'cached': False, 'seconds': 72.1}
+2024-01: profiled 20,000/38,054 meters
+2024-02: profiled 10,000/39,542 meters
+2023-12: profiled 30,000/37,388 meters
+2024-01: profiled 30,000/38,054 meters
+2024-02: profiled 20,000/39,542 meters
+2023-12: 35533 meters -> wpb_profiles_2023-12.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-01: 35668 meters -> wpb_profiles_2024-01.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-02: profiled 30,000/39,542 meters
+{'month': '2023-12', 'n_meters': 35533, 'n_candidates': 5810, 'n_resistance': 2293, 'quiet_fraction': 0.7894914586440773, 'cached': False, 'seconds': 73.6}
+{'month': '2024-01', 'n_meters': 35668, 'n_candidates': 6089, 'n_resistance': 2596, 'quiet_fraction': 0.780671750588763, 'cached': False, 'seconds': 69.8}
+März 2024: skipped 0 duplicate meter-days, 0 invalid dates
+2024-02: 36316 meters -> wpb_profiles_2024-02.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2023-10: profiled 20,000/34,971 meters
+2024-03: profiled 10,000/41,057 meters
+April 2024: skipped 90 duplicate meter-days, 0 invalid dates
+{'month': '2024-02', 'n_meters': 36316, 'n_candidates': 5353, 'n_resistance': 2182, 'quiet_fraction': 0.8143793369313801, 'cached': False, 'seconds': 69.5}
+2024-03: profiled 20,000/41,057 meters
+2024-04: profiled 10,000/42,611 meters
+2024-04: profiled 20,000/42,611 meters
+2024-03: profiled 30,000/41,057 meters
+Mai 2024: skipped 0 duplicate meter-days, 0 invalid dates
+Juni 2024: skipped 90 duplicate meter-days, 0 invalid dates
+2024-03: profiled 40,000/41,057 meters
+2024-04: profiled 30,000/42,611 meters
+2024-03: 38595 meters -> wpb_profiles_2024-03.npz  (raw kept for 0)
+2023-10: profiled 30,000/34,971 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2024-03', 'n_meters': 38595, 'n_candidates': 5231, 'n_resistance': 1952, 'quiet_fraction': 0.8203912423889105, 'cached': False, 'seconds': 79.2}
+2024-04: profiled 40,000/42,611 meters
+2024-05: profiled 10,000/44,097 meters
+Juli 2024: skipped 31 duplicate meter-days, 0 invalid dates
+2024-04: 39952 meters -> wpb_profiles_2024-04.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+/layers/paketo-buildpacks_poetry-install/poetry-venv/datascience-python-renku-dependencies-xS3fZVNL-py3.13/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:1593: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:112: RuntimeWarning: All-NaN slice encountered
+  resid = sub - np.nanmedian(sub, axis=0)
+{'month': '2024-04', 'n_meters': 39952, 'n_candidates': 4110, 'n_resistance': 1380, 'quiet_fraction': 0.8300460552663196, 'cached': False, 'seconds': 80.0}
+2024-06: profiled 10,000/45,751 meters
+2023-10: 32910 meters -> wpb_profiles_2023-10.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-07: profiled 10,000/47,185 meters
+{'month': '2023-10', 'n_meters': 32910, 'n_candidates': 3187, 'n_resistance': 777, 'quiet_fraction': 0.8972348830142813, 'cached': False, 'seconds': 158.8}
+2024-05: profiled 20,000/44,097 meters
+2024-07: profiled 20,000/47,185 meters
+2024-06: profiled 20,000/45,751 meters
+2024-05: profiled 30,000/44,097 meters
+2024-07: profiled 30,000/47,185 meters
+/layers/paketo-buildpacks_poetry-install/poetry-venv/datascience-python-renku-dependencies-xS3fZVNL-py3.13/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:1593: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:112: RuntimeWarning: All-NaN slice encountered
+  resid = sub - np.nanmedian(sub, axis=0)
+August 2024: skipped 31 duplicate meter-days, 0 invalid dates
+Oktober 2024: skipped 0 duplicate meter-days, 0 invalid dates
+2024-07: profiled 40,000/47,185 meters
+2024-05: profiled 40,000/44,097 meters
+2024-06: profiled 30,000/45,751 meters
+September 2024: skipped 30 duplicate meter-days, 0 invalid dates
+2024-10: profiled 10,000/31,763 meters
+2024-07: 44587 meters -> wpb_profiles_2024-07.npz  (raw kept for 2000)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-05: 41112 meters -> wpb_profiles_2024-05.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-08: profiled 10,000/48,254 meters
+{'month': '2024-07', 'n_meters': 44587, 'n_candidates': 2713, 'n_resistance': 854, 'quiet_fraction': 0.9634422589544037, 'cached': False, 'seconds': 94.3}
+2024-09: profiled 10,000/49,881 meters
+{'month': '2024-05', 'n_meters': 41112, 'n_candidates': 3375, 'n_resistance': 1063, 'quiet_fraction': 0.9136505156645262, 'cached': False, 'seconds': 109.3}
+2024-06: profiled 40,000/45,751 meters
+2024-10: profiled 20,000/31,763 meters
+2024-09: profiled 20,000/49,881 meters
+2024-08: profiled 20,000/48,254 meters
+2024-06: 42972 meters -> wpb_profiles_2024-06.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-10: profiled 30,000/31,763 meters
+2024-09: profiled 30,000/49,881 meters
+2024-10: 30686 meters -> wpb_profiles_2024-10.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2024-06', 'n_meters': 42972, 'n_candidates': 3127, 'n_resistance': 866, 'quiet_fraction': 0.9463604207390859, 'cached': False, 'seconds': 128.1}
+/layers/paketo-buildpacks_poetry-install/poetry-venv/datascience-python-renku-dependencies-xS3fZVNL-py3.13/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py:1593: RuntimeWarning: All-NaN slice encountered
+  return fnb._ureduce(a,
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:112: RuntimeWarning: All-NaN slice encountered
+  resid = sub - np.nanmedian(sub, axis=0)
+{'month': '2024-10', 'n_meters': 30686, 'n_candidates': 3330, 'n_resistance': 796, 'quiet_fraction': 0.8925568663234048, 'cached': False, 'seconds': 69.0}
+2024-08: profiled 30,000/48,254 meters
+2024-09: profiled 40,000/49,881 meters
+2024-08: profiled 40,000/48,254 meters
+2024-09: 46859 meters -> wpb_profiles_2024-09.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+November 2024: skipped 60 duplicate meter-days, 0 invalid dates
+Dezember 2024: skipped 868 duplicate meter-days, 0 invalid dates
+{'month': '2024-09', 'n_meters': 46859, 'n_candidates': 3846, 'n_resistance': 902, 'quiet_fraction': 0.9138265861414029, 'cached': False, 'seconds': 95.1}
+2024-08: 45769 meters -> wpb_profiles_2024-08.npz  (raw kept for 0)
+2024-11: profiled 10,000/52,007 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-12: profiled 10,000/52,242 meters
+{'month': '2024-08', 'n_meters': 45769, 'n_candidates': 2958, 'n_resistance': 866, 'quiet_fraction': 0.9639275492145338, 'cached': False, 'seconds': 115.7}
+2024-11: profiled 20,000/52,007 meters
+2024-12: profiled 20,000/52,242 meters
+Januar 2025: skipped 217 duplicate meter-days, 0 invalid dates
+Februar 2025: skipped 308 duplicate meter-days, 0 invalid dates
+2024-11: profiled 30,000/52,007 meters
+2024-12: profiled 30,000/52,242 meters
+2025-01: profiled 10,000/53,652 meters
+2025-02: profiled 10,000/55,000 meters
+2024-11: profiled 40,000/52,007 meters
+2024-12: profiled 40,000/52,242 meters
+2025-02: profiled 20,000/55,000 meters
+2025-01: profiled 20,000/53,652 meters
+2024-11: profiled 50,000/52,007 meters
+2024-12: profiled 50,000/52,242 meters
+2025-02: profiled 30,000/55,000 meters
+2024-11: 48758 meters -> wpb_profiles_2024-11.npz  (raw kept for 0)
+März 2025: skipped 155 duplicate meter-days, 0 invalid dates
+2025-01: profiled 30,000/53,652 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2024-12: 49390 meters -> wpb_profiles_2024-12.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2024-11', 'n_meters': 48758, 'n_candidates': 7662, 'n_resistance': 2581, 'quiet_fraction': 0.8055908773944789, 'cached': False, 'seconds': 101.4}
+2025-03: profiled 10,000/57,443 meters
+2025-01: profiled 40,000/53,652 meters
+2025-02: profiled 40,000/55,000 meters
+April 2025: skipped 30 duplicate meter-days, 0 invalid dates
+{'month': '2024-12', 'n_meters': 49390, 'n_candidates': 8066, 'n_resistance': 3406, 'quiet_fraction': 0.7896740230815955, 'cached': False, 'seconds': 104.3}
+2025-03: profiled 20,000/57,443 meters
+2025-04: profiled 10,000/60,693 meters
+2025-01: profiled 50,000/53,652 meters
+2025-02: profiled 50,000/55,000 meters
+2025-03: profiled 30,000/57,443 meters
+2025-01: 49866 meters -> wpb_profiles_2025-01.npz  (raw kept for 0)
+2025-04: profiled 20,000/60,693 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-02: 50628 meters -> wpb_profiles_2025-02.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-03: profiled 40,000/57,443 meters
+2025-04: profiled 30,000/60,693 meters
+{'month': '2025-01', 'n_meters': 49866, 'n_candidates': 8381, 'n_resistance': 3647, 'quiet_fraction': 0.782497092207115, 'cached': False, 'seconds': 104.3}
+{'month': '2025-02', 'n_meters': 50628, 'n_candidates': 7987, 'n_resistance': 3458, 'quiet_fraction': 0.7910839851465592, 'cached': False, 'seconds': 102.8}
+2025-03: profiled 50,000/57,443 meters
+2025-04: profiled 40,000/60,693 meters
+2025-03: 54098 meters -> wpb_profiles_2025-03.npz  (raw kept for 0)
+2025-04: profiled 50,000/60,693 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-04: profiled 60,000/60,693 meters
+{'month': '2025-03', 'n_meters': 54098, 'n_candidates': 7451, 'n_resistance': 2722, 'quiet_fraction': 0.8033383858922696, 'cached': False, 'seconds': 101.0}
+2025-04: 56620 meters -> wpb_profiles_2025-04.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+Mai 2025: skipped 0 duplicate meter-days, 0 invalid dates
+{'month': '2025-04', 'n_meters': 56620, 'n_candidates': 5439, 'n_resistance': 2034, 'quiet_fraction': 0.8466266336983398, 'cached': False, 'seconds': 99.6}
+Juni 2025: skipped 0 duplicate meter-days, 0 invalid dates
+2025-05: profiled 10,000/64,297 meters
+2025-05: profiled 20,000/64,297 meters
+2025-06: profiled 10,000/67,345 meters
+2025-05: profiled 30,000/64,297 meters
+2025-06: profiled 20,000/67,345 meters
+2025-05: profiled 40,000/64,297 meters
+2025-06: profiled 30,000/67,345 meters
+Juli 2025: skipped 0 duplicate meter-days, 0 invalid dates
+2025-05: profiled 50,000/64,297 meters
+August 2025: skipped 31 duplicate meter-days, 0 invalid dates
+2025-06: profiled 40,000/67,345 meters
+2025-07: profiled 10,000/70,006 meters
+2025-05: profiled 60,000/64,297 meters
+2025-08: profiled 10,000/72,244 meters
+2025-05: 59867 meters -> wpb_profiles_2025-05.npz  (raw kept for 0)
+2025-06: profiled 50,000/67,345 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-08: profiled 20,000/72,244 meters
+2025-07: profiled 20,000/70,006 meters
+September 2025: skipped 0 duplicate meter-days, 0 invalid dates
+2025-06: profiled 60,000/67,345 meters
+{'month': '2025-05', 'n_meters': 59867, 'n_candidates': 4681, 'n_resistance': 1444, 'quiet_fraction': 0.9037366161658342, 'cached': False, 'seconds': 108.6}
+2025-08: profiled 30,000/72,244 meters
+2025-07: profiled 30,000/70,006 meters
+2025-09: profiled 10,000/74,235 meters
+2025-06: 62782 meters -> wpb_profiles_2025-06.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-08: profiled 40,000/72,244 meters
+Oktober 2025: skipped 0 duplicate meter-days, 0 invalid dates
+2025-07: profiled 40,000/70,006 meters
+2025-09: profiled 20,000/74,235 meters
+{'month': '2025-06', 'n_meters': 62782, 'n_candidates': 4298, 'n_resistance': 1155, 'quiet_fraction': 0.9542384759963046, 'cached': False, 'seconds': 120.0}
+2025-08: profiled 50,000/72,244 meters
+2025-10: profiled 10,000/75,955 meters
+2025-09: profiled 30,000/74,235 meters
+2025-07: profiled 50,000/70,006 meters
+2025-08: profiled 60,000/72,244 meters
+2025-10: profiled 20,000/75,955 meters
+2025-09: profiled 40,000/74,235 meters
+2025-07: profiled 60,000/70,006 meters
+2025-08: profiled 70,000/72,244 meters
+2025-10: profiled 30,000/75,955 meters
+2025-07: profiled 70,000/70,006 meters
+2025-08: 68470 meters -> wpb_profiles_2025-08.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-09: profiled 50,000/74,235 meters
+2025-07: 66378 meters -> wpb_profiles_2025-07.npz  (raw kept for 2000)
+2025-10: profiled 40,000/75,955 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2025-08', 'n_meters': 68470, 'n_candidates': 4474, 'n_resistance': 1229, 'quiet_fraction': 0.9563312399591062, 'cached': False, 'seconds': 127.7}
+{'month': '2025-07', 'n_meters': 66378, 'n_candidates': 3998, 'n_resistance': 1163, 'quiet_fraction': 0.9613878092138962, 'cached': False, 'seconds': 132.8}
+2025-10: profiled 50,000/75,955 meters
+2025-09: profiled 60,000/74,235 meters
+2025-10: profiled 60,000/75,955 meters
+2025-09: profiled 70,000/74,235 meters
+November 2025: skipped 0 duplicate meter-days, 0 invalid dates
+2025-09: 70895 meters -> wpb_profiles_2025-09.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-10: profiled 70,000/75,955 meters
+2025-11: profiled 10,000/77,357 meters
+{'month': '2025-09', 'n_meters': 70895, 'n_candidates': 5779, 'n_resistance': 1434, 'quiet_fraction': 0.9332110868185345, 'cached': False, 'seconds': 138.7}
+2025-10: 72686 meters -> wpb_profiles_2025-10.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2025-11: profiled 20,000/77,357 meters
+Dezember 2025: skipped 0 duplicate meter-days, 0 invalid dates
+{'month': '2025-10', 'n_meters': 72686, 'n_candidates': 8141, 'n_resistance': 2106, 'quiet_fraction': 0.8492006713810087, 'cached': False, 'seconds': 139.9}
+2025-11: profiled 30,000/77,357 meters
+2025-12: profiled 10,000/77,737 meters
+2025-11: profiled 40,000/77,357 meters
+2025-12: profiled 20,000/77,737 meters
+2025-11: profiled 50,000/77,357 meters
+Februar 2026: skipped 28 duplicate meter-days, 0 invalid dates
+Januar 2026: skipped 124 duplicate meter-days, 0 invalid dates
+2025-11: profiled 60,000/77,357 meters
+2026-02: profiled 10,000/79,871 meters
+2025-12: profiled 30,000/77,737 meters
+2026-01: profiled 10,000/78,788 meters
+2025-11: profiled 70,000/77,357 meters
+2026-02: profiled 20,000/79,871 meters
+2026-01: profiled 20,000/78,788 meters
+2025-12: profiled 40,000/77,737 meters
+2026-02: profiled 30,000/79,871 meters
+2025-11: 75048 meters -> wpb_profiles_2025-11.npz  (raw kept for 0)
+2026-01: profiled 30,000/78,788 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2026-02: profiled 40,000/79,871 meters
+2026-01: profiled 40,000/78,788 meters
+März 2026: skipped 31 duplicate meter-days, 0 invalid dates
+2025-12: profiled 50,000/77,737 meters
+{'month': '2025-11', 'n_meters': 75048, 'n_candidates': 11724, 'n_resistance': 4039, 'quiet_fraction': 0.7901476388444729, 'cached': False, 'seconds': 149.8}
+2026-02: profiled 50,000/79,871 meters
+2026-01: profiled 50,000/78,788 meters
+2026-03: profiled 10,000/82,476 meters
+April 2026: skipped 60 duplicate meter-days, 0 invalid dates
+2025-12: profiled 60,000/77,737 meters
+2026-02: profiled 60,000/79,871 meters
+2026-01: profiled 60,000/78,788 meters
+2026-03: profiled 20,000/82,476 meters
+2026-04: profiled 10,000/84,585 meters
+2026-02: profiled 70,000/79,871 meters
+2026-01: profiled 70,000/78,788 meters
+2026-03: profiled 30,000/82,476 meters
+2025-12: profiled 70,000/77,737 meters
+2026-04: profiled 20,000/84,585 meters
+2026-03: profiled 40,000/82,476 meters
+2026-02: 77349 meters -> wpb_profiles_2026-02.npz  (raw kept for 0)
+2026-01: 76379 meters -> wpb_profiles_2026-01.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2026-03: profiled 50,000/82,476 meters
+2026-04: profiled 30,000/84,585 meters
+2025-12: 75933 meters -> wpb_profiles_2025-12.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2026-02', 'n_meters': 77349, 'n_candidates': 11879, 'n_resistance': 4799, 'quiet_fraction': 0.7895900399488035, 'cached': False, 'seconds': 143.1}
+{'month': '2026-01', 'n_meters': 76379, 'n_candidates': 12635, 'n_resistance': 6503, 'quiet_fraction': 0.7757629714974011, 'cached': False, 'seconds': 148.4}
+2026-03: profiled 60,000/82,476 meters
+2026-04: profiled 40,000/84,585 meters
+{'month': '2025-12', 'n_meters': 75933, 'n_candidates': 12258, 'n_resistance': 4999, 'quiet_fraction': 0.7838225804327499, 'cached': False, 'seconds': 185.0}
+2026-03: profiled 70,000/82,476 meters
+2026-04: profiled 50,000/84,585 meters
+2026-03: profiled 80,000/82,476 meters
+2026-03: 79795 meters -> wpb_profiles_2026-03.npz  (raw kept for 0)
+2026-04: profiled 60,000/84,585 meters
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+Mai 2026: skipped 31 duplicate meter-days, 0 invalid dates
+2026-04: profiled 70,000/84,585 meters
+{'month': '2026-03', 'n_meters': 79795, 'n_candidates': 11124, 'n_resistance': 4334, 'quiet_fraction': 0.803897487311235, 'cached': False, 'seconds': 152.0}
+2026-05: profiled 10,000/86,145 meters
+2026-04: profiled 80,000/84,585 meters
+2026-05: profiled 20,000/86,145 meters
+2026-04: 81975 meters -> wpb_profiles_2026-04.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2026-05: profiled 30,000/86,145 meters
+{'month': '2026-04', 'n_meters': 81975, 'n_candidates': 7886, 'n_resistance': 2917, 'quiet_fraction': 0.8439524245196707, 'cached': False, 'seconds': 164.3}
+2026-05: profiled 40,000/86,145 meters
+2026-05: profiled 50,000/86,145 meters
+Juni 2026: skipped 60 duplicate meter-days, 0 invalid dates
+2026-05: profiled 60,000/86,145 meters
+Juli 2026: skipped 31 duplicate meter-days, 0 invalid dates
+2026-06: profiled 10,000/88,413 meters
+2026-05: profiled 70,000/86,145 meters
+2026-07: profiled 10,000/89,993 meters
+2026-06: profiled 20,000/88,413 meters
+2026-05: profiled 80,000/86,145 meters
+2026-06: profiled 30,000/88,413 meters
+2026-07: profiled 20,000/89,993 meters
+2026-05: 84371 meters -> wpb_profiles_2026-05.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2026-06: profiled 40,000/88,413 meters
+2026-07: profiled 30,000/89,993 meters
+{'month': '2026-05', 'n_meters': 84371, 'n_candidates': 6024, 'n_resistance': 1700, 'quiet_fraction': 0.8983299949034621, 'cached': False, 'seconds': 151.6}
+2026-06: profiled 50,000/88,413 meters
+2026-07: profiled 40,000/89,993 meters
+2026-06: profiled 60,000/88,413 meters
+2026-07: profiled 50,000/89,993 meters
+2026-06: profiled 70,000/88,413 meters
+2026-06: profiled 80,000/88,413 meters
+2026-07: profiled 60,000/89,993 meters
+2026-07: profiled 70,000/89,993 meters
+2026-06: 86869 meters -> wpb_profiles_2026-06.npz  (raw kept for 0)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+2026-07: profiled 80,000/89,993 meters
+{'month': '2026-06', 'n_meters': 86869, 'n_candidates': 6172, 'n_resistance': 1707, 'quiet_fraction': 0.9474496080304827, 'cached': False, 'seconds': 151.5}
+2026-07: 88145 meters -> wpb_profiles_2026-07.npz  (raw kept for 2000)
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+{'month': '2026-07', 'n_meters': 88145, 'n_candidates': 5522, 'n_resistance': 1679, 'quiet_fraction': 0.9616200578592092, 'cached': False, 'seconds': 171.0}
+/home/renku/work/newspaper/models/heat_pump_boiler/wpb_core.py:94: RuntimeWarning: Mean of empty slice
+  return float(np.nanmin(np.nanmean(windows, axis=1)))
+29226 meters scored -> wpb_predictions.csv
+flag rate at score>=0.8: 1.18%
+
+labelled WPB households:
+mp_id  plz  wpb_score  night_noise_kwh_slot amplitude_kw duration_h start_clock daily_kwh  has_winter_month                                reason  is_labelled_wpb
+60933 8962        0.0                0.0015                                                            True no WPB-shaped plateau in either month             True
+58311 5745        0.0                0.0015                                                            True no WPB-shaped plateau in either month             True

@@ -72,6 +72,9 @@ def day_quantile_profiles(
         raise ValueError(f"expected (n_days, {SLOTS_PER_DAY}), got {days.shape}")
     if days.shape[0] == 0 or np.all(np.isnan(days)):
         return np.full((len(quantiles), SLOTS_PER_DAY), np.nan)
+    # Equivalent fast path avoids one Python callback per slot for complete days.
+    if np.isfinite(days).all():
+        return np.percentile(days, quantiles, axis=0)
     return np.nanpercentile(days, quantiles, axis=0)
 
 
@@ -88,7 +91,13 @@ def baseline(profile: np.ndarray, window_hours: float = 1.0) -> float:
     # Wrap around midnight - the quiet hour often straddles 00:00.
     padded = np.concatenate([prof, prof[: w - 1]]) if w > 1 else prof
     windows = np.lib.stride_tricks.sliding_window_view(padded, w)
-    return float(np.nanmin(np.nanmean(windows, axis=1)))
+    # Keep all-missing windows as NaN without emitting one warning per meter.
+    counts = np.isfinite(windows).sum(axis=1)
+    means = np.divide(
+        np.nansum(windows, axis=1), counts,
+        out=np.full(len(windows), np.nan), where=counts > 0,
+    )
+    return float(np.nanmin(means))
 
 
 def night_noise(days: np.ndarray, night_slots: np.ndarray | None = None) -> float:

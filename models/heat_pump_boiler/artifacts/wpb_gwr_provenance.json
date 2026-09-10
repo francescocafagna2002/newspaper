@@ -1,0 +1,15 @@
+{
+  "source": "https://public.madd.bfs.admin.ch/ag.zip",
+  "catalogue": "https://www.housing-stat.ch/catalog/data/4.3/de.html",
+  "accessed_utc": "2026-09-10T22:10:48.557181+00:00",
+  "sha256": "b02984708bca2f37e48069166cd1655755c2681102076b22faef333d808853b2",
+  "export_dates": [
+    "2026-09-10"
+  ],
+  "n_existing_residential_buildings": 157046,
+  "n_postcodes": 250,
+  "n_ambiguous_postcode_buildings_excluded": 1,
+  "generator_field": "GWAERZW1",
+  "generator_code": 7610,
+  "caution": "Includes combined space-heating/DHW systems; ecological comparison, not WPB accuracy."
+}

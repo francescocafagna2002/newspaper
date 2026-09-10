@@ -5,3 +5,11 @@ data_addition/train_property_sequences.csv
 
 __pycache__/
 *.pyc
+
+# WPB raw profiles and official reference caches (regenerate with pipeline).
+models/heat_pump_boiler/artifacts/*.npz
+models/heat_pump_boiler/artifacts/*.pkl
+models/heat_pump_boiler/artifacts/gwr_*.zip
+models/heat_pump_boiler/artifacts/gwr_*.html
+models/heat_pump_boiler/artifacts/wpb_evidence*.json
+.pytest_cache/
