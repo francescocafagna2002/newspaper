@@ -1,0 +1,1193 @@
+﻿GP-Nr;PLZ;Ort;Kanton;WärmePumpe; PV;PV-Leistung in kWp ;Batterie/Speicher;Ladestation für Elektrofahrzeuge;Wärmepumpenboiler;Datum Unterschrift;geplanter Baustart;Übergabe;InBetrieb-Datum;InBetrieb-Datum bezieht sich auf
+698970;5452;Oberrohrdorf;AG;-;x;;-;-;-;18.04.2008;;;;
+;5024;Küttigen;AG;-;-;;-;-;-;01.01.2017;;;;
+196344;5732;Zetzwil;AG;-;-;;-;-;-;01.01.2017;;;21.06.2017;unbekannt (keine Anlage auf dieser Zeile markiert)
+570021;5023;Biberstein;AG;x;-;;-;-;-;01.07.2017;;;24.11.2017;Wärmepumpe
+716671;8962;Bergdietikon;AG;x;x;;x;-;-;24.08.2017;;23.11.2017;04.12.2017;Wärmepumpe + PV + Batterie
+906991;4310;Rheinfelden;AG;x;-;;-;-;-;04.09.2017;;;ServicePlus gekündigt;Wärmepumpe
+221278;8105;Regensdorf;ZH;-;x;;x;-;-;23.10.2017;;;07.12.2017;PV + Batterie
+123159;4310;Rheinfelden;AG;-;x;;x;-;-;20.11.2017;;;22.03.2018;PV + Batterie
+740532;5727;Oberkulm;AG;-;x;;-;-;-;21.12.2017;;;09.03.2018;PV
+559816;5043;Holziken;AG;-;-;;-;-;-;24.02.2018;;;;
+167357;5245;Habsburg;AG;-;-;;-;-;-;10.04.2018;;;09.03.2018;unbekannt (keine Anlage auf dieser Zeile markiert)
+714976;4313;Möhlin;AG;x;x;;-;-;-;13.04.2018;;;14.09.2018;Wärmepumpe + PV
+712416;5044;Schlossrued;AG;x;x;;-;-;-;17.05.2018;;x;21.09.2018;Wärmepumpe + PV
+692590;8962;Bergdietikon;AG;-;-;;x;-;x;30.07.2018;;;13.09.2018;Batterie + Wärmepumpenboiler
+573125;5102;Rupperswil;AG;x;-;;-;-;-;14.08.2018;;;05.11.2018;Wärmepumpe
+870640;5027;Herznach;AG;x;-;;-;-;x;14.08.2018;;;;
+573138;5616;Meisterschwanden;AG;x;x;;-;-;-;17.08.2018;;x;04.03.2019;Wärmepumpe + PV
+108398;5332;Rekingen AG;AG;-;x;;-;-;-;29.08.2018;;x;06.03.2019;PV
+909495;4805;Brittnau;AG;x;-;;-;-;-;11.09.2018;15.07.2019;14.03.2020;30.08.2019;Wärmepumpe
+572761;8966;Oberwil-Lieli;AG;-;x;;x;-;-;21.09.2018;;;25.10.2018;PV + Batterie
+821258;4303;Kaiseraugst;AG;-;x;;x;-;-;23.10.2018;;x;09.05.2023;PV + Batterie
+573200;5022;Rombach;AG;-;x;;-;-;-;01.11.2018;;;07.12.2018;PV
+732971;4317;Wegenstetten;AG;-;x;;-;-;-;07.11.2018;;x;;
+573411;5024;Küttigen;AG;-;x;;-;-;-;11.11.2018;KW15;18.06.2019;;
+718645;5504;Othmarsingen;AG;;x;;x;-;-;09.12.2018;;;;
+573525;5024;Küttigen;AG;-;x;;-;-;-;14.12.2018;;x;;
+186879;4334;Sisseln AG;AG;;x;;-;-;-;18.12.2018;x;03.05.2019;03.04.2019;PV
+573459;5102;Rupperswil;AG;-;x;;-;-;-;11.01.2019;KW15;15.05.2019;12.04.2019;PV
+131732;4323;Wallbach;AG;;;;;-;-;14.01.2019;16.04.2019;08.05.2019;21.03.2019;unbekannt (keine Anlage auf dieser Zeile markiert)
+730631;4322;Mumpf;AG;x;x;;-;-;-;21.01.2019;20.05.2019;01.07.2019;21.05.2019;Wärmepumpe + PV
+573526;5024;Küttigen;AG;-;x;;-;-;-;22.01.2019;13.05.2019;11.09.2019;;
+785007;5622;Waltenschwil;AG;;x;;-;-;-;23.01.2019;06.05.2019;13.09.2019;09.05.2019;PV
+707713;4323;Wallbach;AG;x;x;;x;-;-;23.01.2019;06.05.2019;01.07.2019;28.05.2019;Wärmepumpe + PV + Batterie
+573250;5000;Aarau;AG;x;x;;x;-;-;24.01.2019;30.08.2019;22.11.2019;24.10.2019;Wärmepumpe + PV + Batterie
+573469;5000;Aarau;AG;;x;;-;-;-;05.02.2019;23.04.2019;16.05.2019;03.05.2019;PV
+573343;5000;Aarau;AG;x;-;;-;-;-;24.02.2019;01.07.2019;26.08.2019;10.07.2019;Wärmepumpe
+706538;4303;Kaiseraugst;AG;x;-;;-;-;-;03.03.2019;-;19.09.2019;;
+573527;5036;Oberentfelden;AG;;x;;-;-;-;20.03.2019;KW16;26.06.2019;;
+573962;5024;Küttigen;AG;-;x;;x;-;-;21.03.2019;25.06.2019;12.09.2019;02.07.2019;PV + Batterie
+909467;5702;Niederlenz;AG;x;x;;x;-;-;14.04.2019;17.05.2019;19.07.2019;08.07.2019;Wärmepumpe + PV + Batterie
+574773;8903;Birmensdorf ZH;ZH;;x;;-;-;-;03.05.2019;10.01.2020;05.05.2020;22.01.2020;PV
+711464;8962;Bergdietikon;AG;x;;;;-;-;03.05.2019;;18.10.2019;16.08.2019;Wärmepumpe
+572837;5035;Unterentfelden;AG;x;-;;-;-;-;19.05.2019;14.08.2019;20.09.2019;27.08.2019;Wärmepumpe
+731486;5074;Eiken;AG;-;x;;-;-;-;28.05.2019;04.09.2019;01.11.2019;27.09.2019;PV
+785642;5622;Waltenschwil;AG;x;-;;-;-;-;03.06.2019;?;09.12.2019;;
+574477;5276;Wil AG;AG;x;-;;-;-;-;10.06.2019;09.09.2019;24.10.2019;30.07.2019;Wärmepumpe
+575135;5012;Eppenberg;SO;-;x;;-;x;-;25.06.2019;KW41;01.11.2019;23.10.2019;PV + EV-Ladestation
+571965;5464;Rümikon AG;AG;-;x;;-;-;-;08.07.2019;;13.01.2020;28.11.2019;PV
+558719;4310;Rheinfelden;AG;-;-;;x;-;-;12.07.2019;12.08.2019;14.08.2019;;
+176630;5621;Zufikon;AG;-;-;;x;x;-;18.07.2019;24.09.2019;18.10.2019;26.09.2019;Batterie + EV-Ladestation
+574685;4322;Mumpf;AG;-;x;;x;x;-;24.07.2019;16.09.2019;07.11.2019;16.10.2019;PV + Batterie + EV-Ladestation
+574845;8916;Jonen;AG;-;x;;-;-;-;27.07.2019;03.10.2019;07.11.2019;24.10.2019;PV
+720480;4313;Möhlin;AG;-;x;;-;x;-;29.07.2019;KW42;08.01.2020;17.10.2019;PV + EV-Ladestation
+703359;5070;Frick;AG;-;x;;-;-;-;29.07.2019;KW42;05.12.2019;18.11.2019;PV
+723468;4310;Rheinfelden;AG;x;-;;-;-;-;31.07.2019;KW41;04.12.2019;13.11.2019;Wärmepumpe
+574802;4663;Aarburg;AG;x;x;;-;x;-;31.07.2019;KW41;08.11.2019;18.10.2019;Wärmepumpe + PV + EV-Ladestation
+692320;8962;Bergdietikon;AG;-;x;;x;-;-;06.08.2019;KW44;20.02.2020;;
+135287;4333;Münchwilen AG;AG;-;x;;-;-;-;11.08.2019;KW44;04.11.2019;15.10.2019;PV
+812691;5620;Bremgarten AG;AG;x;-;;-;-;-;12.08.2019;05.11.2019;06.12.2019;18.11.2019;Wärmepumpe
+821264;4303;Kaiseraugst;AG;-;x;;x;-;-;19.08.2019;06.01.2019;05.03.2020;17.01.2020;PV + Batterie
+575120;5062;Oberhof;AG;-;-;;-;x;-;20.08.2019;19.09.2019;06.11.2019;23.10.2019;EV-Ladestation
+729113;4310;Rheinfelden;AG;x;-;;-;-;-;28.08.2019;28.10.2019;27.11.2019;11.11.2019;Wärmepumpe
+706277;5075;Hornussen;AG;;x;;x;;;05.09.2019;08.01.2020;21.02.2020;21.01.2020;PV + Batterie
+122506;5622;Waltenschwil;AG;;x;;x;-;-;09.09.2019;KW48;-;;
+573484;5033;Buchs AG;AG;-;x;;x;x;-;10.09.2019;15.01.2020;28.02.2020;30.01.2020;PV + Batterie + EV-Ladestation
+576915;5442;Fislisbach;AG;-;x;;-;-;-;18.09.2019;24.01.2020;11.03.2020;05.02.2020;PV
+739616;4813;Uerkheim;AG;-;x;;x;-;-;20.09.2019;-;-;11.05.2021;PV + Batterie
+157648;5272;Gansingen;AG;-;x;;x;-;-;21.09.2019;27.01.2020;21.02.2020;07.02.2020;PV + Batterie
+734306;4312;Magden;AG;x;-;;x;-;-;21.09.2019;16.12.2019;06.02.2020;15.01.2020;Wärmepumpe + Batterie
+134742;5070;Frick;AG;x;-;;-;-;-;24.09.2019;25.11.2019;20.01.2020;13.12.2019;Wärmepumpe
+576627;5116;Schinznach Bad;AG;-;x;;x;-;-;25.09.2019;KW2;30.04.2020;;
+576554;5723;Teufenthal AG;AG;x;x;;x;-;-;25.09.2019;KW46;13.02.2020;19.11.2019;Wärmepumpe + PV + Batterie
+576463;5082;Kaisten;AG;-;x;;-;-;-;27.09.2019;KW9  ;30.04.2020;28.02.2020;PV
+575339;4652;Winznau;SO;;x;;x;-;-;27.09.2019;KW9;April/Mai;05.03.2020;PV + Batterie
+740351;5107;Schinznach Dorf;AG;x;-;;-;-;-;28.09.2019;KW49;09.01.2020;10.12.2019;Wärmepumpe
+577310;4655;Stüsslingen;SO;x;x;;x;-;-;01.10.2019;KW8;03.06.2020;25.03.2020;Wärmepumpe + PV + Batterie
+575578;5212;Hausen AG;AG;x;x;;-;-;-;03.10.2019;KW9+10 PV + KW13 WP;07.05.2020;08.04.2020;Wärmepumpe + PV
+891304;4312;Magden;AG;x;x;;x;x;-;03.10.2019;KW6;15.07.2020;18.02.2020;Wärmepumpe + PV + Batterie + EV-Ladestation
+576552;5742;Kölliken;AG;;x;;x;-;-;05.10.2019;06.02.2020;16.03.2020;20.02.2020;PV + Batterie
+575427;5036;Oberentfelden;AG;-;-;;-;-;-;10.10.2019;17.12.2019;-;;
+707713;4323;Wallbach;AG;-;-;;x;-;-;16.10.2019;-;-;28.05.2019;Batterie
+131732;4323;Wallbach;AG;-;x;;x;-;-;26.10.2019;KW10;21.04.2020;21.03.2019;PV + Batterie
+577138;5213;Villnachern;AG;-;x;;x;-;-;30.10.2019;KW11;22.05.2020;;
+573962;5024;Küttigen;AG;-;-;;-;x;-;05.11.2019;06.11.2019;14.11.2019;02.07.2019;EV-Ladestation
+707268;5027;Herznach;AG;x;-;;-;-;-;06.11.2019;KW16;31.07.2020;01.05.2020;Wärmepumpe
+576527;5600;Lenzburg;AG;-;x;;-;-;-;08.11.2019;KW12;28.04.2020;;
+196287;5107;Schinznach Dorf;AG;-;-;;-;-;-;13.11.2019;-;-;24.04.2020;unbekannt (keine Anlage auf dieser Zeile markiert)
+194322;5604;Hendschiken;AG;-;-;;-;-;-;15.11.2019;KW15;;;
+576503;5723;Teufenthal AG;AG;-;x;;x;-;-;18.11.2019;KW11;19.05.2020;17.04.2020;PV + Batterie
+706391;5027;Herznach;AG;-;x;;x;-;-;23.11.2019;KW19;12.08.2020;28.05.2020;PV + Batterie
+576898;5315;Böttstein;AG;-;x;;x;-;-;02.12.2019;KW12;28.05.2020;;
+576618;5600;Lenzburg;AG;-;x;;x;-;-;03.12.2019;KW11;17.04.2020;;
+579508;5032;Aarau Rohr;AG;-;x;;x;-;-;16.12.2019;KW10;05.06.2020;27.04.2020;PV + Batterie
+812691;5620;Bremgarten AG;AG;;x;;-;-;-;17.12.2019;KW16;05.06.2020;18.11.2019;PV
+692712;8962;Bergdietikon;AG;;x;;-;-;-;20.12.2019;KW24;-;;
+184136;5103;Möriken AG;AG;x;-;;-;-;-;21.12.2019;08.06.2020;28.08.2020;30.06.2020;Wärmepumpe
+575102;4654;Lostorf;SO;x;x;;x;-;-;31.12.2019;KW15;18.08.2020;23.04.2020;Wärmepumpe + PV + Batterie
+585704;5312;Döttingen;AG;-;x;;x;-;-;13.01.2020;04.02.2020;02.06.2020;16.04.2020;PV + Batterie
+134586;5726;Unterkulm;AG;x;x;;x;-;-;18.01.2020;KW21;16.07.2020;16.06.2020;Wärmepumpe + PV + Batterie
+578447;8907;Wettswil;ZH;x;-;;-;-;-;19.01.2020;09.03.2020;11.06.2020;22.05.2020;Wärmepumpe
+578673;5712;Beinwil am See;AG;-;x;;x;-;-;19.01.2020;KW23;24.08.2020;04.06.2020;PV + Batterie
+570021;5023;Biberstein;AG;-;x;;x;-;-;29.01.2020;KW17;23.07.2020;24.11.2017;PV + Batterie
+576824;5610;Wohlen AG;AG;x;x;;x;-;-;05.02.2020;KW17;17.06.2020;07.05.2020;Wärmepumpe + PV + Batterie
+576846;4852;Rothrist;AG;-;x;;x;-;-;11.02.2020;KW25;-;;
+573469;5032;Aarau Rohr;AG;-;-;;x;-;-;22.02.2020;KW18;29.05.2020;03.05.2019;Batterie
+577919;5442;Fislisbach;AG;x;x;;-;-;-;22.02.2020;KW19;14.09.2020;29.05.2020;Wärmepumpe + PV
+727423;4325;Schupfart;AG;x;x;;-;-;-;24.02.2020;KW21;19.10.2020;28.05.2020;Wärmepumpe + PV
+575539;5012;Schönenwerd;SO;x;x;;x;-;-;05.03.2020;KW24;11.08.2020;25.06.2020;Wärmepumpe + PV + Batterie
+700810;5236;Remigen;AG;x;x;;x;-;-;13.03.2020;22.07.2020;18.09.2020;13.08.2020;Wärmepumpe + PV + Batterie
+741214;4312;Magden;AG;-;-;;x;-;-;17.03.2020;11.05.2020;-;;
+578994;5103;Möriken-Wildegg;AG;x;x;;-;-;-;20.03.2020;24.08.2020;28.10.2020;11.09.2020;Wärmepumpe + PV
+574477;5276;Wil AG;AG;-;x;;-;-;-;05.04.2020;KW27;21.08.2020;30.07.2019;PV
+749245;4315;Zuzgen;AG;x;x;;x;-;-;06.04.2020;KW25;27.08.2020;24.07.2020;Wärmepumpe + PV + Batterie
+572837;5035;Unterentfelden;AG;-;x;;-;-;-;18.04.2020;KW27;27.08.2020;27.08.2019;PV
+745999;5330;Bad Zurzach;AG;x;-;;-;-;-;27.04.2020;KW38;23.11.2020;27.10.2020;Wärmepumpe
+167357;5245;Habsburg;AG;x;-;;-;-;-;06.05.2020;KW34;18.09.2020;09.03.2018;Wärmepumpe
+579842;5018;Erlinsbach;AG;-;x;;-;-;-;10.05.2020;KW32;07.09.2020;19.08.2020;PV
+829143;5522;Tägerig;AG;x;-;;-;-;-;11.05.2020;KW32;08.09.2020;;
+195114;5330;Bad Zurzach;AG;-;x;;x;-;-;13.05.2020;KW33;26.11.2020;;
+579764;5610;Wohlen AG;AG;-;x;;x;-;-;14.05.2020;KW35;11.11.2020;19.10.2020;PV + Batterie
+561504;5040;Schöftland;AG;x;x;;-;-;-;27.05.2020;KW31;21.09.2020;;
+578973;4712;Laupersdorf;SO;x;x;;-;-;-;27.05.2020;KW31;23.10.2020;09.09.2020;Wärmepumpe + PV
+583071;5040;Schöftland;AG;-;x;;-;-;-;28.05.2020;KW32;16.09.2020;;
+866821;5070;Frick;AG;x;-;;-;-;-;09.06.2020;28.09.2020;18.11.2020;;
+746421;5304;Endingen;AG;x;-;;-;-;-;14.06.2020;KW38;19.11.2020;25.09.2020;Wärmepumpe
+583327;5242;Lupfig;AG;x;x;;x;-;-;18.06.2020;KW1;12.03.2021;05.02.2021;Wärmepumpe + PV + Batterie
+582891;5722;Gränichen;AG;-;x;;x;-;-;26.06.2020;KW36;14.10.2020;17.09.2020;PV + Batterie
+723468;4310;Rheinfelden;AG;-;-;;-;x;-;29.06.2020;25.08.2020;27.08.2020;13.11.2019;EV-Ladestation
+744851;5027;Herznach;AG;-;x;;-;-;-;02.07.2020;KW36;30.10.2020;;
+870417;5300;Turgi;AG;-;x;;x;-;-;11.07.2020;-;21.01.2021;26.11.2020;PV + Batterie
+571758;4805;Brittnau;AG;-;x;;-;x;-;13.07.2020;KW43;01.12.2020;09.11.2020;PV + EV-Ladestation
+578673;5712;Beinwil am See;AG;;;;x;-;-;16.07.2020;;-;04.06.2020;Batterie
+573527;5036;Oberentfelden;AG;-;-;;x;-;-;16.07.2020;-;x;;
+576824;5610;Wohlen AG;AG;-;-;;x;-;-;18.07.2020;-;-;07.05.2020;Batterie
+583431;5442;Fislisbach;AG;x;-;;-;-;-;18.07.2020;KW43;07.12.2020;03.11.2020;Wärmepumpe
+584849;5022;Rombach;AG;-;-;;-;x;-;26.07.2020;x;-;;
+577847;5212;Hausen AG;AG;x;x;;x;;;26.07.2020;KW45;15.12.2020;19.11.2020;Wärmepumpe + PV + Batterie
+579050;5507;Mellingen;AG;x;-;;-;-;-;27.07.2020;KW44;07.12.2020;;
+580866;5442;Fislisbach;AG;x;x;;-;;;29.07.2020;09.11.2020;17.12.2020;01.12.2020;Wärmepumpe + PV
+582940;5452;Oberrohrdorf;AG;x;-;;-;-;-;31.07.2020;KW46;08.12.2020;15.11.2020;Wärmepumpe
+157648;5272;Gansingen;AG;-;-;;-;x;;01.08.2020;15.10.2020;-;07.02.2020;EV-Ladestation
+583547;5728;Gontenschwil;AG;x;x;;-;-;-;01.08.2020;KW42;04.12.2020;21.10.2020;Wärmepumpe + PV
+583323;4303;Kaiseraugst;AG;x;-;;-;-;-;03.08.2020;KW48;18.01.2021;02.12.2020;Wärmepumpe
+785360;5622;Waltenschwil;AG;x;x;;x;-;-;05.08.2020;KW43;04.12.2020;29.10.2020;Wärmepumpe + PV + Batterie
+586106;5000;Aarau;AG;x;-;;-;-;-;17.08.2020;KW18;14.06.2021;18.05.2021;Wärmepumpe
+580601;4310;Rheinfelden;AG;-;x;;x;-;-;21.08.2020;KW2;;06.05.2021;PV + Batterie
+578360;5742;Kölliken;AG;-;x;;-;-;-;29.08.2020;Q3;;;
+175356;5313;Klingnau;AG;-;x;;x;-;-;31.08.2020;KW11;02.06.2021;08.04.2021;PV + Batterie
+584353;5024;Küttigen;AG;-;x;;x;-;-;01.09.2020;KW48;14.01.2021;;
+745999;5330;Bad Zurzach;AG;-;x;;-;-;-;04.09.2020;-;-;27.10.2020;PV
+584301;8966;Oberwil-Lieli;AG;x;x;;-;-;-;05.09.2020;KW15;07.05.2021;21.04.2021;Wärmepumpe + PV
+714621;5107;Schinznach Dorf;AG;-;x;;x;-;-;09.09.2020;KW50;22.01.2021;17.12.2020;PV + Batterie
+576554;5723;Teufenthal AG;AG;-;-;;x;-;-;10.09.2020;KW43;-;19.11.2019;Batterie
+578673;5712;Beinwil am See;AG;-;x;;-;-;-;13.09.2020;25.02.2021;-;04.06.2020;PV
+575102;4654;Lostorf;SO;-;-;;-;-;-;18.09.2020;;-;23.04.2020;unbekannt (keine Anlage auf dieser Zeile markiert)
+847175;5106;Veltheim AG;AG;-;x;;-;-;-;21.09.2020;KW46;07.01.2021;04.12.2020;PV
+585999;5028;Ueken;AG;-;x;;x;-;-;29.09.2020;KW44;08.01.2021;;
+558719;4310;Rheinfelden;AG;;;;x;;;01.10.2020;;;;
+150401;4313;Möhlin;AG;-;x;;x;-;-;01.10.2020;KW1;08.03.2021;14.01.2021;PV + Batterie
+891304;4312;Magden;AG;;;;x;;;02.10.2020;KW4;;18.02.2020;Batterie
+585733;8905;Arni AG;AG;-;x;;-;-;-;02.10.2020;KW46;Mario;;
+821264;4303;Kaiseraugst;AG;;;;x;;;04.10.2020;;-;17.01.2020;Batterie
+706277;5075;Hornussen;AG;;;;x;;;05.10.2020;;-;21.01.2020;Batterie
+584523;5054;Moosleerau;AG;-;x;;-;-;-;06.10.2020;KW3;09.03.2021;;
+587682;4663;Aarburg;AG;x;-;;-;-;-;09.10.2020;;;;
+720967;4310;Rheinfelden;AG;-;x;;x;-;-;10.10.2020;KW4;15.03.2021;;
+180092;5630;Muri AG;AG;-;-;;-;x;x;12.10.2020;KW49;07.01.2021;04.12.2020;EV-Ladestation + Wärmepumpenboiler
+713405;4315;Zuzgen;AG;x;-;;x;x;-;15.10.2020;KW19;24.06.2021;18.05.2021;Wärmepumpe + Batterie + EV-Ladestation
+584041;5443;Niederrohrdorf;AG;-;x;;.;-;-;21.10.2020;KW9;16.04.2021;17.03.2021;PV
+162973;5727;Oberkulm;AG;-;x;;-;-;-;22.10.2020;KW8;14.04.2021;18.03.2021;PV
+158544;4310;Rheinfelden;AG;x;x;;x;-;-;22.10.2020;KW16;02.06.2021;30.04.2021;Wärmepumpe + PV + Batterie
+129225;5072;Oeschgen;AG;x;x;;x;-;-;26.10.2020;KW50;03.02.2021;18.12.2020;Wärmepumpe + PV + Batterie
+584939;5512;Wohlenschwil;AG;-;x;;x;-;-;29.10.2020;KW5;26.03.2021;;
+573527;5036;Oberentfelden;AG;-;-;;-;-;x;30.10.2020;-;03.01.2021;;
+584406;5033;Buchs AG;AG;-;x;;x;-;-;01.11.2020;KW7;08.04.2021;24.02.2021;PV + Batterie
+573484;5033;Buchs AG;AG;-;-;;x;-;-;03.11.2020;-;-;30.01.2020;Batterie
+690299;4317;Wegenstetten;AG;-;x;;-;-;-;08.11.2020;KW7;19.03.2021;18.02.2021;PV
+137898;4315;Zuzgen;AG;-;x;;-;x;;21.11.2020;KW3;x;02.02.2021;PV + EV-Ladestation
+574685;4322;Mumpf;AG;-;-;;-;x;;23.11.2020;KW50;-;16.10.2019;EV-Ladestation
+574685;4322;Mumpf;AG;-;-;;x;-;-;26.11.2020;;-;16.10.2019;Batterie
+576618;5600;Lenzburg;AG;-;-;;x;-;-;28.11.2020;ab Jan 20201;-;;
+108801;5322;Koblenz;AG;x;x;;-;-;-;29.11.2020;KW16;08.06.2021;11.05.2021;Wärmepumpe + PV
+584301;8966;Oberwil-Lieli;AG;-;-;;-;-;-;03.12.2020;KW15;-;21.04.2021;unbekannt (keine Anlage auf dieser Zeile markiert)
+191185;4805;Brittnau;AG;x;x;;x;-;-;08.12.2020;KW10;07.05.2021;08.04.2021;Wärmepumpe + PV + Batterie
+692320;8962;Bergdietikon;AG;-;-;;x;-;-;10.12.2020;;;;
+586117;5312;Döttingen;AG;-;x;;x;-;-;13.12.2020;KW14;12.05.2021;;
+584196;5623;Boswil;AG;x;x;;x;x;-;15.12.2020;KW15;04.06.2021;14.12.2020;Wärmepumpe + PV + Batterie + EV-Ladestation
+706391;5027;Herznach;AG;-;-;;-;-;-;16.12.2020;KW1;-;28.05.2020;unbekannt (keine Anlage auf dieser Zeile markiert)
+573484;5033;Buchs AG;AG;-;x;;-;-;-;17.12.2020;-;-;30.01.2020;PV
+586707;8957;Spreitenbach;AG;-;-;;-;x;-;15.01.2021;KW4;;;
+587753;5103;Möriken-Wildegg;AG;-;-;;-;x;;16.01.2021;-;-;;
+729283;4332;Stein AG;AG;-;x;;x;-;-;20.01.2021;KW15;09.08.2021;02.06.2021;PV + Batterie
+746741;5300;Turgi;AG;-;x;;x;-;-;24.01.2021;KW 21;01.07.2021;;
+590117;4303;Kaiseraugst;AG;-;x;;-;-;-;25.01.2021;kw13;28.04.2021;;
+739616;4813;Uerkheim;AG;-;x;;x;-;-;30.01.2021;kW 17;24.06.2021;11.05.2021;PV + Batterie
+716671;8962;Bergdietikon;AG;-;-;;x;-;-;01.02.2021;KW29;-;04.12.2017;Batterie
+575135;5012;Eppenberg;SO;-;-;;x;-;-;01.02.2021;KW14;05.05.2021;23.10.2019;Batterie
+588117;5103;Möriken AG;AG;x;x;;x;x;x;03.02.2021;KW14;09.09.2021;15.04.2021;Wärmepumpe + PV + Batterie + EV-Ladestation + Wärmepumpenboiler
+588329;4657;Dulliken;SO;x;x;;-;-;-;10.02.2021;KW15/2021 WP  & KW 18/2022 Solar;18.08.2022;23.04.2021;Wärmepumpe + PV
+584595;5103;Möriken AG;AG;-;x;;x;x;-;13.02.2021;KW18;09.06.2021;20.05.2021;PV + Batterie + EV-Ladestation
+574477;5276;Wil AG;AG;-;-;;x;-;-;19.02.2021;KW19/20;02.06.2021;30.07.2019;Batterie
+587669;4632;Trimbach;SO;-;x;;-;x;-;27.02.2021;KW26;18.08.2021;05.07.2021;PV + EV-Ladestation
+587410;4652;Winznau;SO;x;x;;x;-;-;28.02.2021;KW22;25.08.2021;15.06.2021;Wärmepumpe + PV + Batterie
+191185;4805;Brittnau;AG;-;-;;-;x;;05.03.2021;Mitte Juni;07.05.2021;08.04.2021;EV-Ladestation
+116373;5083;Ittenthal;AG;-;x;;x;-;-;09.03.2021;KW21;30.06.2021;;
+575578;5212;Hausen AG;AG;-;-;;x;-;-;11.03.2021;KW22;?;08.04.2020;Batterie
+744897;5106;Veltheim AG;AG;x;-;;-;-;-;15.03.2021;KW30;02.09.2021;;
+175022;5313;Klingnau;AG;-;x;;x;-;-;17.03.2021;kW31;10.11.2021;;
+572837;5035;Unterentfelden;AG;-;-;;x;-;-;18.03.2021;KW19;18.06.2021;27.08.2019;Batterie
+583987;5024;Küttigen;AG;-;x;;x;x;-;23.03.2021;KW18;;31.05.2021;PV + Batterie + EV-Ladestation
+134065;5316;Leuggern;AG;-;x;;x;x;-;29.03.2021;kW34;29.10.2021;13.09.2021;PV + Batterie + EV-Ladestation
+724881;5745;Safenwil;AG;x;-;;-;-;-;30.03.2021;KW44;18.02.2022;08.12.2021;Wärmepumpe
+712273;4313;Möhlin;AG;-;x;;x;-;-;02.04.2021;kW32;15.10.2021;23.08.2021;PV + Batterie
+571965;5464;Rümikon AG;AG;-;-;;-;x;-;11.04.2021;KW22;-;28.11.2019;EV-Ladestation
+574487;5000;Aarau;AG;-;x;;x;-;-;12.04.2021;-;-;-;PV + Batterie
+578058;4852;Rothrist;AG;-;x;;x;x;;14.04.2021;KW30;10.09.2021;09.08.2021;PV + Batterie + EV-Ladestation
+588885;8903;Birmensdorf ZH;ZH;x;x;;-;-;-;14.04.2021;KW47;24.02.2022;24.11.2021;Wärmepumpe + PV
+177528;5621;Zufikon;AG;;;;;;;16.04.2021;-;-;;
+590142;5000;Aarau;AG;-;x;;x;-;-;19.04.2021;KW21;24.08.2021;;
+570021;5023;Biberstein;AG;-;-;;x;-;-;24.04.2021;;-;24.11.2017;Batterie
+576050;5600;Lenzburg;AG;x;x;;-;-;-;24.04.2021;KW31;02.11.2021;13.09.2021;Wärmepumpe + PV
+872270;5706;Boniswil;AG;x;x;;-;-;-;27.04.2021;KW26;04.10.2021;04.08.2021;Wärmepumpe + PV
+748404;5614;Sarmenstorf;AG;x;x;;x;-;-;28.04.2021;KW35;04.11.2021;27.09.2021;Wärmepumpe + PV + Batterie
+749245;4315;Zuzgen;AG;-;-;;x;-;-;30.04.2021;;-;24.07.2020;Batterie
+;5722;Gränichen;AG;-;-;;-;-;-;03.05.2021;KW21;;;
+738591;5745;Safenwil;AG;-;x;;x;-;x;04.05.2021;KW34;28.01.2022;;
+741254;4316;Hellikon;AG;x;x;;x;-;-;04.05.2021;KW30;09.11.2021;24.09.2021;Wärmepumpe + PV + Batterie
+574477;5276;Wil AG;AG;-;-;;-;x;-;05.05.2021;KW19;-;30.07.2019;EV-Ladestation
+737347;5074;Eiken;AG;x;-;;-;-;-;09.05.2021;KW41;26.11.2021;;
+751454;4310;Rheinfelden;AG;x;x;;x;x;-;10.05.2021;KW32;20.10.2021;31.08.2021;Wärmepumpe + PV + Batterie + EV-Ladestation
+578634;5620;Bremgarten AG;AG;x;x;;-;-;-;11.05.2021;KW31;03.09.2021;05.08.2021;Wärmepumpe + PV
+714588;4313;Möhlin;AG;-;x;;x;x;-;14.05.2021;KW30;20.10.2021;;
+751780;4313;Möhlin;AG;-;x;;x;-;-;17.05.2021;KW30;20.10.2021;;
+118180;5607;Hägglingen;AG;x;x;;x;x;-;18.05.2021;KW30;23.12.2021;04.11.2021;Wärmepumpe + PV + Batterie + EV-Ladestation
+573459;5102;Rupperswil;AG;-;-;;-;x;;19.05.2021;KW24;-;12.04.2019;EV-Ladestation
+576915;5442;Fislisbach;AG;x;-;;x;-;-;19.05.2021;KW33;28.09.2021;05.02.2020;Wärmepumpe + Batterie
+576543;5723;Teufenthal AG;AG;x;x;;x;-;-;20.05.2021;KW36;10.11.2021;23.09.2021;Wärmepumpe + PV + Batterie
+712641;4313;Möhlin;AG;x;x;;x;-;-;20.05.2021;KW5;15.03.2022;07.10.2021;Wärmepumpe + PV + Batterie
+572761;8966;Oberwil-Lieli;AG;-;-;;x;-;-;26.05.2021;KW25;-;25.10.2018;Batterie
+734850;5614;Sarmenstorf;AG;x;x;;x;x;-;30.05.2021;KW45;01.03.2022;21.12.2021;Wärmepumpe + PV + Batterie + EV-Ladestation
+865899;5225;Bözberg;AG;-;x;;x;-;-;01.06.2021;KW39;11.01.2022;25.11.2021;PV + Batterie
+592509;5034;Suhr;AG;-;x;;x;x;-;02.06.2021;KW35;16.11.2021;21.09.2021;PV + Batterie + EV-Ladestation
+742993;4317;Wegenstetten;AG;x;-;;-;-;-;04.06.2021;KW40;17.11.2021;;
+896592;4313;Möhlin;AG;-;x;;-;-;-;04.06.2021;KW33;19.10.2021;17.08.2021;PV
+738793;5070;Frick;AG;x;x;;-;-;-;05.06.2021;KW35;26.10.2021;16.09.2021;Wärmepumpe + PV
+591191;5018;Erlinsbach;AG;x;-;;-;-;-;06.06.2021;KW45;24.01.2022;;
+729283;4332;Stein AG;AG;-;-;;x;-;-;07.06.2021;-;-;02.06.2021;Batterie
+582891;5722;Gränichen;AG;x;-;;-;-;-;07.06.2021;KW41;19.11.2021;17.09.2020;Wärmepumpe
+152528;5225;Bözberg;AG;-;x;;x;x;-;07.06.2021;KW34;21.10.2021;02.09.2021;PV + Batterie + EV-Ladestation
+195088;4313;Möhlin;AG;x;-;;-;-;-;07.06.2021;kW42;09.12.2021;07.09.2022;Wärmepumpe
+733769;5330;Bad Zurzach;AG;x;-;;-;-;-;10.06.2021;KW34;12.10.2021;;
+785007;5622;Waltenschwil;AG;-;-;;x;-;-;13.06.2021;KW30;-;09.05.2019;Batterie
+590480;5210;Windisch;AG;x;x;;x;-;-;14.06.2021;KW47;31.01.2022;08.12.2021;Wärmepumpe + PV + Batterie
+806207;5225;Bözberg;AG;-;x;;x;-;-;17.06.2021;KW38;21.12.2021;20.10.2021;PV + Batterie
+586106;5000;Aarau;AG;-;x;;x;-;-;21.06.2021;KW9;19.05.2022;18.05.2021;PV + Batterie
+714489;4313;Möhlin;AG;x;x;;x;-;-;27.06.2021;KW43;10.02.2022;03.12.2021;Wärmepumpe + PV + Batterie
+588117;5103;Möriken AG;AG;-;-;;x;-;-;30.06.2021;KW28;-;15.04.2021;Batterie
+739616;4813;Uerkheim;AG;-;-;;x;-;-;30.06.2021;KW34;-;11.05.2021;Batterie
+589903;5036;Oberentfelden;AG;x;-;;-;-;-;04.07.2021;KW43;14.01.2022;;
+143675;5236;Remigen;AG;x;-;;-;-;-;07.07.2021;KW39;03.02.2022;;
+738516;5225;Bözberg;AG;x;-;;x;-;-;10.07.2021;KW49;21.02.2022;15.12.2021;Wärmepumpe + Batterie
+746421;5304;Endingen;AG;-;x;;x;-;-;11.07.2021;KW41;20.12.2021;25.09.2020;PV + Batterie
+705536;5725;Leutwil;AG;-;x;;x;x;-;16.07.2021;KW45;16.12.2021;17.11.2021;PV + Batterie + EV-Ladestation
+171901;5304;Endingen;AG;x;x;;x;-;-;19.07.2021;KW47;21.01.2022;01.12.2021;Wärmepumpe + PV + Batterie
+117726;4310;Rheinfelden;AG;-;x;;x;-;-;25.07.2021;KW38;06.01.2022;;
+764446;5707;Seengen;AG;x;-;;-;-;-;27.07.2021;kW 39;24.11.2021;07.10.2021;Wärmepumpe
+590582;5620;Bremgarten AG;AG;x;x;;x;x;-;13.08.2021;KW52;22.11.2023;07.09.2022;Wärmepumpe + PV + Batterie + EV-Ladestation
+129462;5072;Oeschgen;AG;-;x;;x;-;-;18.08.2021;KW44;08.05.2022;;
+703415;4310;Rheinfelden;AG;-;x;;x;-;-;19.08.2021;KW13;;;
+593030;5242;Birr;AG;x;x;;x;-;-;23.08.2021;KW41;19.05.2022;06.04.2022;Wärmepumpe + PV + Batterie
+572795;4813;Uerkheim;AG;-;x;;x;x;-;24.08.2021;KW2 ;16.05.2022;21.02.2022;PV + Batterie + EV-Ladestation
+594108;5430;Wettingen;AG;-;x;;x;x;;28.08.2021;KW45;11.02.2022;15.11.2021;PV + Batterie + EV-Ladestation
+164222;8962;Bergdietikon;AG;x;x;;x;-;-;31.08.2021;11.07.2022;07.11.2022;;
+198827;5225;Bözberg;AG;-;x;;x;-;-;01.09.2021;KW6;09.12.2022;12.10.2022;PV + Batterie
+589133;4658;Däniken SO;SO;x;-;;-;-;-;02.09.2021;KW11;24.08.2022;;
+726547;5107;Schinznach Dorf;AG;x;x;;-;-;-;02.09.2021;kW46;28.09.2022;07.09.2022;Wärmepumpe + PV
+592852;5242;Birr;AG;x;-;;-;-;-;05.09.2021;KW48   ;16.11.2022;;
+595793;5036;Oberentfelden;AG;-;x;;-;-;-;06.09.2021;KW 4/2022;19.04.2022;10.03.2022;PV
+589743;5442;Fislisbach;AG;x;-;;-;-;-;09.09.2021;KW49;19.01.2022;14.12.2021;Wärmepumpe
+594045;5033;Buchs AG;AG;x;x;;x;-;-;09.09.2021;KW10;18.05.2022;12.04.2022;Wärmepumpe + PV + Batterie
+588589;5000;Aarau;AG;x;x;;x;x;-;09.09.2021;KW9;21.07.2022;30.03.2022;Wärmepumpe + PV + Batterie + EV-Ladestation
+594448;5042;Hirschthal;AG;-;x;;-;-;-;12.09.2021;KW50;19.01.2022;14.12.2021;PV
+716968;4315;Zuzgen;AG;x;x;;-;-;-;16.09.2021;KW35;16.08.2022;21.06.2022;Wärmepumpe + PV
+112352;5105;Auenstein;AG;-;x;;x;-;-;19.09.2021;KW49;18.02.2022;;
+595906;8964;Rudolfstetten;AG;x;x;;x;-;-;19.09.2021;KW47;26.07.2022;16.03.2022;Wärmepumpe + PV + Batterie
+595907;8964;Rudolfstetten;AG;x;x;;-;-;-;20.09.2021;KW47;21.06.2022;14.03.2022;Wärmepumpe + PV
+596018;5233;Stilli;AG;-;-;;-;x;;21.09.2021;KW39/40;-;09.08.2022;EV-Ladestation
+596019;5728;Gontenschwil;AG;-;x;;-;x;;22.09.2021;KW2;17.02.2022;11.01.2022;PV + EV-Ladestation
+586141;5443;Niederrohrdorf;AG;-;x;;x;-;-;24.09.2021;KW6;06.04.2022;;
+588885;5413;Birmenstorf AG;AG;-;-;;x;-;-;26.09.2021;KW47;-;24.11.2021;Batterie
+553509;4313;Möhlin;AG;x;x;;-;x;-;26.09.2021;KW2/2022;23.02.2022;13.01.2022;Wärmepumpe + PV + EV-Ladestation
+745455;5616;Meisterschwanden;AG;x;-;;-;-;-;26.09.2021;KW12/2022;;;
+577310;4655;Stüsslingen;SO;-;-;;x;-;-;27.09.2021;KW46;-;25.03.2020;Batterie
+594211;5415;Nussbaumen AG;AG;x;x;;x;-;-;05.10.2021;KW18;16.03.2023;19.05.2022;Wärmepumpe + PV + Batterie
+574487;5000;Aarau;AG;-;x;;x;-;-;07.10.2021;KW18;28.07.2022;;
+178475;5621;Zufikon;AG;-;x;;-;-;-;09.10.2021;KW48 + 10?;16.06.2022;;
+561504;5040;Schöftland;AG;-;-;;x;-;-;11.10.2021;KW3;-;;
+592761;5028;Ueken;AG;-;-;;x;-;x;11.10.2021;KW6;05.04.2021;17.02.2022;Batterie + Wärmepumpenboiler
+596456;5722;Gränichen;AG;-;-;;x;-;-;12.10.2021;KW7;11.03.2022;;
+593131;4310;Rheinfelden;AG;x;x;;x;-;-;13.10.2021;KW15/2022;15.06.2022;04.05.2022;Wärmepumpe + PV + Batterie
+591712;5200;Brugg AG;AG;x;x;;-;-;-;21.10.2021;KW3/2022;09.06.2022;26.04.2022;Wärmepumpe + PV
+909237;5620;Bremgarten AG;AG;Boiler;x;;x;-;-;22.10.2021;kW9;08.06.2022;28.11.2019;PV + Batterie
+596760;4657;Dulliken;SO;-;x;;x;-;-;24.10.2021;KW10;09.06.2022;19.04.2022;PV + Batterie
+594446;5022;Rombach;AG;-;x;;x;x;-;24.10.2021;KW 5/2022;09.03.2022;03.02.2022;PV + Batterie + EV-Ladestation
+727903;5707;Seengen;AG;-;x;;x;-;-;26.10.2021;KW2;07.03.2021;;
+741254;4316;Hellikon;AG;-;-;;x;-;-;02.11.2021;KW48;-;24.09.2021;Batterie
+145791;4332;Stein AG;AG;-;x;;x;x;-;03.11.2021;KW8/2022;07.04.2022;14.03.2022;PV + Batterie + EV-Ladestation
+591100;5213;Villnachern;AG;x;x;;-;-;-;04.11.2021;KW14;29.07.2022;20.05.2022;Wärmepumpe + PV
+593820;5432;Neuenhof;AG;x;x;;x;-;-;08.11.2021;KW31;30.09.2022;08.09.2022;Wärmepumpe + PV + Batterie
+596934;5432;Neuenhof;AG;x;x;;x;-;-;09.11.2021;KW30;30.09.2022;08.09.2022;Wärmepumpe + PV + Batterie
+716143;4303;Kaiseraugst;AG;-;x;;-;-;-;11.11.2021;KW49;22.02.2022;;
+594027;5034;Suhr;AG;-;x;;-;x;-;14.11.2021;KW12;02.06.2022;28.04.2022;PV + EV-Ladestation
+716735;5443;Niederrohrdorf;AG;-;x;;x;-;-;15.11.2021;kW 7/2022;11.05.2022;;
+596967;5000;Aarau;AG;x;-;;-;-;-;16.11.2021;KW23;05.12.2022;;
+582891;5722;Gränichen;AG;-;-;;-;x;-;19.11.2021;;-;17.09.2020;EV-Ladestation
+723980;4312;Magden;AG;-;x;;x;-;-;19.11.2021;kW10;;10.02.2022;PV + Batterie
+593387;5712;Beinwil am See;AG;-;x;;x;x;-;21.11.2021;KW 13/2022;09.06.2022;14.04.2022;PV + Batterie + EV-Ladestation
+16976;5432;Neuenhof;AG;x;x;;x;-;-;22.11.2021;KW12;21.06.2022;19.04.2022;Wärmepumpe + PV + Batterie
+595711;8962;Bergdietikon;AG;-;x;;-;-;-;24.11.2021;KW8/2022;30.03.2022;;
+594002;5035;Unterentfelden;AG;x;x;;x;-;-;24.11.2021;KW30?;27.10.2022;19.09.2022;Wärmepumpe + PV + Batterie
+203398;5610;Wohlen AG;AG;-;x;;x;-;-;25.11.2021;KW26;20.07.2021;;
+596018;5233;Stilli;AG;x;x;;x;-;-;29.11.2021;KW15;23.09.2022;09.08.2022;Wärmepumpe + PV + Batterie
+694066;5707;Seengen;AG;-;x;;x;-;-;04.12.2021;KW 8/2022;05.04.2022;16.03.2022;PV + Batterie
+593365;5103;Möriken AG;AG;x;x;;x;x;;07.12.2021;KW 24;26.09.2023;30.06.2022;Wärmepumpe + PV + Batterie + EV-Ladestation
+595302;5400;Baden;AG;x;-;;-;-;-;09.12.2021;KW4;-;24.11.2022;Wärmepumpe
+593014;5236;Remigen;AG;-;x;;x;-;-;03.01.2022;kW 33;19.10.2022;20.09.2022;PV + Batterie
+580281;5070;Frick;AG;-;x;;-;-;-;03.01.2022;KW23;18.10.2022;;
+750388;5107;Schinznach Dorf;AG;-;x;;x;x;-;03.01.2022;KW9;06.05.2022;;
+577018;5600;Lenzburg;AG;-;x;;x;-;x;03.01.2022;KW13;12.05.2022;11.04.2022;PV + Batterie + Wärmepumpenboiler
+703976;5070;Frick;AG;-;x;;x;-;-;03.01.2022;KW18;16.06.2022;20.05.2022;PV + Batterie
+589123;5014;Gretzenbach;SO;-;-;;x;-;-;04.01.2022;KW15;-;;
+131436;4313;Möhlin;AG;-;x;;x;-;-;04.01.2022;KW13;24.05.2022;09.02.2022;PV + Batterie
+564900;5024;Küttigen;AG;-;x;;x;x;-;04.01.2022;KW16;17.06.2022;04.05.2022;PV + Batterie + EV-Ladestation
+593829;5425;Schneisingen;AG;x;x;;x;-;-;04.01.2022;KW29;28.09.2022;16.08.2022;Wärmepumpe + PV + Batterie
+595636;5076;Bözen;AG;-;x;;x;x;-;07.01.2022;28.04.2022;14.07.2022;31.05.2022;PV + Batterie + EV-Ladestation
+597714;5073;Gipf-Oberfrick;AG;-;x;;x;;-;08.01.2022;KW12;24.05.2022;23.03.2022;PV + Batterie
+594402;5412;Gebenstorf;AG;x;x;;x;-;-;10.01.2022;kW17;22.05.2022;16.05.2022;Wärmepumpe + PV + Batterie
+590937;5512;Wohlenschwil;AG;x;x;;x;-;-;10.01.2022;kW 27;28.04.2023;03.10.2022;Wärmepumpe + PV + Batterie
+142012;5074;Eiken;AG;x;-;;-;-;-;16.01.2022;KW 26;16.12.2022;07.09.2022;Wärmepumpe
+584406;5033;Buchs AG;AG;-;-;;x;x;-;20.01.2022;KW8;;24.02.2021;Batterie + EV-Ladestation
+595302;5400;Baden;AG;-;-;;-;-;-;21.01.2022;KW4;;24.11.2022;unbekannt (keine Anlage auf dieser Zeile markiert)
+785531;5622;Waltenschwil;AG;x;-;;-;-;-;22.01.2022;KW 42;03.04.2023;;
+175213;5313;Klingnau;AG;-;x;;-;-;-;23.01.2022;12.05.2022;24.08.2022;;
+735680;4323;Wallbach;AG;-;x;;x;x;-;25.01.2022;KW19;08.07.2022;02.06.2022;PV + Batterie + EV-Ladestation
+181978;4323;Wallbach;AG;x;x;;x;-;-;25.01.2022;KW22;03.11.2022;22.09.2022;Wärmepumpe + PV + Batterie
+;5620;Bremgarten AG;AG;x;-;;-;-;-;26.01.2022;29.08.2022;;;
+212758;5722;Gränichen;AG;-;x;;x;x;-;27.01.2022;KWxY/2023;23.08.2023;28.07.2022;PV + Batterie + EV-Ladestation
+583323;4303;Kaiseraugst;AG;-;x;21.6;x;-;-;03.02.2022;11.12.2023;13.01.2024;02.12.2020;PV + Batterie
+691339;4317;Wegenstetten;AG;-;x;;x;-;-;07.02.2022;Aug;26.08.2023;07.09.2023;PV + Batterie
+108801;5322;Koblenz;AG;-;-;;x;-;-;10.02.2022;KW17;27.04.2022;11.05.2021;Batterie
+131447;5442;Fislisbach;AG;x;-;;-;-;-;10.02.2022;22.04.2022;-;;
+212714;4665;Oftringen;AG;x;x;;-;-;-;11.02.2022;KW21;19.12.2022;08.06.2022;Wärmepumpe + PV
+596760;4657;Dulliken;SO;-;-;;-;-;-;12.02.2022;-;09.06.2022;19.04.2022;unbekannt (keine Anlage auf dieser Zeile markiert)
+109103;5322;Koblenz;AG;x;-;;-;;;12.02.2022;kW 34;02.11.2022;;
+595990;5033;Buchs AG;AG;x;x;;x;x;-;12.02.2022;KW30;24.11.2022;21.10.2022;Wärmepumpe + PV + Batterie + EV-Ladestation
+870417;5300;Turgi;AG;-;-;;x;-;-;14.02.2022;10.07.2022;-;26.11.2020;Batterie
+812691;5620;Bremgarten AG;AG;-;-;;-;x;-;15.02.2022;KW10;-;18.11.2019;EV-Ladestation
+743335;5314;Kleindöttingen;AG;-;x;;x;-;-;15.02.2022;04.07.2022;;;
+595302;5400;Baden;AG;x;x;;x;-;-;16.02.2022;;;24.11.2022;Wärmepumpe + PV + Batterie
+153783;5619;Uezwil;AG;x;-;;-;x;;17.02.2022;kW 34;;21.09.2022;Wärmepumpe + EV-Ladestation
+596691;5610;Wohlen AG;AG;-;x;;x;x;;17.02.2022;KW 31;13.10.2022;02.09.2022;PV + Batterie + EV-Ladestation
+192082;5620;Bremgarten AG;AG;-;x;;x;x;-;17.02.2022;KW25;20.06.2023;;
+213106;5420;Ehrendingen;AG;-;x;;-;-;-;22.02.2022;KW19;06.07.2022;;
+595391;4665;Oftringen;AG;x;x;;x;-;-;22.02.2022;kW31+37;14.12.2022;03.11.2022;Wärmepumpe + PV + Batterie
+213113;4653;Obergösgen;SO;-;x;;x;-;-;24.02.2022;kW31;15.12.2022;02.11.2022;PV + Batterie
+155734;5073;Gipf-Oberfrick;AG;x;x;;-;-;-;24.02.2022;KW22;24.11.2022;20.10.2022;Wärmepumpe + PV
+213052;5033;Buchs AG;AG;x;-;;-;x;-;27.02.2022;KW31;14.12.2022;15.11.2022;Wärmepumpe + EV-Ladestation
+178529;5621;Zufikon;AG;-;x;;x;-;-;27.02.2022;kW23;03.08.2022;06.07.2022;PV + Batterie
+163954;4322;Mumpf;AG;-;x;;x;-;-;01.03.2022;kW23 ;15.03.2023;04.04.2022;PV + Batterie
+596167;4665;Oftringen;AG;x;-;;-;-;-;01.03.2022;01.11.2022;;24.01.2023;Wärmepumpe
+711145;4303;Kaiseraugst;AG;-;x;;x;x;-;01.03.2022;KW 28;28.09.2022;20.07.2022;PV + Batterie + EV-Ladestation
+705057;4317;Wegenstetten;AG;-;x;;-;-;-;01.03.2022;KW38;12.04.2023;18.11.2022;PV
+732971;4317;Wegenstetten;AG;-;-;;x;-;-;02.03.2022;KW29;-;;
+151970;5306;Tegerfelden;AG;-;x;;x;-;-;02.03.2022;KW26;31.08.2022;27.07.2022;PV + Batterie
+723437;4310;Rheinfelden;AG;x;x;;x;-;-;03.03.2022;29.08.2022;;08.11.2022;Wärmepumpe + PV + Batterie
+213274;4852;Rothrist;AG;x;x;;-;-;-;06.03.2022;KW33;08.05.2023;16.09.2022;Wärmepumpe + PV
+696616;5070;Frick;AG;-;x;;x;-;-;07.03.2022;KW22;11.08.2022;04.04.2022;PV + Batterie
+596437;4657;Dulliken;SO;-;x;;-;-;-;08.03.2022;kW 38;;;
+728322;5707;Seengen;AG;x;-;;-;-;-;08.03.2022;kW35;;;
+909745;4803;Vordemwald;AG;-;x;;x;x;-;09.03.2022;KW29;;20.12.2022;PV + Batterie + EV-Ladestation
+145326;5426;Lengnau AG;AG;-;x;;-;x;-;13.03.2022;KW29;27.09.2022;18.08.2022;PV + EV-Ladestation
+596257;4665;Oftringen;AG;x;x;;x;-;-;15.03.2022;KW35;05.01.2023;22.11.2022;Wärmepumpe + PV + Batterie
+724881;5745;Safenwil;AG;-;x;;-;-;-;16.03.2022;KW28;25.8.22?;08.12.2021;PV
+596313;4852;Rothrist;AG;x;-;;-;-;-;16.03.2022;KW41;;22.12.2022;Wärmepumpe
+692112;8962;Bergdietikon;AG;-;x;;x;-;-;17.03.2022;01.10.2022;24.10.2022;;
+146807;5106;Veltheim AG;AG;-;x;;x;-;-;18.03.2022;01.08.2022;08.02.2023;10.01.2023;PV + Batterie
+213683;5024;Küttigen;AG;-;x;;x;-;-;19.03.2022;KW35;Patrick;22.09.2022;PV + Batterie
+702332;5304;Endingen;AG;x;-;;-;-;-;20.03.2022;KW22;21.09.2022;;
+884000;5107;Schinznach Dorf;AG;-;x;;x;-;-;21.03.2022;kW 24;29.06.2023;;
+733114;4317;Wegenstetten;AG;-;x;;-;-;-;21.03.2022;KW35;;06.10.2022;PV
+213700;5610;Wohlen AG;AG;x;-;;-;-;-;23.03.2022;KW32;05.01.2023;;
+152557;5070;Frick;AG;-;x;;x;-;-;23.03.2022;KW40;25.01.2023;13.12.2022;PV + Batterie
+702339;5304;Endingen;AG;x;-;;-;-;-;25.03.2022;;;;
+129447;5072;Oeschgen;AG;-;x;;x;-;-;26.03.2022;KW32;09.05.2023;11.04.2023;PV + Batterie
+740230;8962;Bergdietikon;AG;x;x;;x;x;-;26.03.2022;12.06.2023;26.10.2023;23.06.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+213711;5024;Küttigen;AG;-;x;;x;x;-;27.03.2022;kW 18;08.05.2023;17.05.2022;PV + Batterie + EV-Ladestation
+898693;5504;Othmarsingen;AG;-;x;;-;x;-;28.03.2022;KW32;;22.09.2022;PV + EV-Ladestation
+195088;4313;Möhlin;AG;-;x;;x;-;-;28.03.2022;KW44;14.02.2023;07.09.2022;PV + Batterie
+821268;4303;Kaiseraugst;AG;-;-;;-;x;-;29.03.2022;KW48 prov.;-;16.05.2022;EV-Ladestation
+595118;4800;Zofingen;AG;x;-;;-;-;-;30.03.2022;KW46 (KW52);;;
+134309;5312;Döttingen;AG;x;x;;x;x;-;31.03.2022;KW38 (KW52);03.05.2023;22.02.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+693106;5706;Boniswil;AG;x;x;;x;;;07.04.2022;Dez.22/ Frühling 2023?;13.03.2023;20.12.2022;Wärmepumpe + PV + Batterie
+748977;5706;Boniswil;AG;x;x;;x;x;;08.04.2022;;13.03.2023;20.12.2022;Wärmepumpe + PV + Batterie + EV-Ladestation
+191185;4805;Brittnau;AG;-;-;;x;-;-;08.04.2022;12.08.2022;;08.04.2021;Batterie
+723937;5235;Rüfenach AG;AG;-;x;;x;-;-;08.04.2022;KW49;07.12.2022;09.11.2022;PV + Batterie
+593403;5430;Wettingen;AG;-;x;;-;-;-;10.04.2022;kW42;15.02.2022;21.07.2022;PV
+127600;5235;Rüfenach AG;AG;-;x;;x;-;-;10.04.2022;kW40;11.01.2023;14.12.2022;PV + Batterie
+697434;5108;Oberflachs;AG;-;x;;x;-;-;13.04.2022;KW 42;25.11.2023;16.12.2022;PV + Batterie
+214149;5420;Ehrendingen;AG;-;x;;-;x;-;18.04.2022;KW39;;11.10.2022;PV + EV-Ladestation
+136557;4325;Schupfart;AG;-;x;;x;-;-;18.04.2022;KW13;28.07.2023;10.05.2023;PV + Batterie
+821251;4303;Kaiseraugst;AG;-;-;;-;x;-;20.04.2022;;-;;
+187258;5106;Veltheim AG;AG;-;x;;x;x;-;23.04.2022;kW42;02.02.2023;30.11.2022;PV + Batterie + EV-Ladestation
+734850;5614;Sarmenstorf;AG;-;-;;x;-;-;26.04.2022;15.11.2022;-;21.12.2021;Batterie
+175022;5313;Klingnau;AG;-;-;;x;-;-;27.04.2022;15.11.2022;-;;
+751926;8962;Bergdietikon;AG;-;x;;x;-;-;28.04.2022;KW2 (KW10);14.08.2023;;
+214379;5525;Fischbach-Göslikon;AG;x;x;;x;-;-;28.04.2022;kW46/47 (52);;09.02.2023;Wärmepumpe + PV + Batterie
+707738;5443;Niederrohrdorf;AG;-;x;;-;-;-;29.04.2022;KW45;23.02.2023;;
+900492;5000;Aarau;AG;x;x;;x;x;-;01.05.2022;KW13;;02.05.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+596414;8967;Widen;AG;x;x;;x;-;-;02.05.2022;01.03.2023;;02.05.2023;Wärmepumpe + PV + Batterie
+596167;4665;Oftringen;AG;-;x;;x;-;-;03.05.2022;Q4/2022;;24.01.2023;PV + Batterie
+900752;5200;Brugg AG;AG;x;x;;x;-;-;04.05.2022;;08.02.2023;09.12.2022;Wärmepumpe + PV + Batterie
+591571;5426;Lengnau AG;AG;-;-;;-;x;-;05.05.2022;KW30;-;;
+148705;4314;Zeiningen;AG;-;x;;x;-;-;05.05.2022;KW44;;19.12.2022;PV + Batterie
+713578;4313;Möhlin;AG;-;x;;x;-;-;05.05.2022;KW40?;07.12.2022;04.09.2022;PV + Batterie
+842115;4323;Wallbach;AG;-;x;;x;-;-;05.05.2022;KW34;18.10.2022;15.08.2022;PV + Batterie
+902436;5624;Bünzen;AG;x;x;;x;x;-;05.05.2022;14.08.2023;;11.09.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+596019;5728;Gontenschwil;AG;-;-;;x;-;-;06.05.2022;KW3 / 23;-;11.01.2022;Batterie
+596361;5242;Lupfig;AG;x;-;;-;-;-;06.05.2022;KW 38;11.01.2023;15.12.2022;Wärmepumpe
+712641;4313;Möhlin;AG;-;-;;x;-;-;07.05.2022;17.08.2022;-;07.10.2021;Batterie
+159508;4805;Brittnau;AG;-;x;;-;-;-;07.05.2022;01.03.2023;27.04.2023;15.03.2023;PV
+117726;4310;Rheinfelden;AG;-;-;;x;-;-;08.05.2022;KW37;-;;
+214501;5035;Unterentfelden;AG;-;x;;x;-;-;08.05.2022;;10.05.2023;;
+595809;5626;Hermetschwil-Staffeln;AG;x;x;;x;-;-;12.05.2022;11.04.2023;16.08.2023;24.05.2023;Wärmepumpe + PV + Batterie
+902449;5737;Menziken;AG;x;-;;-;-;-;13.05.2022;02/04 23;01.06.2023;;
+214609;4313;Möhlin;AG;x;-;;-;-;-;15.05.2022;KW44/ Q1 23;08.03.2023;31.01.2023;Wärmepumpe
+902489;5018;Erlinsbach;AG;-;x;;x;-;-;18.05.2022;06.02.2023-10.02.2023;;30.06.2023;PV + Batterie
+580866;5442;Fislisbach;AG;-;-;;x;-;-;20.05.2022;28.09.2022;;01.12.2020;Batterie
+178529;5621;Zufikon;AG;-;-;;-;x;-;21.05.2022;;;06.07.2022;EV-Ladestation
+214745;5430;Wettingen;AG;x;x;;x;-;-;24.05.2022;Q3 /22;;15.11.2022;Wärmepumpe + PV + Batterie
+572795;4813;Uerkheim;AG;-;x;;-;-;-;29.05.2022;12.10.2022;-;21.02.2022;PV
+900371;5107;Schinznach Dorf;AG;x;x;;-;-;-;30.05.2022;WP 17.10.22, PV Q1 23;;;
+719912;5235;Rüfenach AG;AG;-;x;;x;-;;31.05.2022;Q1/2023;21.06.2023;30.05.2023;PV + Batterie
+148105;4314;Zeiningen;AG;x;x;18.17;x;-;-;01.06.2022;Q1/2023;;11.05.2023;Wärmepumpe + PV + Batterie
+776146;5452;Oberrohrdorf;AG;x;-;;-;-;-;06.06.2022;Q1/2023;;;
+707268;5027;Herznach;AG;x;x;;x;-;-;07.06.2022;Q2/2023;;01.05.2020;Wärmepumpe + PV + Batterie
+573459;5102;Rupperswil;AG;-;-;;x;-;-;09.06.2022;Q3/2022;-;12.04.2019;Batterie
+214910;4800;Zofingen;AG;-;x;;x;-;-;09.06.2022;;14.12.2022;14.12.2022;PV + Batterie
+749729;5616;Meisterschwanden;AG;-;x;;x;x;-;09.06.2022;10.10.2022;05.01.2023;13.12.2022;PV + Batterie + EV-Ladestation
+759548;8962;Bergdietikon;AG;x;x;;x;;-;09.06.2022;28.11.2022/31.12.22;08.02.2023;24.01.2023;Wärmepumpe + PV + Batterie
+740351;5107;Schinznach Dorf;AG;-;-;;x;-;-;10.06.2022;17.02.2023;-;10.12.2019;Batterie
+572837;5035;Unterentfelden;AG;-;-;;-;-;-;16.06.2022;Q4 / 2022;-;27.08.2019;unbekannt (keine Anlage auf dieser Zeile markiert)
+902701;5102;Rupperswil;AG;x;-;;-;-;-;18.06.2022;Q2/2023;;;
+118609;5607;Hägglingen;AG;-;x;;x;-;-;20.06.2022;Q1/2023;;06.04.2023;PV + Batterie
+710494;4312;Magden;AG;x;x;;x;-;-;22.06.2022;Q2/2023;;23.08.2023;Wärmepumpe + PV + Batterie
+576552;5742;Kölliken;AG;-;-;;-;x;-;24.06.2022;KW51/2022;16.12.2022;20.02.2020;EV-Ladestation
+902830;5032;Aarau Rohr;AG;-;x;;x;x;-;25.06.2022;Q1/2023;;;
+902831;8957;Spreitenbach;AG;x;x;;x;-;-;26.06.2022;Q3/2023;;25.10.2023;Wärmepumpe + PV + Batterie
+597714;5073;Gipf-Oberfrick;AG;-;-;;x;-;-;28.06.2022;25.8.22;;23.03.2022;Batterie
+750388;5107;Schinznach Dorf;AG;-;-;;x;-;-;28.06.2022;01.08.2022;;;
+735831;4333;Münchwilen AG;AG;-;x;;x;-;-;28.06.2022;Q2/2023;;05.06.2023;PV + Batterie
+155412;8967;Widen;AG;x;x;;x;-;-;28.06.2022;Q4/2022;;29.06.2023;Wärmepumpe + PV + Batterie
+901003;5043;Holziken;AG;-;x;;x;-;-;03.07.2022;Q1/2023;09.10.2023;14.03.2023;PV + Batterie
+215500;4323;Wallbach;AG;-;x;21.17;-;-;-;05.07.2022;Q2, Q3/2023;;;
+215740;5000;Aarau;AG;x;x;;x;-;-;05.07.2022;Q2/23;22.08.2023;14.07.2023;Wärmepumpe + PV + Batterie
+215442;5000;Aarau;AG;-;x;;-;-;-;07.07.2022;KW7/2023;;08.03.2023;PV
+160111;4805;Brittnau;AG;x;-;;-;-;-;07.07.2022;Frühling/Sommer 2023;;;
+215605;5023;Biberstein;AG;x;-;;-;-;-;09.07.2022;Frühling 2023;;;
+900382;4312;Magden;AG;-;x;;x;-;-;11.07.2022;06.06.2023;10.08.2023;06.06.2023;PV + Batterie
+215480;5504;Othmarsingen;AG;-;x;;-;x;-;11.07.2022;01.04.2023;;16.06.2023;PV + EV-Ladestation
+690299;4317;Wegenstetten;AG;-;x;;-;-;-;12.07.2022;04.10.2022;-;18.02.2021;PV
+749221;5616;Meisterschwanden;AG;x;x;;x;-;-;12.07.2022;01.12.2022;;05.04.2023;Wärmepumpe + PV + Batterie
+215492;5033;Buchs AG;AG;x;x;;x;-;-;12.07.2022;Q2/2023;28.09.2023;07.07.2023;Wärmepumpe + PV + Batterie
+571965;5464;Rümikon AG;AG;-;-;;-;-;-;13.07.2022;-;;28.11.2019;unbekannt (keine Anlage auf dieser Zeile markiert)
+900905;5024;Küttigen;AG;-;x;;x;-;-;17.07.2022;Q1/2023;;24.04.2023;PV + Batterie
+215676;4852;Rothrist;AG;x;-;;-;-;-;17.07.2022;10.07.2023;28.08.2023;;
+215697;5742;Kölliken;AG;-;x;;x;-;-;20.07.2022;Q2 2023;25.10.2023;27.09.2023;PV + Batterie
+694753;5620;Bremgarten AG;AG;-;-;;-;x;-;21.07.2022;Ende Sept;-;;
+215731;5430;Wettingen;AG;-;x;;x;-;-;23.07.2022;12.06.2023;;24.08.2023;PV + Batterie
+745424;5027;Herznach;AG;;x;;x;;;26.07.2022;01.08.2023;;05.06.2023;PV + Batterie
+;4323;Wallbach;AG;-;-;;-;-;-;26.07.2022;;;;
+741214;4312;Magden;AG;-;-;;x;-;-;29.07.2022;Q4 / 2022;;;
+174453;5706;Boniswil;AG;-;x;;x;-;-;01.08.2022;01.04.2023;11.05.2023;18.04.2023;PV + Batterie
+748404;5614;Sarmenstorf;AG;-;-;;-;x;;02.08.2022;15.09.2022/ 31.10.2022;-;27.09.2021;EV-Ladestation
+729283;4332;Stein AG;AG;-;x;;x;-;-;02.08.2022;31.10.2022;;02.06.2021;PV + Batterie
+593014;5236;Remigen;AG;-;-;;-;x;-;04.08.2022;;;20.09.2022;EV-Ladestation
+215929;5724;Dürrenäsch;AG;-;x;;-;-;-;05.08.2022;Q2 /23 ;31.08.2023;28.07.2023;PV
+750496;4315;Zuzgen;AG;-;x;;-;x;-;05.08.2022;07.08.2023;;12.09.2023;PV + EV-Ladestation
+692971;5244;Birrhard;AG;x;-;;-;;;06.08.2022;01.09.2023;30.10.2023;15.09.2023;Wärmepumpe
+143664;4312;Magden;AG;-;x;;x;x;-;07.08.2022;19.06.2023;29.03.2023;02.02.2023;PV + Batterie + EV-Ladestation
+900686;5036;Oberentfelden;AG;-;x;;x;-;-;07.08.2022;KW 12 / 23;;;
+889825;5620;Bremgarten AG;AG;;x;;x;;;08.08.2022;01.05.2023;;;
+596391;5116;Schinznach Bad;AG;x;x;;-;x;-;08.08.2022;Frühling 2023;12.04.2023;08.03.2023;Wärmepumpe + PV + EV-Ladestation
+215962;5210;Windisch;AG;x;-;;-;-;-;09.08.2022;Frühling 2023;;15.05.2023;Wärmepumpe
+216063;5024;Küttigen;AG;-;x;;-;-;-;15.08.2022;01.05.2023;05.06.2023;;
+697435;5425;Schneisingen;AG;-;x;;x;x;-;15.08.2022;Sommer 2023;23.10.2023;14.09.2023;PV + Batterie + EV-Ladestation
+572761;8966;Oberwil-Lieli;AG;-;-;;-;x;-;16.08.2022;KW34;;25.10.2018;EV-Ladestation
+135287;4333;Münchwilen AG;AG;-;-;;x;-;-;18.08.2022;Q1/23;;15.10.2019;Batterie
+;4800;Zofingen;AG;;x;;;;;19.08.2022;;;;
+112352;5105;Auenstein;AG;-;-;;-;x;-;21.08.2022;Sofort ;-;;
+900596;5034;Suhr;AG;x;x;;x;-;-;21.08.2022;Sommer 2023;;27.03.2023;Wärmepumpe + PV + Batterie
+216226;5014;Gretzenbach;SO;x;x;;;;;23.08.2022;Sommer 2023;;30.08.2023;Wärmepumpe + PV
+216213;4657;Dulliken;SO;-;-;;x;-;-;25.08.2022;01.08.2023;;05.05.2023;Batterie
+216237;5610;Wohlen AG;AG;x;x;;x;-;-;29.08.2022;Q1 2023;;22.03.2023;Wärmepumpe + PV + Batterie
+709624;5113;Holderbank AG;AG;-;x;;-;;;30.08.2022;24.07.2023;11.09.2023;02.08.2023;PV
+584301;8966;Oberwil-Lieli;AG;-;-;;x;-;-;02.09.2022;-;-;21.04.2021;Batterie
+;8966;Oberwil-Lieli;AG;-;-;;x;-;-;02.09.2022;-;-;;
+216373;8956;Killwangen;AG;-;x;;-;-;-;03.09.2022;01.08.2023;;;
+596313;4852;Rothrist;AG;-;x;;x;-;-;03.09.2022;01.04.2023;;22.12.2022;PV + Batterie
+900694;5408;Ennetbaden;AG;-;x;;x;x;-;04.09.2022;01.08.2023;20.10.2023;30.09.2023;PV + Batterie + EV-Ladestation
+146018;4324;Obermumpf;AG;x;x;;x;x;-;04.09.2022;19.06.2023;17.10.2023;07.07.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+573525;5024;Küttigen;AG;-;-;;x;-;-;05.09.2022;Q2/2023;;;
+695851;5452;Oberrohrdorf;AG;-;x;;x;-;-;05.09.2022;01.06.2023;20.11.2023;05.06.2023;PV + Batterie
+596641;4464;Maisprach;BL;x;x;;x;-;-;06.09.2022;16.06.2023;29.09.2023;13.06.2023;Wärmepumpe + PV + Batterie
+699307;5316;Leuggern;AG;x;-;;-;-;-;08.09.2022;01.04.2023;;;
+694334;4323;Wallbach;AG;;x;;;;;10.09.2022;04.08.2023;19.10.2023;;
+722853;4315;Zuzgen;AG;-;x;;x;x;-;10.09.2022;02.10.2023;23.11.2024;23.10.2023;PV + Batterie + EV-Ladestation
+704806;4316;Hellikon;AG;-;x;;-;-;-;11.09.2022;01.01.2023;05.04.2023;20.12.2022;PV
+870024;5300;Turgi;AG;;x;12.18;x;;;15.09.2022;01.09.2023;;;
+213113;4653;Obergösgen;SO;-;-;;x;-;;15.09.2022;01.10.2023;20.10.2023;02.11.2022;Batterie
+573527;5036;Oberentfelden;AG;x;;;;;;15.09.2022;Sommer 2023;;;
+586106;5000;Aarau;AG;-;-;;x;-;-;16.09.2022;01.12.2023;-;18.05.2021;Batterie
+183539;4323;Wallbach;AG;-;-;;-;x;-;16.09.2022;01.10.2022;;03.05.2023;EV-Ladestation
+596560;4663;Aarburg;AG;x;x;;x;;;16.09.2022;17.07.2023;08.09.2023;27.07.2023;Wärmepumpe + PV + Batterie
+900825;5430;Wettingen;AG;x;x;;x;-;-;17.09.2022;Q3/2023;20.12.2023;21.07.2023;Wärmepumpe + PV + Batterie
+216692;5014;Gretzenbach;SO;-;x;;x;-;-;18.09.2022;11.09.2023;08.12.2023;08.12.2023;PV + Batterie
+215962;5210;Windisch;AG;;x;;x;x;;18.09.2022;Q1 / 2024;;15.05.2023;PV + Batterie + EV-Ladestation
+900899;4800;Zofingen;AG;x;x;32.8;x;-;-;19.09.2022;24.07.2023;08.12.2023;;
+183539;4323;Wallbach;AG;-;x;;x;-;-;19.09.2022;01.04.2023;13.07.2023;03.05.2023;PV + Batterie
+902830;5032;Aarau Rohr;AG;-;-;;-;-;-;20.09.2022;Q1/2023;;;
+579972;5036;Oberentfelden;AG;-;x;;x;-;-;21.09.2022;04.09.2023;11.12.2023;13.11.2023;PV + Batterie
+153783;5619;Uezwil;AG;;x;;x;-;-;24.09.2022;Q3/2023;21.11.2023;21.09.2022;PV + Batterie
+593329;5200;Brugg AG;AG;x;x;12.45;x;-;-;25.09.2022;01.11.2023;;22.09.2023;Wärmepumpe + PV + Batterie
+712273;4313;Möhlin;AG;-;-;;x;-;x;25.09.2022;Q4/2022;;23.08.2021;Batterie + Wärmepumpenboiler
+694569;5452;Oberrohrdorf;AG;-;x;;x;-;-;29.09.2022;25.09.2023;08.11.2023;;
+713894;4323;Wallbach;AG;-;x;;-;-;-;29.09.2022;08.03.2023;07.09.2023;11.08.2023;PV
+900555;5210;Windisch;AG;-;x;;x;-;-;01.10.2022;06.09.2023;16.10.2023;21.09.2023;PV + Batterie
+179215;5607;Hägglingen;AG;x;x;;-;-;-;03.10.2022;01.04.2023;;01.09.2023;Wärmepumpe + PV
+727423;4325;Schupfart;AG;-;-;;x;-;-;04.10.2022;01.11.2023;-;28.05.2020;Batterie
+575102;4654;Lostorf;SO;-;-;;x;-;-;06.10.2022;23.10.2023;-;23.04.2020;Batterie
+718990;5027;Herznach;AG;x;x;14.45;x;-;-;10.10.2022;30.10.2023;27.02.2024;30.10.2023;Wärmepumpe + PV + Batterie
+120135;4313;Möhlin;AG;-;x;13.2;x;-;-;11.10.2022;01.10.2023;;01.11.2023;PV + Batterie
+214910;4800;Zofingen;AG;-;-;;-;x;;12.10.2022;20.10.2022;14.12.2022;14.12.2022;EV-Ladestation
+893520;4313;Möhlin;AG;;x;13.6;x;;;13.10.2022;01.10.2023;;03.11.2023;PV + Batterie
+594950;5103;Möriken AG;AG;;x;20.54;x;-;-;15.10.2022;01.08.2023;;25.07.2023;PV + Batterie
+901752;4803;Vordemwald;AG;-;x;;x;-;-;19.10.2022;KW 33/23;19.12.2023;11.12.2023;PV + Batterie
+216151;8966;Oberwil-Lieli;AG;-;x;;x;-;-;19.10.2022;Sommer 2023;;;
+900418;4663;Aarburg;AG;-;x;21.44;x;-;-;20.10.2022;KW 25/23;;19.12.2023;PV + Batterie
+104987;4322;Mumpf;AG;;x;16.61;x;;;21.10.2022;Q4 2023;;03.11.2023;PV + Batterie
+903240;5034;Suhr;AG;;x;;x;;;22.10.2022;02.10.2023;15.12.2023;03.11.2023;PV + Batterie
+785596;5622;Waltenschwil;AG;x;x;12.75;x;x;;24.10.2022;06.12.2023;07.05.2024;29.09.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+149164;5600;Ammerswil AG;AG;x;x;;x;;;27.10.2022;Q4 / 2023;;06.12.2023;Wärmepumpe + PV + Batterie
+130747;5622;Waltenschwil;AG;x;;;;;;28.10.2022;24.07.2023;18.09.2023;;
+573469;5032;Aarau Rohr;AG;-;-;;x;-;-;29.10.2022;-;-;03.05.2019;Batterie
+118639;5607;Hägglingen;AG;;x;30.88;x;x;;31.10.2022;04.12.2023;28.08.2024;04.07.2024;PV + Batterie + EV-Ladestation
+120137;4313;Möhlin;AG;;x;13.6;x;;;31.10.2022;01.10.2023;;01.11.2023;PV + Batterie
+902362;5430;Wettingen;AG;x;-;;-;-;-;01.11.2022;01.04.2023;;;
+584301;8966;Oberwil-Lieli;AG;-;-;;x;-;-;03.11.2022;07.11.2023;-;21.04.2021;Batterie
+579508;5032;Aarau Rohr;AG;-;x;;-;-;-;04.11.2022;Sommer / Spätsommer 2023;;27.04.2020;PV
+149072;5706;Boniswil;AG;;x;;x;;;04.11.2022;Juni / Juli 23;16.11.2023;;
+692466;8962;Bergdietikon;AG;;x;13.17;x;;;05.11.2022;Q4 2023;;;
+217735;8964;Rudolfstetten;AG;-;x;;x;-;-;07.11.2022;13.11.2023;18.12.2023;08.12.2023;PV + Batterie
+734481;5600;Ammerswil AG;AG;;x;;x;;;09.11.2022;27.11.2023;;14.12.2023;PV + Batterie
+901251;5432;Neuenhof;AG;-;x;;x;x;-;09.11.2022;01.10.2023;19.12.2023;23.11.2023;PV + Batterie + EV-Ladestation
+720808;4325;Schupfart;AG;;x;;;;;10.11.2022;Q4 2023;;10.08.2023;PV
+901260;5024;Küttigen;AG;-;x;;x;-;-;11.11.2022;10.07.2023;;21.11.2023;PV + Batterie
+212714;4665;Oftringen;AG;-;-;;-;x;-;12.11.2022;baldmöglichst ;19.12.2022;08.06.2022;EV-Ladestation
+692112;8962;Bergdietikon;AG;-;-;;-;-;-;15.11.2022;baldmöglichst ;;;
+710804;4312;Magden;AG;-;x;;x;-;-;15.11.2022;01.08.2023;;10.08.2023;PV + Batterie
+176260;5452;Oberrohrdorf;AG;x;x;;x;-;-;16.11.2022;28.08.2023;11.12.2023;21.09.2023;Wärmepumpe + PV + Batterie
+575120;5062;Oberhof;AG;-;x;21.6;x;x;-;17.11.2022;Herbst 2023;;23.10.2019;PV + Batterie + EV-Ladestation
+575120;5062;Oberhof;AG;-;-;;x;-;-;17.11.2022;15.03.2023;06.11.2023;23.10.2019;Batterie
+571675;4805;Brittnau;AG;x;-;;-;-;-;17.11.2022;01.09.2023;04.10.2023;31.08.2023;Wärmepumpe
+790904;5506;Mägenwil;AG;;x;;x;x;;18.11.2022;01.10.2023;07.11.2023;16.03.2023;PV + Batterie + EV-Ladestation
+821253;4303;Kaiseraugst;AG;x;x;;x;;;21.11.2022;01.09.2023;23.10.2023;08.08.2023;Wärmepumpe + PV + Batterie
+698929;5605;Dottikon;AG;x;x;17.38;x;;;23.11.2022;02.01.1900;05.02.2024;15.12.2023;Wärmepumpe + PV + Batterie
+702016;4313;Möhlin;AG;;x;;;;;23.11.2022;24.07.2023;02.10.2023;;
+703035;5443;Niederrohrdorf;AG;x;;;;;;23.11.2022;01.09.2023;25.10.2023;04.09.2023;Wärmepumpe
+592509;5034;Suhr;AG;-;-;;x;-;-;24.11.2022;15.03.2023;-;21.09.2021;Batterie
+213711;5024;Küttigen;AG;-;-;;x;-;-;24.11.2022;01.06.2023;-;17.05.2022;Batterie
+218254;5417;Untersiggenthal;AG;x;;;;x;;27.11.2022;11.08.2023;;;
+166661;5626;Hermetschwil-Staffeln;AG;x;x;9.35;x;x;;03.12.2022;25.09.2023;27.03.2024;05.10.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+714621;5107;Schinznach Dorf;AG;-;-;;x;-;-;03.12.2022;;24.06.2024;17.12.2020;Batterie
+696579;5605;Dottikon;AG;-;x;10.2;x;;;06.12.2022;01.01.2024;23.01.2024;12.01.2024;PV + Batterie
+903068;5620;Bremgarten AG;AG;;x;;x;x;;06.12.2022;01.09.2023;;08.11.2023;PV + Batterie + EV-Ladestation
+901606;5073;Gipf-Oberfrick;AG;;x;;x;x;;07.12.2022;09.10.2023;;11.08.2023;PV + Batterie + EV-Ladestation
+821258;4303;Kaiseraugst;AG;-;-;;-;x;-;10.12.2022;20.06.2023;;09.05.2023;EV-Ladestation
+902353;4657;Dulliken;SO;;x;20.4;x;;;11.12.2022;25.09.2023;11.01.2024;20.12.2023;PV + Batterie
+885322;4313;Möhlin;AG;;x;;x;;;11.12.2022;01.09.2023;;01.09.2023;PV + Batterie
+805535;4313;Möhlin;AG;-;x;7.9;x;;;12.12.2022;Q1/2024 oder wenn möglich früher;;02.02.2024;PV + Batterie
+805537;4313;Möhlin;AG;-;x;7.9;x;;;12.12.2022;Q1/2024 oder wenn möglich früher;;02.02.2024;PV + Batterie
+743047;4303;Kaiseraugst;AG;;x;;x;;;12.12.2022;KW44 / 23;15.12.2023;10.08.2023;PV + Batterie
+731568;4313;Möhlin;AG;-;x;18.7;x;;;14.12.2022;Q1 / 2024;03.04.2024;12.01.2024;PV + Batterie
+722394;4323;Wallbach;AG;-;x;19.57;x;-;-;16.12.2022;Q1 2024;;12.01.2024;PV + Batterie
+732662;4323;Wallbach;AG;-;x;;x;-;-;19.12.2022;Q3 2023;;11.08.2023;PV + Batterie
+883062;4312;Magden;AG;-;-;;-;x;-;21.12.2022;01.02.2023;;;
+190040 / 750463;5504;Othmarsingen;AG;x;-;;-;-;-;21.12.2022;Q3/2023;10.11.2023;21.09.2023;Wärmepumpe
+902831;8957;Spreitenbach;AG;x;-;;-;-;-;21.12.2022;;;;
+138849;5605;Dottikon;AG;-;x;22.1;x;x;-;22.12.2022;Q1 / 2024;22.01.2024;09.01.2024;PV + Batterie + EV-Ladestation
+732821;4323;Wallbach;AG;-;x;17.63;x;-;-;01.01.2023;Q1 2024;;22.11.2023;PV + Batterie
+874661;5106;Veltheim AG;AG;-;x;19.6;x;-;-;04.01.2023;Q1 2024;;18.04.2024;PV + Batterie
+104479;8962;Bergdietikon;AG;-;x;11.48;x;;;08.01.2023;02.04.2024;13.05.2024;15.04.2024;PV + Batterie
+218646;4310;Rheinfelden;AG;-;x;12.71;x;-;-;09.01.2023;15.01.2024;29.02.2024;12.01.2024;PV + Batterie
+155497;5108;Oberflachs;AG;;x;26.1;x;;;10.01.2023;25.04.2024;19.11.2024;26.07.2024;PV + Batterie
+218749;5600;Lenzburg;AG;;x;31.98;x;;;11.01.2023;KW 48 /23;24.01.2024;15.12.2023;PV + Batterie
+741910;4313;Möhlin;AG;;x;23.78;x;;;11.01.2023;KW48 2023;;03.11.2023;PV + Batterie
+708823;5316;Leuggern;AG;-;x;10.08;x;-;-;12.01.2023;29.01.2024;12.03.2024;15.02.2024;PV + Batterie
+692971;5244;Birrhard;AG;x;-;;-;;;12.01.2023;01.08.2023;30.10.2023;15.09.2023;Wärmepumpe
+707045;4312;Magden;AG;x;x;;x;-;-;12.01.2023;11.03.2024;16.04.2024;12.01.2024;Wärmepumpe + PV + Batterie
+878846;5506;Mägenwil;AG;;x;;;;;13.01.2023;03.11.2023;14.12.2023;01.12.2023;PV
+150951;5506;Mägenwil;AG;-;x;;-;-;-;22.01.2023;06.11.2023;14.12.2023;13.11.2023;PV
+218940;5058;Wiliberg;AG;-;x;;x;-;-;24.01.2023;04.12.2023;14.03.2024;07.12.2024;PV + Batterie
+716735;5443;Niederrohrdorf;AG;-;-;;x;-;-;25.01.2023;;;;
+219030;8965;Berikon;AG;-;x;;x;-;-;28.01.2023;13,3,24;27.05.2024;22.04.2024;PV + Batterie
+692126;8962;Bergdietikon;AG;-;x;;x;-;-;28.01.2023;18.03.2024;13.05.2024;03.04.2024;PV + Batterie
+596361;5242;Lupfig;AG;-;x;;-;-;-;29.01.2023;27.03.2024;13.06.2024;15.12.2022;PV
+749429;5616;Meisterschwanden;AG;-;-;;x;-;-;05.02.2023;01.06.2023;;;
+219195;5000;Aarau;AG;-;x;;x;-;-;06.02.2023;20.11.2023;16.01.2024;19.12.2023;PV + Batterie
+118168;5607;Hägglingen;AG;-;x;;x;-;-;16.02.2023;Q2/2024;13.08.2024;01.05.2024;PV + Batterie
+697496;5616;Meisterschwanden;AG;;x;;x;x;;16.02.2023;Q1/2024;25.09.2024;07.02.2024;PV + Batterie + EV-Ladestation
+219355;5222;Umiken;AG;x;x;;;;;20.02.2023;25.03.2024;24,6,24;20.10.2023;Wärmepumpe + PV
+164222;8962;Bergdietikon;AG;-;-;;x;-;-;22.02.2023;27.06.2023;-;;
+590142;5000;Aarau;AG;-;x;;x;-;-;23.02.2023;20.11.2023;05.12.2023;08.11.2023;PV + Batterie
+590142;5000;Aarau;AG;-;x;;x;-;-;23.02.2023;01.07.2023;05.12.2023;08.11.2023;PV + Batterie
+751403;5105;Auenstein;AG;x;x;;-;-;-;27.02.2023;Frühilng 2023;;21.11.2023;Wärmepumpe + PV
+219690;4800;Zofingen;AG;x;x;;x;x;-;28.02.2023;11.09.2023;;19.12.2023;Wärmepumpe + PV + Batterie + EV-Ladestation
+745959;5105;Auenstein;AG;x;x;;x;-;-;02.03.2023;21.04.2023;;10.01.2024;Wärmepumpe + PV + Batterie
+161857;4324;Obermumpf;AG;-;x;;-;x;-;03.03.2023;22.01.2024;04.03.2024;29.01.2024;PV + EV-Ladestation
+731681;5106;Veltheim AG;AG;-;x;;x;-;-;03.03.2023;Q2/2024;01.07.2024;31.05.2024;PV + Batterie
+132315;4312;Magden;AG;-;x;;x;-;-;04.03.2023;05.02.2024;21.03.2023;12.01.2024;PV + Batterie
+219735;5018;Erlinsbach;AG;-;x;;x;;;05.03.2023;08.04.2024;03.06.2024;23.04.2024;PV + Batterie
+131858;5443;Niederrohrdorf;AG;-;x;;x;-;-;08.03.2023;Q1/2024;20.11.2024;12.08.2024;PV + Batterie
+752093;4303;Kaiseraugst;AG;-;x;;x;-;-;10.03.2023;KW 5 2024;;12.01.2024;PV + Batterie
+720260;4312;Magden;AG;-;x;;x;-;-;15.03.2023;Q2/2024;;05.06.2024;PV + Batterie
+126001;4312;Magden;AG;-;x;;x;-;-;15.03.2023;KW 5 / 2024;;;
+739616;4813;Uerkheim;AG;-;x;;-;x;-;19.03.2023;15.01.2024;11.04.2024;11.05.2021;PV + EV-Ladestation
+902793;5210;Windisch;AG;x;-;;-;-;-;20.03.2023;Q3/2023;26.10.2023;28.09.2023;Wärmepumpe
+745415;5074;Eiken;AG;-;x;;x;-;-;20.03.2023;Q4/2023;09.04.2024;20.12.2023;PV + Batterie
+175514;5313;Klingnau;AG;-;x;;x;-;-;27.03.2023;Q2/2024;19.08.2024;02.07.2024;PV + Batterie
+727027;5225;Bözberg;AG;-;x;;x;-;-;28.03.2023;11.04.2024;17.06.2024;17.06.2024;PV + Batterie
+220346;5018;Erlinsbach;AG;x;;;;;;31.03.2023;Q2/2024;27.08.2024;07.06.2024;Wärmepumpe
+700296;4310;Rheinfelden;AG;x;x;;x;-;-;02.04.2023;12.02.2024;04.04.2024;03.04.2024;Wärmepumpe + PV + Batterie
+904943;5024;Küttigen;AG;-;x;;x;x;-;03.04.2023;Q1/2024;19.03.2024;02.08.2023;PV + Batterie + EV-Ladestation
+785360;5622;Waltenschwil;AG;-;-;;-;x;-;05.04.2023;Q2/2023;-;29.10.2020;EV-Ladestation
+220402;5000;Aarau;AG;-;x;;x;-;-;05.04.2023;Q1 / 2024;;;
+159313;4805;Brittnau;AG;-;x;;x;-;-;05.04.2023;Frühling 2024;;20.03.2024;PV + Batterie
+806207;5225;Bözberg;AG;-;-;;-;x;-;06.04.2023;20.11.2023;02.10.2023;20.10.2021;EV-Ladestation
+144863;5105;Auenstein;AG;-;x;;x;-;-;06.04.2023;Q1 / 2024;;06.04.2024;PV + Batterie
+868747;5102;Rupperswil;AG;-;x;;x;-;-;08.04.2023;KW 4 / 24;23.02.2024;01.02.2024;PV + Batterie
+596561;5430;Wettingen;AG;x;x;;x;-;-;11.04.2023;Q2/2024;21.06.2024;22.09.2023;Wärmepumpe + PV + Batterie
+590142;5000;Aarau;AG;-;-;;x;-;-;12.04.2023;01.11.2023;-;;
+166831;5725;Leutwil;AG;-;x;;x;x;-;13.04.2023;Q2/2024;25.06.2024;11.06.2024;PV + Batterie + EV-Ladestation
+797810;5616;Meisterschwanden;AG;-;x;;-;-;-;14.04.2023;01.05.2024;17.06.2024;17.07.2024;PV
+595990;5033;Buchs AG;AG;-;-;;x;-;-;15.04.2023;10.05.2023;24.05.2023;21.10.2022;Batterie
+559868;5036;Oberentfelden;AG;-;x;;x;-;-;16.04.2023;Q1/2024;22.04.2024;07.03.2024;PV + Batterie
+109520;4313;Möhlin;AG;-;-;;-;-;-;17.04.2023;;-;;
+585660;4322;Mumpf;AG;-;x;;-;-;-;18.04.2023;13.06.2024;27.09.2024;14.03.2024;PV
+904069;8905;Arni AG;AG;-;x;;-;-;-;21.04.2023;01.04.2024;;25.06.2024;PV
+127600;5235;Rüfenach AG;AG;-;-;;x;-;-;26.04.2023;Q2 2023;;14.12.2022;Batterie
+220642;5200;Brugg AG;AG;x;-;;-;-;-;26.04.2023;01.10.2023;04.12.2023;;
+785007;5622;Waltenschwil;AG;-;-;;-;x;-;02.05.2023;01.03.2024;-;09.05.2019;EV-Ladestation
+556837;5236;Remigen;AG;;x;;x;-;;02.05.2023;01.03.2024;03.05.2024;26.03.2024;PV + Batterie
+812506;5506;Mägenwil;AG;-;x;;x;-;-;04.05.2023;Q1/2024;18.06.2024;22.03.2024;PV + Batterie
+735427;4315;Zuzgen;AG;-;x;;x;-;-;08.05.2023;25.03.2024;16.05.2024;04.03.2024;PV + Batterie
+718990;5027;Herznach;AG;-;-;;-;x;-;10.05.2023;Q2/2024;27.02.2024;02.02.2024;EV-Ladestation
+736207;5078;Effingen;AG;-;x;;x;-;-;13.05.2023;03.06.2024;26.07.2024;25.06.2024;PV + Batterie
+220966;5018;Erlinsbach;AG;-;x;;x;-;-;14.05.2023;26.02.2024;17.04.2024;10.04.2024;PV + Batterie
+594211;5415;Nussbaumen AG;AG;-;-;;x;-;-;17.05.2023;;;19.05.2022;Batterie
+184486;5305;Unterendingen;AG;-;x;;x;-;-;17.05.2023;Q2, Q3/2024;;04.07.2024;PV + Batterie
+572042;5070;Frick;AG;x;-;;-;-;-;24.05.2023;01.10.2023;;;
+186748;5074;Eiken;AG;x;x;;x;-;-;24.05.2023;Q3/23+Q1/24;12.04.2024;03.07.2023;Wärmepumpe + PV + Batterie
+723701;5707;Seengen;AG;x;x;;x;x;;30.05.2023;Q3/23+Q1/24;08.05.2024;17.01.2024;Wärmepumpe + PV + Batterie + EV-Ladestation
+847273;5620;Bremgarten AG;AG;-;x;14.95;x;-;-;04.06.2023;Q2/2024;10.09.2025;19.07.2024;PV + Batterie
+221242;5000;Aarau;AG;-;-;;-;x;-;06.06.2023;13.10.2023;13.10.2023;13.10.2023;EV-Ladestation
+215731;5430;Wettingen;AG;-;x;;x;-;-;10.06.2023;12.06.2023;27.09.2023;24.08.2023;PV + Batterie
+13217;4324;Obermumpf;AG;-;x;;x;x;-;15.06.2023;01.04.2024;;20.03.2024;PV + Batterie + EV-Ladestation
+594379;4333;Münchwilen AG;AG;-;x;;-;-;-;19.06.2023;01.05.2024;06.05.2024;07.02.2024;PV
+201264;5076;Bözen;AG;-;x;;x;;;19.06.2023;15.04.2024;08.06.2024;07.05.2024;PV + Batterie
+186964;4334;Sisseln AG;AG;-;x;;x;-;-;19.06.2023;02.04.2024;20.05.2024;13.03.2024;PV + Batterie
+221051;8954;Geroldswil;ZH;x;x;9.2;x;-;-;21.06.2023;Q2/2024;03.04.2025;03.10.2024;Wärmepumpe + PV + Batterie
+904184;4312;Magden;AG;-;x;;x;-;-;21.06.2023;01.06.2024;;13.03.2024;PV + Batterie
+725159;4310;Rheinfelden;AG;-;x;;-;-;-;21.06.2023;;;;
+715586;4322;Mumpf;AG;-;x;;x;-;-;22.06.2023;01.04.2024;;09.10.2024;PV + Batterie
+113592;5106;Veltheim AG;AG;-;x;;x;x;-;26.06.2023;Q2/2024;10.07.2024;28.06.2024;PV + Batterie + EV-Ladestation
+717438;5225;Bözberg;AG;;x;;x;-;-;27.06.2023;12:2.24;08.11.2024;28.02.2024;PV + Batterie
+867869;5504;Othmarsingen;AG;-;x;;x;x;-;30.06.2023;Q2/2024;08.07.2024;03.07.2024;PV + Batterie + EV-Ladestation
+159181;4805;Brittnau;AG;-;x;;;-;;04.07.2023;01.04.2024;07.05.2024;06.05.2024;PV
+221660;5607;Hägglingen;AG;-;x;;;-;;04.07.2023;Q2/2024;26.06.2024;31.05.2024;PV
+706335;4310;Rheinfelden;AG;-;x;;x;-;;04.07.2023;01.05.2024;13.06.2024;12.06.2024;PV + Batterie
+863162;4324;Obermumpf;AG;-;x;;x;-;;04.07.2023;01.05.2024;;14.03.2024;PV + Batterie
+107868;5322;Koblenz;AG;-;x;;;-;;05.07.2023;01.07.2024;01.10.2024;06.09.2024;PV
+700623;5074;Eiken;AG;-;x;;-;-;;06.07.2023;Q2/2024;24.06.2024;13.03.2024;PV
+906818;5000;Aarau;AG;-;x;;x;-;;06.07.2023;Q1.2024;;24.07.2024;PV + Batterie
+722764;5620;Bremgarten AG;AG;-;x;;x;-;;07.07.2023;Q2/2024;13.11.2024;08.07.2024;PV + Batterie
+221151;5610;Wohlen AG;AG;-;x;;x;x;;12.07.2023;04.03.2024;18.04.2024;05.04.2024;PV + Batterie + EV-Ladestation
+596077;5272;Gansingen;AG;-;x;;-;-;;18.07.2023;01.10.2023;26.10.2023;13.10.2023;PV
+221251;5507;Mellingen;AG;-;x;;x;-;;20.07.2023;30.10.2023;09.04.2024;20.06.2024;PV + Batterie
+222361;3038;Kirchlindach;BE;-;x;;-;-;;21.07.2023;30.05.2024;22.07.2024;14.06.2024;PV
+108808;5322;Koblenz;AG;-;x;;x;-;;22.07.2023;10.06.2024;15.07.2024;;
+689836;5237;Mönthal;AG;-;x;23.93;;-;;27.07.2023;01.08.2024;;05.11.2024;PV
+181978;4323;Wallbach;AG;-;-;;x;-;-;30.07.2023;28.09.2023;;22.09.2022;Batterie
+576618;5600;Lenzburg;AG;x;-;;-;-;;01.08.2023;offen;;31.01.2024;Wärmepumpe
+221104;5504;Othmarsingen;AG;-;x;26.97;x;-;;03.08.2023;Q3 / 2024;17.02.2025;27.08.2024;PV + Batterie
+905318;5024;Küttigen;AG;-;x;;x;-;;06.08.2023;10.06.2024;;;
+197257;5426;Lengnau AG;AG;-;x;;x;x;;08.08.2023;01.06.2024;24.10.2024;16.07.2024;PV + Batterie + EV-Ladestation
+221163;5000;Aarau;AG;x;x;;x;-;;09.08.2023;WP Nov.23 PV Juni 2024;;08.05.2024;Wärmepumpe + PV + Batterie
+855487;4323;Wallbach;AG;-;x;;x;-;;10.08.2023;26.08.2024;17.10.2024;09.08.2024;PV + Batterie
+220598;5502;Hunzenschwil;AG;-;x;;x;-;;11.08.2023;01.06.2024;11.07.2024;21.06.2024;PV + Batterie
+222659;5722;Gränichen;AG;-;x;;x;-;;14.08.2023;Q2 / 2024;09.08.2024;31.07.2024;PV + Batterie
+220464;5442;Fislisbach;AG;x;x;;x;-;;14.08.2023;Q2 / 2024;28.10.2024;29.02.2024;Wärmepumpe + PV + Batterie
+147864;4314;Zeiningen;AG;-;x;;-;-;;15.08.2023;01.06.2024;;27.05.2024;PV
+745424;5027;Herznach;AG;-;;;x;-;;21.08.2023;;;05.06.2023;Batterie
+143397;5620;Bremgarten AG;AG;-;x;;x;-;;25.08.2023;13.06.2024;14.10.2024;30.07.2024;PV + Batterie
+153093;5504;Othmarsingen;AG;-;-;;-;x;;26.08.2023;Q3/2023;-;13.10.2023;EV-Ladestation
+727137;4333;Münchwilen AG;AG;-;x;;-;-;;30.08.2023;01.06.2024;;27.06.2024;PV
+220835;4853;Murgenthal;AG;-;x;;-;-;;30.08.2023;22.07.2024;23.09.2024;03.09.2024;PV
+222951;5622;Waltenschwil;AG;-;x;;x;-;;31.08.2023;Q2/2024;06.09.2024;28.08.2024;PV + Batterie
+727135;4333;Münchwilen AG;AG;-;x;;-;-;;03.09.2023;01.06.2024;;05.06.2024;PV
+116909;4665;Oftringen;AG;x;x;;x;-;;04.09.2023;03.06.2024;29.07.2024;28.03.2024;Wärmepumpe + PV + Batterie
+900371;5107;Schinznach Dorf;AG;-;-;;x;-;;05.09.2023;01.11.2023;;;
+725192;4312;Magden;AG;-;x;;x;-;;05.09.2023;01.06.2024;08.07.2024;28.05.2024;PV + Batterie
+748404;5614;Sarmenstorf;AG;-;-;;x;x;;07.09.2023;Q1/2024;02.02.2024;27.09.2021;Batterie + EV-Ladestation
+821784;5707;Seengen;AG;x;x;22.53;x;-;;08.09.2023;01.06.2024;01.11.2024;12.09.2024;Wärmepumpe + PV + Batterie
+135868;4313;Möhlin;AG;-;x;;x;-;;10.09.2023;15.07.2024;23.08.2024;20.06.2024;PV + Batterie
+146143;4323;Wallbach;AG;-;x;;x;-;;15.09.2023;23&24;;;
+578756;5452;Oberrohrdorf;AG;-;x;;-;-;;15.09.2023;15.07.2024;26.09.2024;09.08.2024;PV
+592852;5242;Birr;AG;-;x;;x;x;;17.09.2023;01.09.2024;18.11.2024;10.10.2024;PV + Batterie + EV-Ladestation
+223319;5013;Niedergösgen;SO;x;x;;x;-;;17.09.2023;22.04.2024;15.07.2024;06.06.2024;Wärmepumpe + PV + Batterie
+222144;5737;Menziken;AG;-;x;;x;-;;18.09.2023;01.07.2024;18.09.2024;03.09.2024;PV + Batterie
+596019;5728;Gontenschwil;AG;-;-;;x;-;;19.09.2023;01.10.2024;-;11.01.2022;Batterie
+594211;5415;Nussbaumen AG;AG;;x;;;-;;20.09.2023;01.10.2023;;19.05.2022;PV
+223567;8965;Berikon;AG;-;x;;x;-;;20.09.2023;01.08.2024;25.10.2024;09.08.2024;PV + Batterie
+577538;5200;Brugg AG;AG;-;x;;x;-;;20.09.2023;01.06.2024;;09.08.2024;PV + Batterie
+223425;4802;Strengelbach;AG;-;x;;x;-;;21.09.2023;01.07.2024;;;
+731757;5616;Meisterschwanden;AG;x;-;;-;-;;21.09.2023;Q2 / 2024;25.06.2024;06.06.2024;Wärmepumpe
+712408;5705;Hallwil;AG;-;x;;x;-;;21.09.2023;01.11.2023;;14.12.2023;PV + Batterie
+712048;5616;Meisterschwanden;AG;;x;;x;;;22.09.2023;01.08.2024;25.10.2024;06.09.2024;PV + Batterie
+223566;4102;Binningen;BL;;x;;x;;;22.09.2023;19.08.2024;06.01.2025;17.01.2025;PV + Batterie
+223653;4323;Wallbach;AG;;x;;x;;;24.09.2023;01.08.2024;;20.06.2024;PV + Batterie
+583987;5024;Küttigen;AG;-;-;;x;-;;25.09.2023;01.12.2023;;31.05.2021;Batterie
+220683;4803;Vordemwald;AG;-;x;;x;-;;26.09.2023;05.08.2024;23.09.2024;09.08.2024;PV + Batterie
+201391;5076;Bözen;AG;;x;;x;;;28.09.2023;01.09.2024;;07.10.2024;PV + Batterie
+155412;8967;Widen;AG;;;;x;;;02.10.2023;Q4, 2023;;29.06.2023;Batterie
+693075;4323;Wallbach;AG;-;x;;x;-;;04.10.2023;01.08.2024;;25.06.2024;PV + Batterie
+176765;5621;Zufikon;AG;-;x;;x;-;;11.10.2023;01.07.2024;26.08.2024;30.07.2024;PV + Batterie
+745959;5105;Auenstein;AG;-;-;;-;x;;14.10.2023;KW 51;;;
+224211;5018;Erlinsbach;AG;-;x;;x;-;;20.10.2023;01.09.2024;;;
+224148;6234;Triengen;LU;-;x;;x;x;;21.10.2023;01.08.2024;16.10.2024;11.09.2024;PV + Batterie + EV-Ladestation
+119324;5614;Sarmenstorf;AG;-;x;;x;-;;21.10.2023;01.07.2024;15.01.2025;18.09.2024;PV + Batterie
+896125;5745;Safenwil;AG;-;x;;-;-;;28.10.2023;01.08.2024;;19.09.2024;PV
+10179;5024;Küttigen;AG;-;-;;-;-;;01.11.2023;;;;
+120137;4313;Möhlin;AG;-;-;;-;x;;02.11.2023;;;;
+591571;5426;Lengnau AG;AG;;x;;x;;;02.11.2023;01.05.2024;28.06.2024;27.06.2024;PV + Batterie
+221953;4852;Rothrist;AG;x;x;;x;-;;02.11.2023;26.09.2024;06.12.2024;09.08.2021;Wärmepumpe + PV + Batterie
+165183;5504;Othmarsingen;AG;-;x;;x;-;;04.11.2023;01.03.2024;22.04.2024;04.04.2024;PV + Batterie
+224437;5036;Oberentfelden;AG;x;x;;x;-;;05.11.2023;WP Mai 2024 / PV Sep. 2024;;11.07.2024;Wärmepumpe + PV + Batterie
+224444;5000;Aarau;AG;-;x;;x;-;;06.11.2023;01.09.2024;;11.10.2024;PV + Batterie
+194423;4324;Obermumpf;AG;;x;;;-;;10.11.2023;01.09.2024;;;
+224372;5242;Birr;AG;-;x;;x;-;;11.11.2023;01.03.2024;25.04.2024;03.04.2024;PV + Batterie
+165171;5506;Mägenwil;AG;x;-;;-;-;;12.11.2023;01.06.2024;;24.06.2024;Wärmepumpe
+900418;4663;Aarburg;AG;-;-;;x;-;-;13.11.2023;01.12.2023;;19.12.2023;Batterie
+224481;5400;Baden;AG;-;x;;x;-;;15.11.2023;01.08.2024;27.08.2024;21.08.2024;PV + Batterie
+726831;4323;Wallbach;AG;;x;;x;x;;15.11.2023;07.10.2024;02.12.2024;24.09.2024;PV + Batterie + EV-Ladestation
+224532;4600;Olten;SO;;x;;;-;;20.11.2023;10.10.2024;25.11.2024;25.11.2024;PV
+224819;4657;Dulliken;SO;x;x;31.32;x;-;;22.11.2023;01.05.2024;12..12.24;25.07.2024;Wärmepumpe + PV + Batterie
+596641;4464;Maisprach;BL;-;-;;x;-;;22.11.2023;01.01.2024;16.01.2024;13.06.2023;Batterie
+123159;4310;Rheinfelden;AG;x;;;;-;;23.11.2023;01.07.2024;11.09.2024;22.03.2018;Wärmepumpe
+726831;4323;Wallbach;AG;-;x;;x;-;;26.11.2023;KW 23;;24.09.2024;PV + Batterie
+576050;5600;Lenzburg;AG;-;-;;x;-;;01.12.2023;10.01.2024;-;13.09.2021;Batterie
+867608;5604;Hendschiken;AG;;x;;;-;;01.12.2023;01.09.2024;28.10.2024;27.09.2024;PV
+224898;5620;Bremgarten AG;AG;-;x;;;-;;02.12.2023;07.10.2024;11.12.2024;30.10.2024;PV
+580767;4312;Magden;AG;-;x;;;-;;03.12.2023;07.10.2024;14.11.2024;17.10.2024;PV
+225057;5034;Suhr;AG;x;x;;x;-;;05.12.2023;01.06.2024;;09.08.2024;Wärmepumpe + PV + Batterie
+221878;5033;Buchs AG;AG;-;x;;-;-;;09.12.2023;01.10.2024;;05.11.2024;PV
+555287;5706;Boniswil;AG;-;x;;x;-;;09.12.2023;01.05.2024;13.09.2024;29.08.2024;PV + Batterie
+162827;5225;Bözberg;AG;-;x;;x;-;;10.12.2023;01.05.2024;20.09.2024;03.05.2024;PV + Batterie
+757719;4312;Magden;AG;x;x;14.22;x;-;;15.12.2023;01.08.2024;24.01.2025;25.07.2024;Wärmepumpe + PV + Batterie
+225127;5443;Niederrohrdorf;AG;-;x;;-;-;;15.12.2023;01.09.2024;;;
+225127;5443;Niederrohrdorf;AG;-;x;;-;-;;15.12.2023;01.09.2024;;;
+583323;4303;Kaiseraugst;AG;-;x;;-;-;;17.12.2023;01.01.2024;13.02.2024;02.12.2020;PV
+164237;5622;Waltenschwil;AG;-;x;;x;-;;18.12.2023;01.05.2024;13.11.2024;20.08.2024;PV + Batterie
+225186;4612;Wangen b. Olten;SO;-;x;;x;-;;19.12.2023;01.08.2024;22.10.2024;04.09.2024;PV + Batterie
+711259;5506;Mägenwil;AG;-;x;;-;-;;20.12.2023;01.05.2024;;;
+142682;4303;Kaiseraugst;AG;;x;13.7;x;-;;22.12.2023;01.08.2024;20.01.2025;08.10.2024;PV + Batterie
+809909;5506;Mägenwil;AG;-;x;;-;-;;26.12.2023;01.05.2024;30.08.2024;15.05.2024;PV
+225302;5452;Oberrohrdorf;AG;-;x;;x;-;;27.12.2023;01.09.2024;04.12.2024;22.11.2024;PV + Batterie
+218940;5058;Wiliberg;AG;x;-;;-;-;;30.12.2023;01.02.2024;14.03.2024;;
+204380;5325;Leibstadt;AG;x;x;20.24;x;x;;01.01.2024;04.11.2024;07.02.2025;19.04.2024;Wärmepumpe + PV + Batterie + EV-Ladestation
+225364;5116;Schinznach Bad;AG;-;x;;-;-;;07.01.2024;01.04.2024;;14.05.2024;PV
+750463;4310;Rheinfelden;AG;-;x;;-;-;;09.01.2024;04.10.2024;09.01.2025;09.01.2025;PV
+225438;5442;Fislisbach;AG;-;x;;x;x;;09.01.2024;01.05.2024;14.08.2024;02.07.2024;PV + Batterie + EV-Ladestation
+225601;5033;Buchs AG;AG;-;x;;-;-;;13.01.2024;01.07.2024;;17.07.2024;PV
+225602;5033;Buchs AG;AG;-;x;;-;-;;16.01.2024;01.07.2024;;23.08.2024;PV
+148105;4314;Zeiningen;AG;-;-;;-;x;;17.01.2024;01.02.2024;06.03.2024;11.05.2023;EV-Ladestation
+225594;5243;Mülligen;AG;-;x;;x;-;;17.01.2024;01.05.2024;16.10.2024;04.07.2024;PV + Batterie
+225685;5630;Muri AG;AG;-;x;;x;-;;22.01.2024;01.03.2024;10.06.2024;29.04.2024;PV + Batterie
+225852;5620;Bremgarten AG;AG;-;x;;-;-;;23.01.2024;;;12.12.2024;PV
+587753;5103;Möriken AG;AG;x;-;;-;-;;23.01.2024;01.08.2024;30.10.2024;29.08.2024;Wärmepumpe
+221659;5502;Hunzenschwil;AG;;;;;-;;24.01.2024;_;;;
+196344;5732;Zetzwil;AG;-;x;;x;-;;26.01.2024;20.05.2024;13.06.2024;21.06.2017;PV + Batterie
+906291;8962;Bergdietikon;AG;x;-;;-;-;;27.01.2024;01.09.2024;21.10.2024;29.08.2024;Wärmepumpe
+806207;5225;Bözberg;AG;-;x;;-;-;;28.01.2024;19.08.2024;26.09.2024;20.10.2021;PV
+696588;5044;Schlossrued;AG;-;x;20.88;-;-;;29.01.2024;25.11.2024;;04.12.2024;PV
+223653;4323;Wallbach;AG;-;-;;-;x;;29.01.2024;01.08.2024;;;
+225908;5603;Staufen;AG;-;x;;-;-;;31.01.2024;27.05.2024;08.07.2024;14.06.2025;PV
+225935;5611;Anglikon;AG;-;x;;-;-;;02.02.2024;30.04.2024;22.05.2024;29.04.2024;PV
+226026;4313;Möhlin;AG;-;x;;x;;;05.02.2024;01.06.2024;;13.03.2024;PV + Batterie
+790904;5506;Mägenwil;AG;-;-;;x;-;;07.02.2024;01.04.2024;-;16.03.2023;Batterie
+745415;5074;Eiken;AG;-;-;;x;-;;09.02.2024;01.04.2024;-;20.12.2023;Batterie
+716143;4303;Kaiseraugst;AG;-;x;;-;-;;13.02.2024;04.11.2024;;;
+578387;4323;Wallbach;AG;-;x;;x;-;;14.02.2024;01.08.2024;;09.09.2024;PV + Batterie
+176306;5707;Seengen;AG;-;x;26.66;-;-;;15.02.2024;01.12.2024;13.01.2025;28.11.2024;PV
+720022;4310;Rheinfelden;AG;x;x;25.37;x;-;;16.02.2024;25.11.2024;23.01.2025;05.08.2024;Wärmepumpe + PV + Batterie
+573146;8918;Unterlunkhofen;AG;x;x;;-;-;;16.02.2024;20.05.2024;;09.07.2024;Wärmepumpe + PV
+226514;8919;Rottenschwil;AG;-;x;;x;x;;17.02.2024;30.06.2024;23.10.2024;22.07.2024;PV + Batterie + EV-Ladestation
+194265;5078;Effingen;AG;x;x;;x;-;;18.02.2024;01.08.2024;15.11.2024;08.08.2024;Wärmepumpe + PV + Batterie
+226644;5430;Wettingen;AG;-;x;39.84;x;x;;20.02.2024;05.08.2024;25.06.2025;30.08.2024;PV + Batterie + EV-Ladestation
+226809;5610;Wohlen AG;AG;x;-;;-;-;;22.02.2024;01.09.2024;24.09.2024;29.07.2024;Wärmepumpe
+904184;4312;Magden;AG;-;-;;-;x;;23.02.2024;13.05.2024;;;
+226751;4802;Strengelbach;AG;-;x;9.14;x;-;;24.02.2024;01.12.2024;09.01.2025;09.12.2024;PV + Batterie
+221251;5507;Mellingen;AG;-;-;;-;-;;24.02.2024;01.02.2024;09.04.2024;;
+552884;5522;Tägerig;AG;-;x;;x;x;;25.02.2024;01.06.2024;;08.07.2024;PV + Batterie + EV-Ladestation
+594950;5103;Möriken AG;AG;-;-;;x;-;;28.02.2024;?;;25.07.2023;Batterie
+127293;4313;Möhlin;AG;-;x;;x;-;;03.03.2024;01.09.2024;;09.08.2024;PV + Batterie
+221660;5607;Hägglingen;AG;-;-;;-;x;;04.03.2024;20.05.2024;26.06.2024;10.06.2024;EV-Ladestation
+583817;5605;Dottikon;AG;-;x;13.35;x;-;;05.03.2024;01.07.2024;24.10.2025;;
+187213;5113;Holderbank AG;AG;x;-;;-;-;;07.03.2024;05.08.2024;;;
+710897;4315;Zuzgen;AG;-;x;;-;-;;12.03.2024;01.09.2024;;09.08.2024;PV
+717974;5452;Oberrohrdorf;AG;-;x;;x;x;;13.03.2024;16.09.2024;15.11.2024;18.10.2024;PV + Batterie + EV-Ladestation
+227165;5603;Staufen;AG;-;x;;-;-;;14.03.2024;24.06.2024;21.10.2024;03.07.2024;PV
+225602;5033;Buchs AG;AG;-;-;;x;-;;22.03.2024;15.07.2024;;;
+227446;4323;Wallbach;AG;-;x;;;-;;25.03.2024;03.06.2024;15.08.2024;02.07.2024;PV
+897353;5522;Tägerig;AG;-;x;;x;-;;26.03.2024;15.07.2024;23.09.2024;30.08.2024;PV + Batterie
+811757;5608;Stetten AG;AG;-;x;;;-;;02.04.2024;10.07.2024;23.09.2024;11.07.2024;PV
+226015;5082;Kaisten;AG;-;x;;x;-;;02.04.2024;01.08.2024;;;
+227594;5412;Gebenstorf;AG;x;x;;x;-;;02.04.2024;01.09.2024;17.12.2024;06.09.2024;Wärmepumpe + PV + Batterie
+696579;5605;Dottikon;AG;-;-;;x;-;;03.04.2024;01.06.2024;-;12.01.2024;Batterie
+696780;4310;Rheinfelden;AG;-;x;;x;-;;08.04.2024;04.06.2024;08.11.2024;27.05.2024;PV + Batterie
+118168;5607;Hägglingen;AG;-;-;;-;x;;12.04.2024;15.04.2024;-;11.06.2024;EV-Ladestation
+708813;5316;Leuggern;AG;-;x;10.32;x;-;;19.04.2024;02.12.2024;;;
+228090;5034;Suhr;AG;-;x;;x;-;;20.04.2024;24.06.2024;06.11.2024;30.06.2024;PV + Batterie
+720199;4314;Zeiningen;AG;-;x;13.05;x;-;;22.04.2024;24.09.2024;10.03.2025;06.02.2025;PV + Batterie
+150964;5107;Schinznach Dorf;AG;-;x;;-;-;;28.04.2024;25.06.2024;20.08.2024;23.07.2024;PV
+198525;5723;Teufenthal AG;AG;-;x;;x;-;;28.04.2024;01.09.2024;04.12.2024;06.11.2024;PV + Batterie
+223900;5607;Hägglingen;AG;-;x;;x;-;;30.04.2024;01.09.2024;;22.11.2024;PV + Batterie
+226549;4542;Luterbach;SO;x;x;14.45;x;-;;01.05.2024;01.09.2024;20.05.2025;21.10.2024;Wärmepumpe + PV + Batterie
+797810;5616;Meisterschwanden;AG;-;-;;-;x;;01.05.2024;13.05.2024;17.06.2024;10.06.2024;EV-Ladestation
+182712;8967;Widen;AG;x;x;;-;-;;01.05.2024;01.09.2024;18.12.2024;06.12.2024;Wärmepumpe + PV
+732680;4323;Wallbach;AG;x;x;;x;-;;02.05.2024;;;11.10.2024;Wärmepumpe + PV + Batterie
+867608;5604;Hendschiken;AG;-;-;;-;x;;06.05.2024;02.09.2024;-;23.09.2024;EV-Ladestation
+868792;4322;Mumpf;AG;-;x;;x;-;;20.05.2024;26.08.2024;23.10.2024;30.08.2024;PV + Batterie
+226011;5425;Schneisingen;AG;-;x;;-;-;;24.05.2024;12.8,24;23.09.2024;;
+228750;5620;Bremgarten AG;AG;-;x;;-;-;;25.05.2024;01.06.2024;06.11.2024;08.08.2024;PV
+228764;5034;Suhr;AG;-;x;;x;-;;27.05.2024;01.09.2024;;30.09.2024;PV + Batterie
+167903;4332;Stein AG;AG;-;x;;x;-;;28.05.2024;01.06.2024;;29.05.2024;PV + Batterie
+197811;4305;Olsberg;AG;-;x;;x;-;;11.06.2024;30.09.2024;06.12.2024;05.12.2024;PV + Batterie
+227658;5200;Brugg AG;AG;x;-;;-;-;;12.06.2024;01.11.2024;;;
+736402;5236;Remigen;AG;-;x;19.36;-;-;;14.06.2024;KW 36;05.05.2025;01.05.2025;PV
+226022;5702;Niederlenz;AG;-;x;;x;-;;14.06.2024;12.08.2024;27.11.2024;06.09.2024;PV + Batterie
+709341;4317;Wegenstetten;AG;x;x;10.8;x;;;18.06.2024;02.12.2024;07.02.2025;11.12.2024;Wärmepumpe + PV + Batterie
+227957;5103;Möriken AG;AG;-;x;;;;;18.06.2024;01.10.2024;;09.10.2024;PV
+229103;5272;Gansingen;AG;-;x;;x;;;18.06.2024;01.09.2024;;18.11.2024;PV + Batterie
+719301;5504;Othmarsingen;AG;-;x;;x;;;22.06.2024;09.09.2024;18.10.2024;17.09.2024;PV + Batterie
+229415;5107;Schinznach Dorf;AG;x;-;;-;-;;25.06.2024;im 2025;;;
+590480;5210;Windisch;AG;-;-;;-;x;;26.06.2024;01.08.2024;07.01.2025;08.12.2021;EV-Ladestation
+155497;5108;Oberflachs;AG;-;x;;x;-;;27.06.2024;08.07.2024;15.10.2024;26.07.2024;PV + Batterie
+228382;5502;Hunzenschwil;AG;-;x;;x;-;;30.06.2024;16.09.2024;29.11.2024;25.09.2024;PV + Batterie
+595990;5033;Buchs AG;AG;-;x;;-;-;;01.07.2024;01.10.2024;;21.10.2022;PV
+696935;5225;Bözberg;AG;x;x;24.6;x;-;;02.07.2024;25.01.2025;10.04.2025;09.04.2025;Wärmepumpe + PV + Batterie
+589123;5014;Gretzenbach;SO;-;-;;x;-;;02.07.2024;;;;
+229547;5436;Würenlos;AG;-;x;;-;-;;05.07.2024;KW41;;;
+731681;5106;Veltheim AG;AG;-;-;;x;-;;06.07.2024;01.09.2024;-;05.09.2024;Batterie
+735579;8962;Bergdietikon;AG;-;x;;x;-;;06.07.2024;Spätsommer;;;
+149164;5600;Ammerswil AG;AG;-;-;;x;-;;10.07.2024;?;;;
+698970;5452;Oberrohrdorf;AG;-;-;;x;-;;10.07.2024;01.09.2024;28.10.2024;21.06.2018;Batterie
+226885;5032;Aarau Rohr;AG;-;x;18.48;-;-;;11.07.2024;25.11.2024;13.01.2025;27.11.2024;PV
+227966;5032;Aarau Rohr;AG;-;x;;x;x;;12.07.2024;KW 40;;20.12.2024;PV + Batterie + EV-Ladestation
+694066;5707;Seengen;AG;-;-;;-;x;;13.07.2024;?;;16.03.2022;EV-Ladestation
+228239;5452;Oberrohrdorf;AG;-;x;;x;-;;13.07.2024;KW 42;16.12.2024;25.11.2024;PV + Batterie
+228384;5502;Hunzenschwil;AG;-;x;;x;-;;13.07.2024;28.10.2024;;05.12.2024;PV + Batterie
+746764;5452;Oberrohrdorf;AG;-;x;;x;-;;14.07.2024;14.10.2024;25.11.2024;28.10.2024;PV + Batterie
+229766;5703;Seon;AG;-;x;8.36;x;-;;17.07.2024;21.10.2024;20.02.2025;20.11.2024;PV + Batterie
+722929;5106;Veltheim AG;AG;-;x;;x;;;17.07.2024;01.10.2024;;17.12.2024;PV + Batterie
+227804;5702;Niederlenz;AG;-;x;;x;-;;03.08.2024;KW 46;13.12.2024;30.11.2024;PV + Batterie
+230149;4310;Rheinfelden;AG;-;x;;-;-;;06.08.2024;25.11.2024;31.01.2025;;
+188943;5524;Niederwil AG;AG;-;x;13.2;x;-;;12.08.2024;KW42;;;
+227913;5426;Lengnau AG;AG;-;;;;-;;12.08.2024;KW 46;-;-;unbekannt (keine Anlage auf dieser Zeile markiert)
+692550;8962;Bergdietikon;AG;-;x;;;-;;21.08.2024;KW 44;17.12.2024;25.11.2024;PV
+575209;5012;Schönenwerd;SO;-;x;14.08;x;x;;25.08.2024;01.03.2025;;08.05.2025;PV + Batterie + EV-Ladestation
+231791;5034;Suhr;AG;x;x;14.52;-;-;;28.08.2024;01.10.2024;12.03.2025;20.02.2025;Wärmepumpe + PV
+231749;5000;Aarau;AG;-;x;;x;-;;28.08.2024;Q4 2024;;;
+568740;5000;Aarau;AG;x;-;0;-;-;;02.09.2024;;;;
+231801;5200;Brugg AG;AG;-;x;14.08;x;x;;03.09.2024;28.10.2024;14.04.2025;20.05.2025;PV + Batterie + EV-Ladestation
+228837;5463;Wislikofen;AG;-;x;;x;-;;04.09.2024;21.10.2024;11.12.2024;30.11.2024;PV + Batterie
+720967;4310;Rheinfelden;AG;x;-;;-;-;;05.09.2024;01.08.2025;25.09.2025;;
+724334;5235;Rüfenach AG;AG;-;x;;;;;15.09.2024;21.10.2024;18.12.2024;04.12.2024;PV
+228933;4632;Trimbach;SO;x;-;;-;;;18.09.2024;07.04.2025;;;
+182712;8967;Widen;AG;x;-;;-;-;;19.09.2024;01.03.2025;08.04.2025;13.03.2025;Wärmepumpe
+851473;8962;Bergdietikon;AG;-;x;30.8;x;x;;20.09.2024;25.11.2024;24.01.2025;17.12.2024;PV + Batterie + EV-Ladestation
+232339;5000;Aarau;AG;x;-;;-;-;;21.09.2024;01.05.2025;;;
+707043;4312;Magden;AG;x;x;11.06;x;-;;22.09.2024;01.04.2025;29.08.2025;13.06.2025;Wärmepumpe + PV + Batterie
+164491;5105;Auenstein;AG;-;x;8.36;-;-;;25.09.2024;19.11.2024;07.02.2025;;
+229264;5200;Brugg AG;AG;x;x;6.68;x;-;;26.09.2024;01.02.2025;;24.04.2025;Wärmepumpe + PV + Batterie
+734306;4312;Magden;AG;-;-;;X;X;;01.10.2024;25.11.2024;14.03.2025;14.03.2025;Batterie + EV-Ladestation
+159181;4805;Brittnau;AG;-;-;;x;-;;01.10.2024;07.10.2024;25.10.2024;25.10.2024;Batterie
+216237;5610;Wohlen AG;AG;-;-;;-;X;;02.10.2024;?;;22.03.2023;EV-Ladestation
+232359;5726;Unterkulm;AG;-;x;12.32;x;-;;03.10.2024;15.11.2024;11.02.2025;06.12.2024;PV + Batterie
+156287;5322;Koblenz;AG;X;-;;-;-;;04.10.2024;Q1 / 2026;-;-;Wärmepumpe
+232425;5452;Oberrohrdorf;AG;;-;;-;-;;04.10.2024;17.10.2024;;;
+137763;4313;Möhlin;AG;;x;12.9;x;;;11.10.2024;09.12.2024;13.01.2025;12.01.2025;PV + Batterie
+229088;5430;Wettingen;AG;-;x;24.03;-;-;;15.10.2024;Q1 2025;19.06.2025;31.03.2025;PV
+232749;4123;Allschwil;BL;-;X;;X;;;20.10.2024;Q1 2025;;;
+870024;5300;Turgi;AG;-;-;;X;-;;21.10.2024;10.01.2025;;09.01.2025;Batterie
+233086;5073;Gipf-Oberfrick;AG;-;x;13.35;x;-;;27.10.2024;01.02.2025;21.02.2025;22.01.2025;PV + Batterie
+129462;5072;Oeschgen;AG;-;-;;-;x;;27.10.2024;;;;
+232990;4600;Olten;SO;x;-;;-;-;;27.10.2024;01.04.2025;28.03.2025;20.03.2025;Wärmepumpe
+233087;5212;Hausen AG;AG;;x;20.03;x;-;;30.10.2024;Q1/2025;19.03.2025;29.01.2025;PV + Batterie
+906291;8962;Bergdietikon;AG;;-;;-;-;;30.10.2024;Q4/2024;-;04.12.2024;unbekannt (keine Anlage auf dieser Zeile markiert)
+778612;5725;Leutwil;AG;-;-;;x;-;;30.10.2024;Q1/2025;-;17.04.2025;Batterie
+233188;4127;Birsfelden;BL;-;X;108.45;-;-;;31.10.2024;01.01.2024;;;
+233298;5605;Dottikon;AG;-;X;5.34;X;-;;12.11.2024;Q4/24;22.07.2025;06.05.2025;PV + Batterie
+227577;5034;Suhr;AG;-;X;12.6;X;-;;15.11.2024;01.04.2025;19.05.2025;07.04.2025;PV + Batterie
+891106;4313;Möhlin;AG;-;X;15.13;X;-;;17.11.2024;Q1 2025;;;
+232018;5430;Wettingen;AG;-;x;20.25;x;-;;21.11.2024;10.06.2025;15.07.2025;27.06.2025;PV + Batterie
+233381;4652;Winznau;SO;-;X;16.02;X;-;;25.11.2024;01.01.2025;18.02.2025;23.01.2025;PV + Batterie
+228831;8962;Bergdietikon;AG;-;X;14.69;-;-;;25.11.2024;01.02.2025;;28.03.2025;PV
+201391;5076;Bözen;AG;-;-;;x;;;25.11.2024;31.12.2024;;;
+106914;5608;Stetten AG;AG;-;x;15.13;x;-;;27.11.2024;01.02.2025;14.03.2025;06.03.2025;PV + Batterie
+234314;5018;Erlinsbach;AG;-;x;14.69;x;-;;27.11.2024;01.02.2025;;04.04.2025;PV + Batterie
+722955;5304;Endingen;AG;-;X;9.35;X;-;;29.11.2024;Q1/2025;31.03.2025;18.02.2025;PV + Batterie
+234332;5034;Suhr;AG;x;x;15.13;x;x;;02.12.2024;01.04.2025;09.09.2025;08.04.2025;Wärmepumpe + PV + Batterie + EV-Ladestation
+133692;5608;Stetten AG;AG;-;x;8.01;x;-;;03.12.2024;Q1/2025;09.04.2025;17.03.2025;PV + Batterie
+701696;5304;Endingen;AG;-;X;42.24;-;-;;04.12.2024;15.02.2025;11.04.2025;09.04.2025;PV
+770736;5027;Herznach;AG;-;X;16.02;X;-;;04.12.2024;03.03.2025;01.04.2025;21.03.2025;PV + Batterie
+222824;5304;Endingen;AG;-;X;20.25;X;-;;09.12.2024;Q1/2025;02.05.2025;;
+233381;5073;Gipf-Oberfrick;AG;-;-;;-;x;;10.12.2024;13.01.2025;20.02.2025;21.02.2025;EV-Ladestation
+234572;4614;Hägendorf;SO;-;x;12.32;x;-;;12.12.2024;10.03.2025;14.03.2025;24.03.2025;PV + Batterie
+118265;5607;Hägglingen;AG;-;x;14.24;x;-;;16.12.2024;17.02.2025;25.06.2025;05.05.2025;PV + Batterie
+744914;5000;Aarau;AG;-;X;16.92;X;-;;17.12.2024;17.03.2025;;02.07.2025;PV + Batterie
+234669;5024;Küttigen;AG;;x;8.46;x;-;x;18.12.2024;01.03.2025;;;
+119324;5614;Sarmenstorf;AG;-;-;;X;-;-;20.12.2024;01.03.2024;-;19.02.2025;Batterie
+705032;5604;Hendschiken;AG;;-;0;x;-;-;09.01.2025;03.02.2025;01.04.2025;19.03.2025;Batterie
+713894;4323;Wallbach;AG;-;-;;-;x;-;14.01.2025;-;;;
+869547;4323;Wallbach;AG;X;x;14.69;x;-;-;16.01.2025;03.03.2025;;18.03.2025;Wärmepumpe + PV + Batterie
+235223;5614;Sarmenstorf;AG;x;-;;-;-;;20.01.2025;01.04.2025;22.07.2025;02.06.2025;Wärmepumpe
+582164;5614;Sarmenstorf;AG;x;-;;-;-;;22.01.2025;01.04.2025;22.07.2025;02.06.2025;Wärmepumpe
+235266;5303;Würenlingen;AG;-;-;;-;-;-;23.01.2025;KW 6;;;
+230807;5425;Schneisingen;AG;x;-;;-;-;-;27.01.2025;22.04.2025;12.08.2025;;
+188435;5524;Niederwil AG;AG;-;X;16.02;X;;;29.01.2025;01.05.2025;16.06.2025;01.05.2025;PV + Batterie
+201527;5620;Bremgarten AG;AG;-;X;43.2;x;-;-;06.02.2025;01.05.2025;27.08.2025;23.06.2025;PV + Batterie
+201527;5620;Bremgarten AG;AG;-;x;36.9;x;-;-;06.02.2025;01.05.2025;27.08.2025;23.06.2025;PV + Batterie
+909265;4468;Kienberg;SO;X;-;;-;-;-;08.02.2025;15.04.2025;;;
+902830;5032;Aarau Rohr;AG;-;x;29.52;-;-;-;14.02.2025;10.03.2025;;;
+805535;4313;Möhlin;AG;-;-;;x;-;-;16.02.2025;10.03.2025;;;
+805537;4313;Möhlin;AG;-;-;;x;-;-;16.02.2025;10.03.2025;;;
+223653;4323;Wallbach;AG;-;-;;x;-;-;18.02.2025;10.03.2025;;;
+235760;5445;Eggenwil;AG;-;x;14.1;x;-;-;19.02.2025;01.05.2025;02.07.2025;02.05.2025;PV + Batterie
+696588;5044;Schlossrued;AG;-;-;;-;x;;21.02.2025;04.03.2025;;;
+235970;5200;Brugg AG;AG;X;-;;-;-;-;27.02.2025;25.08.2025;25.11.2025;;
+236035;4632;Trimbach;SO;-;-;;x;-;-;01.03.2025;01.05.2025;25.06.2025;28.05.2025;Batterie
+868792;4322;Mumpf;AG;X;-;;;-;-;04.03.2025;01.06.2025;21.07.2025;17.06.2025;Wärmepumpe
+186396;4324;Obermumpf;AG;-;x;8.84;x;x;;05.03.2025;05.05.2025;;18.03.2025;PV + Batterie + EV-Ladestation
+859760;5707;Seengen;AG;X;X;15.68;X;-;-;10.03.2025;Q1 / 2026;27.02.2026;23.01.2026;Wärmepumpe + PV + Batterie
+236888;5223;Riniken;AG;-;x;0;x;-;-;23.03.2025;01.06.2025;14.05.2025;01.05.2025;PV + Batterie
+595687;4310;Rheinfelden;AG;-;x;13.49;x;-;-;26.03.2025;26.05.2025;;;
+237118;6265;Roggliswil;LU;X;-;;-;-;-;26.03.2025;25.08.2025;;;
+148265;4314;Zeiningen;AG;-;x;21.6;x;X;;28.03.2025;02.06.2025;08.07.2025;10.06.2025;PV + Batterie + EV-Ladestation
+227965;5073;Gipf-Oberfrick;AG;-;x;4.95;x;-;-;28.03.2025;01.06.2025;24.07.2025;;
+236992;5103;Möriken AG;AG;x;x;13.92;x;-;-;29.03.2025;01.09.2025;30.01.2026;14.01.2026;Wärmepumpe + PV + Batterie
+220531;5036;Oberentfelden;AG;-;-;;x;-;-;30.03.2025;02.06.2025;30.04.2025;30.04.2025;Batterie
+236125;4322;Mumpf;AG;-;X;35.2;-;-;-;31.03.2025;20.06.2025;;;
+591712;5200;Brugg AG;AG;-;-;;x;-;-;01.04.2025;01.06.2025;18.06.2025;27.05.2025;Batterie
+168512;4314;Zeiningen;AG;-;X;16.92;X;X;-;04.04.2025;07.07.2025;;04.07.2025;PV + Batterie + EV-Ladestation
+237215;5432;Neuenhof;AG;-;X;13.63;X;-;-;07.04.2025;02.06.2025;13.08.2025;11.07.2025;PV + Batterie
+191185;4805;Brittnau;AG;-;X;17.3;-;-;-;09.04.2025;30.06.2025;19.08.2025;15.07.2025;PV
+159313;4805;Brittnau;AG;-;-;;-;X;-;09.04.2025;05.05.2025;;;
+748606;4333;Münchwilen AG;AG;-;x;8.1;x;-;-;10.04.2025;10.06.2025;;;
+237552;4852;Rothrist;AG;x;-;;-;-;-;24.04.2025;01.09.2025;;;
+237736;5062;Oberhof;AG;-;-;;x;;;05.05.2025;Ende Mai ;;;
+909494;5062;Oberhof;AG;-;-;;x;;;05.05.2025;Ende Mai ;;;
+238020;5412;Gebenstorf;AG;-;X;15.2;X;;;07.05.2025;23.06.2025;06.08.2025;08.07.2025;PV + Batterie
+707268;5027;Herznach;AG;-;-;;-;X;-;10.05.2025;22.05.2025;;;
+237900;5623;Boswil;AG;x;-;;-;;;11.05.2025;01.10.2025;21.11.2025;;
+717797;4324;Obermumpf;AG;;x;15.51;x;;;12.05.2025;Mitte Juli;25.08.2025;09.07.2025;PV + Batterie
+579448;5603;Staufen;AG;x;-;;-;;;12.05.2025;01.09.2025;21.11.2025;03.10.2025;Wärmepumpe
+238234;5000;Aarau;AG;-;X;;-;;;12.05.2025;23.03.2026;;;
+199430;4303;Kaiseraugst;AG;-;x;15.98;x;x;;16.05.2025;04.08.2025;12.09.2025;27.08.2025;PV + Batterie + EV-Ladestation
+199430;4303;Kaiseraugst;AG;-;x;12.22;x;;;16.05.2025;04.08.2025;12.09.2025;20.08.2025;PV + Batterie
+238724;5033;Buchs AG;AG;x;-;;-;;;19.05.2025;11.05.2026;;;
+238140;5000;Aarau;AG;-;X;76;-;;;21.05.2025;01.09.2025?;;;
+225852;5620;Bremgarten AG;AG;-;x;19.27;x;;;21.05.2025;21.07.2025;23.09.2025;;
+238234;5000;Aarau;AG;-;X;;-;;;25.05.2025;23.03.2026;;;
+717438;5225;Bözberg;AG;-;-;;x;;;26.05.2025;01.07.2025;-;04.07.2025;Batterie
+897928;5733;Leimbach AG;AG;x;-;;-;;;03.06.2025;01.10.2025;04.12.2025;30.10.2025;Wärmepumpe
+692550;8962;Bergdietikon;AG;-;X;15.13;-;;;06.06.2025;01.08.2025;16.07.2025;09.07.2025;PV
+869547;4323;Wallbach;AG;-;-;;x;;;07.06.2025;01.08.2025;übergeben;;
+227804;5702;Niederlenz;AG;x;-;;x;;;11.06.2025;01.11.2025;28.11.2025;20.11.2025;Wärmepumpe + Batterie
+577919;5442;Fislisbach;AG;-;-;;x;;;12.06.2025;01.08.2025;29.08.2025;11.07.2025;Batterie
+692466;8962;Bergdietikon;AG;-;-;;x;;;15.06.2025;01.08.2025;;;
+238871;5033;Buchs AG;AG;-;x;11.28;x;;;18.06.2025;01.09.2025;;07.10.2025;PV + Batterie
+238878;5037;Muhen;AG;-;x;15.04;x;;;19.06.2025;01.09.2025;08.01.2025;;
+595906;8964;Rudolfstetten;AG;-;-;;-;x;;22.06.2025;;;;
+868792;4322;Mumpf;AG;-;x;24.64;-;;;23.06.2025;02.07.2025;21.07.2025;02.07.2025;PV
+878287;4303;Kaiseraugst;AG;-;x;15.04;-;;;23.06.2025;01.09.2025;02.10.2025;14.07.2025;PV
+239018;5024;Küttigen;AG;-;x;17.205;x;;;24.06.2025;01.10.2025;15.01.2026;19.12.2025;PV + Batterie
+239000;5420;Ehrendingen;AG;-;x;0;x;;;24.06.2025;01.08.2025;25.08.2025;11.08.2025;PV + Batterie
+747439;5412;Gebenstorf;AG;-;-;;-;x;;27.06.2025;01.07.2025;übergeben;;
+191828;5452;Oberrohrdorf;AG;-;x;16.56;x;;;29.06.2025;01.09.2025;31.10.2025;;
+238918;5316;Leuggern;AG;;x;17.86;x;;;02.07.2025;01.09.2025;02.09.2025;19.08.2025;PV + Batterie
+239204;5012;Schönenwerd;SO;x;x;13.95;x;;;02.07.2025;15.09.2025;07.11.2025;03.10.2025;Wärmepumpe + PV + Batterie
+239315;5116;Schinznach Bad;AG;-;x;13.02;x;;;10.07.2025;22.09.2025;24.11.2025;06.10.2025;PV + Batterie
+171122;5745;Safenwil;AG;-;x;11.28;x;;;10.07.2025;01.09.2025;;;
+215492;5033;Buchs AG;AG;-;-;;-;x;;11.07.2025;04.08.2025;-;;
+136557;4325;Schupfart;AG;-;-;;x;;;14.07.2025;01.09.2025;;;
+738793;5070;Frick;AG;x;-;;-;;;15.07.2025;01.10.2025;02.12.2025;07.11.2025;Wärmepumpe
+556799;5113;Holderbank AG;AG;-;x;16.49;x;;;17.07.2025;08.09.2025;29.10.2025;;
+226015;5082;Kaisten;AG;-;-;;x;;;18.07.2025;01.08.2025;übergeben;;
+227805;5200;Brugg AG;AG;x;-;;-;;;04.08.2025;22.09.2025;übergeben;;
+878287;4303;Kaiseraugst;AG;-;-;;x;;;07.08.2025;-;02.10.2025;;
+240050;5415;Nussbaumen AG;AG;x;-;;-;;;12.08.2025;01.09.2025;05.06.2026;16.10.2025;Wärmepumpe
+721906;4310;Rheinfelden;AG;x;;;;;;18.08.2025;01.05.2026;30.04.2026;;
+177379;5312;Döttingen;AG;;x;12.6;x;;;19.08.2025;mitte Okt. ;17.11.2025;;
+240158;5103;Wildegg;AG;;x;22.1;x;;;20.08.2025;16.10.2025;01.12.2025;19.11.2025;PV + Batterie
+138849;5605;Dottikon;AG;;;;x;;;23.08.2025;01.10.2025;-;19.09.2025;Batterie
+240366;5035;Unterentfelden;AG;x;;;;;;24.08.2025;Ende Nov. ;;;
+240425;5712;Beinwil am See;AG;;x;19.4;x;x;;30.08.2025;01.10.2025;24.01.2025;04.11.2025;PV + Batterie + EV-Ladestation
+214745;5430;Wettingen;AG;;;;x;;;30.08.2025;01.10.2025;-;29.09.2025;Batterie
+740863;5727;Oberkulm;AG;;;;x;;;30.08.2025;01.10.2025;10.11.2025;14.10.2025;Batterie
+240458;5303;Würenlingen;AG;x;x;19.8;x;;;02.09.2025;06.10.2025;;;
+225186;4612;Wangen b. Olten;SO;;;;;x;;04.09.2025;01.11.2025;27.10.2025;;
+909494;4312;Magden;AG;;x;7.13;;x;;05.09.2025;03.11.2025;19.12.2025;24.11.2025;PV + EV-Ladestation
+900694;5408;Ennetbaden;AG;;;;x;;;05.09.2025;01.11.2025;-;03.10.2025;Batterie
+118609;5607;Hägglingen;AG;;;;x;;;09.09.2025;01.10.2025;;;
+694753;5620;Bremgarten AG;AG;;;;x;;;09.09.2025;01.11.2025;-;18.11.2025;Batterie
+240781;5722;Gränichen;AG;;x;11.875;x;;;11.09.2025;17.11.2025;;07.11.2025;PV + Batterie
+589123;5014;Gretzenbach;SO;;;;x;;;12.09.2025;;;;
+707043;4312;Magden;AG;;;;x;;;12.09.2025;-;-;;
+751215;5107;Schinznach Dorf;AG;;x;;x;;;12.09.2025;16.03.2026;;;
+724881;5745;Safenwil;AG;;;;x;;;13.09.2025;;;;
+240903;5033;Buchs AG;AG;x;;;;;;14.09.2025;Q1 / 2026;04.06.2026;08.05.2026;Wärmepumpe
+590937;5512;Wohlenschwil;AG;;;;x;;;15.09.2025;01.11.2025;-;14.11.2025;Batterie
+573138;5616;Meisterschwanden;AG;;x;-;x;x;;29.09.2025;01.12.2025;13.02.2026;;
+226015;5082;Kaisten;AG;-;-;;x;;;29.09.2025;01.11.2025;;;
+821264;4303;Kaiseraugst;AG;-;-;;x;;;15.10.2025;01.06.2026;-;;
+241448;5080;Laufenburg;AG;-;x;13.16;x;;;16.10.2025;17.11.2025;03.12.2025;28.11.2025;PV + Batterie
+241353;5064;Wittnau;AG;x;;;;;;18.10.2025;16.03.2026;22.07.2026;10.04.2026;Wärmepumpe
+186983;4334;Sisseln AG;AG;;x;15.2;x;;;20.10.2025;12.01.2026;19.02.2026;;
+227957;5103;Wildegg;AG;;;;x;;;20.10.2025;-;-;;
+241564;5725;Leutwil;AG;;x;17.58;x;;;24.10.2025;01.12.2025;02.02.2025;;
+574802;4663;Aarburg;AG;;;;x;;;26.10.2025;01.12.2025;15.12.2025;05.12.2025;Batterie
+241633;5102;Rupperswil;AG;;x;15..675;x;;;29.10.2025;01.04.2026;12.06.2026;13.05.2026;PV + Batterie
+238234;5000;Aarau;AG;x;;;;;;29.10.2025;08.06.2026;;;
+175560;5313;Klingnau;AG;;x;;x;;;30.10.2025;01.05.2026;;;
+238234;5000;Aarau;AG;x;;;;;;30.10.2025;08.06.2026;;;
+156287;5322;Koblenz;AG;x;;;;;;31.10.2025;Q1 / 2026;09.03.2026;22.01.2026;Wärmepumpe
+745959;5105;Auenstein;AG;;;;x;;;01.11.2025;im 2026;-;;
+227509;5113;Holderbank AG;AG;x;;;;;;03.11.2025;Q1 / 2026;09.02.2026;16.01.2026;Wärmepumpe
+688436;5620;Bremgarten AG;AG;;x;156.8;;;;04.11.2025;Q1 / 2026;01.06.2026;27.04.2026;PV
+241981;5436;Würenlos;AG;;x;14.75;x;;;09.11.2025;Q1 / 2026;12.05.2026;19.03.2026;PV + Batterie
+920024;5603;Staufen;AG;x;x;13.63;x;;;09.11.2025;Q1 / 2026;11.06.2026;;
+709341;4317;Wegenstetten;AG;;;;;x;;09.11.2025;Q1 / 2026;noch offen;13.01.2026;EV-Ladestation
+133710;5726;Unterkulm;AG;;x;15.675;x;;;10.11.2025;Q1 / 2026;23.03.2026;05.03.2026;PV + Batterie
+242130;5210;Windisch;AG;x;x;21.85;x;;;11.11.2025;Q2 / 2026;12.06.2026;24.04.2026;Wärmepumpe + PV + Batterie
+242130;5210;Windisch;AG;;;;;;;14.11.2025;08.04.2026;-;;
+595711;8962;Bergdietikon;AG;;;0;;;;18.11.2025;-;;;
+890111;5235;Rüfenach AG;AG;;x;15.2;x;;;22.11.2025;;13.04.2026;;
+813191;5107;Schinznach Dorf;AG;;x;13.775;x;;;22.11.2025;Q2 / 2026;21.04.2026;02.04.2026;PV + Batterie
+920030;5043;Holziken;AG;;x;22.3;x;;;23.11.2025;Q1 / 2026 ;21.04.2026;;
+229434;5430;Wettingen;AG;x;x;12.83;x;;;27.11.2025;18.05.2026;;;
+709341;4317;Wegenstetten;AG;;;;x;;;28.11.2025;18.07.1905;noch offen;;
+229547;5436;Würenlos;AG;;;;x;;;03.12.2025;;09.02.2026;;
+920045;5436;Würenlos;AG;;x;15.2;x;;;04.12.2025;Q1.2026;23.04.2026;;
+920044;5242;Lupfig ;AG;;x;14.4;x;;;04.12.2025;01.02.2026;24.04.2026;;
+118160;5607;Hägglingen;AG;;x;11.4;x;;;07.12.2025;01.02.2026;09.04.2026;;
+576824;5610;Wohlen AG;AG;;;;x;;;10.12.2025;20.01.2026;06.02.2026;;
+920055;5200;Brugg AG;AG;x;x;9.5;x;;;12.12.2025;01.02.2026;22.04.2026;;
+920058;5430;Wettingen;AG;;x;4.75;;;;16.12.2025;Q1 2026;05.06.2026;;
+129447;5072;Oeschgen;AG;;;;;;;16.12.2025;17.12.2025;;;
+596361;5242;Birr;AG;;;;;x;;17.12.2025;-;-;;
+859760;5707;Seengen;AG;;;;;x;;20.12.2025;Q1 / 2026;27.02.2026;23.01.2026;EV-Ladestation
+920061;8965;Berikon;AG;;x;16.15;x;;;21.12.2025;Q2 / 2026;04.05.2026;10.04.2026;PV + Batterie
+718040;4324;Obermumpf;AG;;x;14.4;x;;;25.12.2025;08.06.2026;;;
+582891;5722;Gränichen;AG;;;;;x;;06.01.2026;Q1 / 2026;-;20.01.2026;EV-Ladestation
+920062;4334;Sisseln AG;AG;;x;17.1;x;;;07.01.2026;Q1 / 2026;05.05.2026;02.04.2026;PV + Batterie
+575339;4652;Winznau;SO;x;;;;;;07.01.2026;11.05.2026;;;
+579842;5018;Erlinsbach;AG;;;;x;;;10.01.2026;Q1 / 2026;11.03.2026;17.02.2026;Batterie
+165295;4313;Möhlin;AG;x;x;12.69;x;;;12.01.2026;09.11.2026;;;
+739178;5105;Auenstein;AG;x;;;;;;22.01.2026;08.06.2026;;;
+885769;4313;Möhlin;AG;;x;14.4;x;x;;26.01.2026;01.03.2026;07.05.2026;;
+241341;5625;Kallern;AG;x;;;;;;29.01.2026;29.06.2026;;;
+920084;5014;Gretzenbach;SO;;x;23.75;x;;;30.01.2026;23.03.2026;29.06.2026;;
+131858;5443;Niederrohrdorf;AG;;;;;;;30.01.2026;Q1 / 2026;-;26.02.2026;unbekannt (keine Anlage auf dieser Zeile markiert)
+120135;4313;Möhlin;AG;;;;;x;;03.02.2026;-;31.03.2026;;
+920091;5034;Suhr;AG;x;;;;;;06.02.2026;27.07.2026;;;
+107868;5322;Koblenz;AG;;;;x;;;09.02.2026;Q2 / 2026;17.04.2026;08.04.2026;Batterie
+194098;5504;Othmarsingen;AG;x;;;;;;10.02.2026;31.08.2026;;;
+790904;5506;Mägenwil;AG;x;;;;;;12.02.2026;27.04.2026;;;
+243997;5015;Erlinsbach SO;SO;x;;;;;;12.02.2026;06.07.2026;;;
+572837;5035;Unterentfelden;AG;;;;;x;;15.02.2026;Q2 / 2026;-;11.03.2026;EV-Ladestation
+157583;5272;Gansingen;AG;;x;20.16;x;;;17.02.2026;?;08.05.2026;;
+723966;5235;Rüfenach AG;AG;;x;14.4;x;;;19.02.2026;Q2 / 2026;06.05.2026;17.04.2026;PV + Batterie
+920106;5406;Rütihof;AG;x;;;;;;19.02.2026;10.08.2026;;;
+151081;4310;Rheinfelden;AG;;;nur Speicher;x;;;20.02.2026;01.05.2026;22.06.2026;;
+734540;8962;Bergdietikon;AG;;x;28.8;x;;;20.02.2026;04.05.2026;17.07.2026;;
+920105;4616;Kappel SO;SO;;x;13.78;x;;;22.02.2026;Q2 / 2026;10.06.2026;20.05.2026;PV + Batterie
+920129;5453;Remetschwil;AG;;x;11.64;x;;;01.03.2026;Q2 / 2026;09.06.2026;30.04.2026;PV + Batterie
+723701;5707;Seengen;AG;;;;;x;;02.03.2026;Q2 / 2026;03.06.2026;17.04.2026;EV-Ladestation
+920131;4653;Obergösgen;SO;x;;;x;;;02.03.2026;10.08.2026;;;
+21264;4303;Kaiseraugst;AG;x;;;;;;05.03.2026;12.10.2026;;;
+584406;5033;Buchs AG;AG;;;;x;;;06.03.2026;?;;;
+920132;5022;Rombach;AG;x;x;12.61;x;;;07.03.2026;14.09.2026;;;
+241564;5725;Leutwil;AG;;;;x;;;09.03.2026;27.07.2026;;;
+920135;5503;Schafisheim;AG;x;;;;;;10.03.2026;02.11.2026;;;
+920134;5742;Kölliken;AG;x;x;17.1;x;;;17.03.2026;05.10.2026;;;
+920150;5034;Suhr;AG;x;x;11.52;x;;;19.03.2026;26.10.2026;;;
+920135;5503;Schafisheim;AG;;x;14.25;x;;;20.03.2026;06.11.2026;;;
+920153;5103;Wildegg;AG;x;;;;;;21.03.2026;01.10.2026;;;
+830617;5616;Meisterschwanden;AG;;x;11.64;x;;;24.03.2026;22.06.2026;;;
+920155;5012;Schönenwerd;SO;x;;;;;;27.03.2026;16.11.2026;;;
+920162;5012;Schönenwerd;SO;x;;;;;;28.03.2026;07.09.2026;;;
+239204;5012;Schönenwerd;SO;;;;;x;;02.04.2026;Q2 / 2026;-;01.05.2026;EV-Ladestation
+920155;5012;Schönenwerd;SO;x;x;15.2;x;;;08.04.2026;22.06.2026;;;
+164237;5622;Waltenschwil;AG;;;;x;;;14.04.2026;01.07.2026;;;
+575135;5012;Wöschnau;SO;;;;x;;;16.04.2026;Q2 / 2026;-;27.05.2026;Batterie
+920175;5222;Umiken;AG;x;;;x;;;19.04.2026;06.06.2026;;;
+227804;5702;Niederlenz;AG;;;;;x;;22.04.2026;Q2 / 2026;11.05.2026;30.05.2026;EV-Ladestation
+724118;5745;Safenwil;AG;;x;5.88;x;;;24.04.2026;01.06.2026;16.07.2026;;
+228384;5502;Hunzenschwil;AG;;;;;;;24.04.2026;-;-;;
+132812;5726;Unterkulm;AG;x;x;17.95;x;x;;26.04.2026;13.07.2026;;;
+709084;5316;Leuggern;AG;x;;;;;;29.04.2026;29.06.2026;;;
+223251;4852;Rothrist;AG;;;;x;;;01.05.2026;01.07.2026;;;
+742207;5106;Veltheim AG;AG;x;;;;;;02.05.2026;05.10.2026;;;
+920211;4410;Liestal;BL;x;x;13.23;x;;;05.05.2026;01.09.2026;;;
+696780;4310;Rheinfelden;AG;;;;x;x;;05.05.2026;03.07.2026;;;
+553924;5074;Eiken;AG;x;;;;;;05.05.2026;22.06.2026;;;
+222361;3038;Kirchlindach;BE;;;;x;;;07.05.2026;10.07.2026;;;
+238234;5000;Aarau;AG;;;;;;;11.05.2026;19.05.2026;;;
+238234;5000;Aarau;AG;;;;;;;11.05.2026;19.05.2026;;;
+214149;5420;Ehrendingen;AG;;;;x;;;12.05.2026;16.06.2026;20.07.2026;16.06.2026;Batterie
+920213;5600;Lenzburg;AG;x;x;13;x;x;;17.05.2026;01.05.2027;;;
+238918;5316;Leuggern;AG;;;;;x;;20.05.2026;10.06.2026;21.07.2026;18.06.2026;EV-Ladestation
+246881;5444;Künten;AG;x;;;;;;20.05.2026;01.05.2027;;;
+920227;8965;Berikon;AG;x;;;;;;20.05.2026;05.10.2026;;;
+920225;5722;Gränichen;AG;;x;17.82;x;;;22.05.2026;17.08.2026;;;
+227165;5603;Staufen;AG;;;;x;;;25.05.2026;16.06.2026;22.07.2026;16.06.2026;Batterie
+226011;5425;Schneisingen;AG;;;;x;;;27.05.2026;09.07.2026;20.07.2026;09.07.2026;Batterie
+115673;4317;Wegenstetten;AG;x;;;;;;27.05.2026;02.11.2026;;;
+594448;5042;Hirschthal;AG;x;;;x;;;27.05.2026;01.02.2027;;;
+;5425;Schneisingen;AG;;x;25.92;x;x;;31.05.2026;01.10.2026;;;
+920234;5610;Wohlen AG;AG;x;x;16.62;x;;;01.06.2026;01.11.2026;;;
+745464;4317;Wegenstetten;AG;x;x;19.8;x;;;03.06.2026;01.01.2027;;;
+;5425;Schneisingen;AG;;;;;x;;03.06.2026;01.09.2026;;;
+920240;5637;Beinwil (Freiamt);AG;;x;65.84;x;;;06.06.2026;13.10.2026;;;
+710570;5070;Frick ;AG;;x;14.55;x;;;08.06.2026;03.08.2026;;;
+555287;5706;Boniswil;AG;;;;;x;;08.06.2026;01.09.2026;;;
+185674;5330;Bad Zurzach;AG;x;;;;;;13.06.2026;01.10.2026;;;
+233087;5212;Hausen AG;AG;;;;;x;;16.06.2026;01.08.2026;;;
+749578;5504;Othmarsingen;AG;;x;14.36;x;;;17.06.2026;01.08.2026;;;
+920242;5018;Erlinsbach;AG;x;;;;;;17.06.2026;01.04.2027;;;
+855457;4323;Wallbach;AG;;;;;;;18.06.2026;01.07.2026;-;;
+176260;5452;Oberrohrdorf;AG;;;;;;;19.06.2026;01.08.2026;-;;
+920241;5200;Brugg;AG;x;x;11.64;x;;;20.06.2026;15.09.2026;;;
+165585;5614;Sarmenstorf;AG;;x;14.55;x;;;22.06.2026;01.09.2026;;;
+227963;5000;Aarau;AG;;x;14.55;;;;24.06.2026;01.10.2026;;;
+881402;4313;Möhlin;AG;;x;24.25;x;;;25.06.2026;01.09.2026;;;
+920129;5453;Remetschwil;AG;;;;;;;28.06.2026;01.07.2026;;;
+920243;5024;Küttigen;AG;;;;x;;;29.06.2026;01.07.2026;;;
+165171;5506;Mägenwil;AG;;x;9.4;x;x;;30.06.2026;08.09.2026;;;
+867344;4333;Münchwilen AG;AG;x;x;23.27;x;;;06.07.2026;19.10.2026;;;
+596019;5728;Gontenschwil;AG;;;;;;;08.07.2026;01.08.2026;;;
+587753;5103;Wildegg;AG;;x;15.35;x;;;10.07.2026;01.10.2026;;;
+720022;4310;Rheinfelden;AG;;;;;;;14.07.2026;01.09.2026;;;
+576824;5610;Wohlen AG;AG;;;;;;;15.07.2026;01.09.2026;;;
+901606;5073;Gipf-Oberfrick;AG;;;;x;;;20.07.2026;01.08.2026;;;
+920283;4652;Winznau;SO;;;;x;;;24.07.2026;01.09.2026;;;
+920285;5210;Windisch;AG;;x;13.86;x;;;29.07.2026;01.09.2026;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
