@@ -1,0 +1,31 @@
+{
+  "features": [
+    "n_meters",
+    "day_kwh_mean",
+    "night_kwh_mean",
+    "n_months",
+    "midday_clear_summer",
+    "midday_mean_summer",
+    "midday_std_summer",
+    "daytime_zero_summer",
+    "below_night_summer",
+    "evening_midday_summer",
+    "day_kwh_summer",
+    "n_summers",
+    "midday_clear_winter",
+    "daytime_zero_winter",
+    "day_kwh_winter",
+    "midday_seasonality",
+    "summer_winter_kwh_ratio",
+    "rollout_era",
+    "midday_max_yoy_drop",
+    "midday_yoy_slope",
+    "pv_rate"
+  ],
+  "c": 0.9509777239314948,
+  "gamma": 2.413392780520528,
+  "target_base_rate": 0.12,
+  "n_splits": 5,
+  "n_positives": 6468,
+  "n_unlabelled": 70221
+}

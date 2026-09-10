@@ -1,0 +1,5 @@
+# large intermediate artifacts - regenerate with `python -m newspaper.models.pipeline`
+*.pkl
+*.zip
+weather_raw/
+elpa_raw.zip
