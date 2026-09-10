@@ -32,11 +32,18 @@ HP_MAX_SUMMER_SHARE = 0.20
 # a meter is a production point if it exports but essentially never imports
 PROD_MAX_IMPORT_KWH = 50.0
 MIN_MONTHS = 3          # need some history before the ratio means anything
+MIN_DAYS_PER_MONTH = 20  # docs/data_problems.md (1): a thin month (e.g. the
+                         # partial 2024-10 export) must not dominate a mean
 MULTI_UNIT_MIN_METERS = 4
 
 
 def _meter_seasonal(mm: pd.DataFrame) -> pd.DataFrame:
     """Per-meter winter/summer import totals and export totals."""
+    thin = mm["n_days"] < MIN_DAYS_PER_MONTH
+    if thin.any():
+        print(f"  dropping {int(thin.sum())} meter-months with "
+              f"<{MIN_DAYS_PER_MONTH} days of readings")
+        mm = mm[~thin]
     imp = mm[mm["direction"] == "bezug"].copy()
     exp = mm[mm["direction"] == "einsp"].copy()
 

@@ -15,6 +15,10 @@ Derived, ML-ready data for the HackDays load-profile work.
 | `meter_month_labelled.csv` | 17 808 | Per-**meter** monthly kWh (import/export, midday, night) for the 413 GIGI-labelled meters |
 | `property_aux_features.csv` | 337 | Per-household features that survive meter aggregation (`n_meters`, dedicated-HP / production-only meter flags, per-meter extremes) |
 | `train_property_samples_aux.csv` | 342 | `train_property_samples.csv` + the 12 aux columns — same `sample_id` / labels |
+| `train_property_samples_auxw.csv` | 342 | Aux features recomputed **per sample window** (`w_*` columns) |
+| `train_property_samples_auxw_netload.csv` | 342 | **← TRAIN ON THIS.** Net-load only; the export register is removed (`docs/data_problems.md` ④) |
+| `train_property_samples_auxw_feedin.csv` | 342 | The 29 quarantined export columns — silver labels and evaluation **only**, never model input |
+| `augmentation_manifest_auxw.csv` | 20 | Install-anchored before/after windows with windowed aux features |
 
 Two views of the **same 342 samples**, same `sample_id` / `group_id` / labels:
 

@@ -50,7 +50,7 @@ def labelled_meters() -> set[str]:
     return set(mp.str.strip()) - {""}
 
 
-def run() -> pd.DataFrame:
+def run(only: set[str] | None = None) -> pd.DataFrame:
     want = labelled_meters()
     print(f"labelled meters to extract: {len(want)}")
 
@@ -64,8 +64,7 @@ def run() -> pd.DataFrame:
     plz_of: dict[str, str] = {}
 
     for ex in exports:
-        if ex.ym in C.KNOWN_PARTIAL_MONTHS:
-            print(f"  {ex.ym}: SKIPPED (known partial month)")
+        if only and ex.ym not in only:
             continue
         t0 = time.time()
         n_rows = 0
@@ -100,18 +99,35 @@ def run() -> pd.DataFrame:
     recs = [
         dict(mp_id=mp, year=y, month=mo, direction=dr,
              kwh=v[0], n_days=int(v[1]), midday_kwh=v[2], night_kwh=v[3],
-             plz=plz_of.get(mp, ""))
+             plz=plz_of.get(mp, ""),
+             is_partial_month=int(f"{y:04d}-{mo:02d}" in C.KNOWN_PARTIAL_MONTHS))
         for (mp, y, mo, dr), v in acc.items()
     ]
-    df = pd.DataFrame.from_records(recs).sort_values(
-        ["mp_id", "year", "month", "direction"]).reset_index(drop=True)
+    df = pd.DataFrame.from_records(recs)
+    if only and OUT.exists():
+        # splice: keep every month we did not just rescan
+        prev = pd.read_csv(OUT, sep=C.CSV_SEP, dtype={"mp_id": str, "plz": str})
+        if "is_partial_month" not in prev.columns:
+            prev["is_partial_month"] = 0
+        keep = ~(prev["year"].astype(str) + "-"
+                 + prev["month"].astype(int).map("{:02d}".format)).isin(only)
+        df = pd.concat([prev[keep], df], ignore_index=True)
+        print(f"  spliced into existing file (kept {int(keep.sum())} prior rows)")
+    df = df.sort_values(["mp_id", "year", "month", "direction"]).reset_index(drop=True)
     df.to_csv(OUT, sep=C.CSV_SEP, index=False)
     print(f"\nwrote {OUT}  ({len(df)} rows, {df.mp_id.nunique()} meters)")
     return df
 
 
 def main() -> None:
-    run()
+    import argparse
+
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument("--only", nargs="*", metavar="YYYY-MM",
+                    help="rescan just these months and splice them into the "
+                         "existing output instead of a full 77 GB pass")
+    args = ap.parse_args()
+    run(set(args.only) if args.only else None)
 
 
 if __name__ == "__main__":

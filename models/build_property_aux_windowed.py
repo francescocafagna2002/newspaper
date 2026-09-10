@@ -46,6 +46,8 @@ AUX_COLS = [
 
 def _prepare_meter_months() -> pd.DataFrame:
     mm = pd.read_csv(MM_IN, sep=C.CSV_SEP, dtype={"mp_id": str, "plz": str})
+    from .build_property_aux import MIN_DAYS_PER_MONTH
+    mm = mm[mm["n_days"] >= MIN_DAYS_PER_MONTH]
     mm["period"] = pd.PeriodIndex.from_fields(
         year=mm["year"], month=mm["month"], freq="M")
     mm["kwh_per_day"] = mm["kwh"] / mm["n_days"].clip(lower=1)
