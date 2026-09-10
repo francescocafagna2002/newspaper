@@ -66,7 +66,7 @@ Data science and machine learning.
 
 ## Skills
 
-Before executing a plan, always use the `grill-me` skill first.
+Before executing a plan, always use the `grill-me` skill first. The repository-local skill is at `.agents/skills/grill-me/SKILL.md`; invoke it as `$grill-me`.
 
 ## Working guidance for the coding agent
 
