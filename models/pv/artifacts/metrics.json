@@ -1,0 +1,21 @@
+{
+  "n_households": 76689,
+  "n_positives": 6468,
+  "n_gigi_positives": 284,
+  "pu_pr_auc_gigi": 0.08,
+  "pu_roc_auc_gigi": 0.961,
+  "pu_pr_auc_all_positives": 0.122,
+  "pu_roc_auc_all_positives": 0.997,
+  "roc_auc_gigi_vs_rest": 0.92,
+  "avg_precision_gigi_vs_rest": 0.039,
+  "roc_auc_allpos_vs_rest": 0.995,
+  "recall@0.5_all_positives": 0.989,
+  "recall@0.5_gigi_positives": 0.915,
+  "recall@0.5_silver_positives": 0.993,
+  "population_flag_rate@0.5": 0.066,
+  "population_mean_probability": 0.12,
+  "target_base_rate": 0.12,
+  "plz_flagrate_vs_baserate_spearman": 0.111,
+  "changepoint_vs_commissioning_spearman": 0.045,
+  "n_midwindow_installs_checked": 98
+}

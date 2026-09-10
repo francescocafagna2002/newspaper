@@ -1,0 +1,11 @@
+{
+  "features": [
+    "daytime_zero_summer"
+  ],
+  "c": 0.8536494389331993,
+  "gamma": -0.7571286252992759,
+  "target_base_rate": 0.12,
+  "n_splits": 5,
+  "n_positives": 6468,
+  "n_unlabelled": 70221
+}

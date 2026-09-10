@@ -1,0 +1,7 @@
+# large regenerable intermediates - rebuild with `python -m newspaper.models.pv.pipeline`
+*.pkl
+*.zip
+*.log
+weather_raw/
+# small outputs (metrics.json, model/, figures/, pv_predictions.csv, *_stats.csv,
+# meter_flags.csv) are kept in git as the record of a run.

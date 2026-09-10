@@ -3,9 +3,9 @@
 Energy Data Hackdays 2026 · AEW "Energy Fingerprints" challenge
 Draft: 2026-09-10 · updated after clarification round 1
 
-> **STATUS — built.** The pipeline is implemented in [`../models/`](../models/)
-> and runs end to end (`python -m newspaper.models.pipeline`). Final approach,
-> results and limitations: [`../models/REPORT.md`](../models/REPORT.md).
+> **STATUS — built.** The pipeline is implemented in [`../models/pv/`](../models/pv/)
+> and runs end to end (`python -m newspaper.models.pv.pipeline`). Final approach,
+> results and limitations: [`../models/pv/REPORT.md`](../models/pv/REPORT.md).
 > Full list of data problems and how each was handled:
 > [`data_problems.md`](data_problems.md). Some sections below (e.g. "weather
 > out of scope", "two models") were superseded during the clarification rounds
@@ -185,7 +185,7 @@ GIGI only?
 
 ## 4. MVP pipeline
 
-### Step 0 — Project skeleton (`newspaper/models/`)
+### Step 0 — Project skeleton (`newspaper/models/pv/`)
 `config.py` (paths, month list), `build_labels.py`, `build_features.py`,
 `train.py`, `score.py`, plus a `notebooks/` EDA notebook. Deterministic seeds,
 everything writes to `store/` or a `models/artifacts/` dir.
