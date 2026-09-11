@@ -48,6 +48,17 @@ SCAN_DMIN = 2    # detect once at the shortest duration, filter per variant afte
 EDGE_TOL = 0.8   # a step of >= 0.8 * p_lo counts as switch-on
 BASE_LAG = 4     # quarter-hours before the step used as the pre-event baseline
 
+# --- EV mode 2 ("granny cable") -----------------------------------------------
+# A Schuko domestic socket delivers 230 V x 10 A = 2.3 kW. That sits in the dead
+# zone between the spec's L1 (1.4-1.8 kW) and L2_small (3.6-4.8 kW) bands, so
+# EV_CLASSES cannot see it by construction -- a household charging without a
+# wallbox is invisible to every rule above. The band edges below are those two
+# spec bands' inner edges, not constants fitted here; the duration reuses
+# L2_small's 1 h minimum.
+MODE2_LO, MODE2_HI = 1.8, 3.6
+MODE2_DMIN = 4                                        # 1 h, as L2_small
+MODE2_WINDOW = set(range(80, 96)) | set(range(0, 24))  # run starts 20:00-06:00
+
 # --- PV -----------------------------------------------------------------------
 # No invented constants. The three windows are astronomical, not tuned: SUN_MONTHS is
 # equinox to equinox, MIDDAY is solar noon (13:00 in this fixed-UTC+1 series) +/- 2.5 h,
@@ -175,7 +186,39 @@ def ev_scores(s: dict) -> dict:
     res["ev_spec_rate100"] = 100.0 * spec_n / n_days
     res["ev_spec_daysfrac"] = len(spec_days) / n_days
     res["ev_tuned_rate100"] = 100.0 * tuned_n / n_days
+    res.update(ev_mode2_scores(imp, n_days))
     return res
+
+
+def ev_mode2_scores(imp: np.ndarray, n_days: int) -> dict:
+    """EV charging from a domestic socket: a multi-hour flat plateau at ~2.3 kW
+    beginning in the overnight window.
+
+    NEGATIVE RESULT (measured 2026-09-11, kept as the closed question).
+    The rule does not work: AUC 0.490 against ``has_EV``, i.e. chance, flagging
+    64% of households for a 21% base rate. Adding it to the headline ramp rule
+    makes that rule worse (AUC 0.686 -> 0.566, MCC 0.342 -> 0.123).
+
+    The reason is the confound this was built to survive. A night-tariff hot
+    water boiler also draws ~2 kW for hours after midnight, and most of this
+    population has one. The intended discriminator was the *spread* of
+    delivered energy -- a boiler reheats the same tank to the same setpoint
+    every night, a car takes back whatever the day's driving used -- but
+    ``energy_cv`` scores only AUC 0.556, so it does not separate them either.
+
+    Keep this here so the question is not reopened: at 15-minute resolution,
+    mode-2 charging is not distinguishable from a controlled overnight load.
+    ``energy_cv`` is NaN below 3 qualifying nights, where it means nothing.
+    """
+    ev = detect_events(imp, MODE2_LO, MODE2_HI, MODE2_DMIN)
+    night = [e for e in ev if (e[0] % SLOTS) in MODE2_WINDOW]
+    kwh = np.array([e[1] * e[2] / KW for e in night])
+    return dict(
+        ev_mode2_nights100=100.0 * len({e[0] // SLOTS for e in night}) / n_days,
+        ev_mode2_med_hours=float(np.median([e[1] for e in night]) / 4) if night else 0.0,
+        ev_mode2_energy_cv=float(kwh.std() / kwh.mean())
+            if len(kwh) >= 3 and kwh.mean() > 0 else np.nan,
+    )
 
 
 # --------------------------------------------------------------- PV rules ----
@@ -277,6 +320,18 @@ def evaluate(df: pd.DataFrame) -> pd.DataFrame:
              "unfitted - 5.8 kW is the spec's Large-L2 minimum"),
         _ops(df.ev_ramp_days100, y_ev, None, "EV    ramp-day rate, threshold-free",
              "robust form: share of days with a >= 9 kW ramp"),
+        _ops(df.ev_mode2_nights100, y_ev, EV_THR, "EV-m2 mode-2 night plateau rate",
+             "NEGATIVE - chance-level; flags 64% at a 21% base rate (boilers)"),
+        _ops(df.ev_mode2_nights100, y_ev, None, "EV-m2 mode-2 rate, threshold-free",
+             "NEGATIVE - ranking only, confirms the operating point is not the problem"),
+        _ops(df.ev_mode2_energy_cv, y_ev, None,
+             "EV-m2 per-night energy spread (>=3 nights)",
+             "NEGATIVE - intended boiler discriminator, does not separate either",
+             mask=df.ev_mode2_energy_cv.notna().to_numpy()),
+        _ops(np.maximum((df.ev_ramp_max >= EV_RAMP_KW).astype(float),
+                        (df.ev_mode2_nights100 >= EV_THR).astype(float)),
+             y_ev, 1.0, "EV    ramp >= 9 kW OR mode-2 plateau",
+             "NEGATIVE - union is worse than the headline rule alone"),
     ]
     for name, *_ in EV_CLASSES:
         rows.append(_ops(df[f"ev_{name}_spec_rate100"], y_ev, EV_THR,

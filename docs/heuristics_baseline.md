@@ -381,6 +381,38 @@ Large L2 ≥1 h still scores 0.680 on PV households vs 0.630 on non-PV.
 same day as the up-step: 0.677, against 0.677 for the up-step alone. Same pattern as the
 plateau and band tests — at this resolution the cheapest form of the idea is the right one.
 
+### ④ Mode-2 "granny cable" charging — tested 2026-09-11, does not work
+
+The spec's class table leaves a gap: L1 covers 1.4–1.8 kW and Small L2 starts at 3.6 kW,
+but a Schuko domestic socket delivers 230 V × 10 A = **2.3 kW**. A household charging
+without a wallbox therefore falls between the bands and is invisible to every rule above.
+This was raised by a household whose profile shows exactly that shape — a multi-hour flat
+2.2 kW plateau, starting at 00:00, on 20 of 62 days, delivering 3.3–27 kWh per night.
+
+Implemented as `ev_mode2_scores` (1.8–3.6 kW — the two spec bands' inner edges, not fitted
+here — sustained ≥1 h, starting 20:00–06:00). **It is chance-level:**
+
+| rule | AUC | flag rate | MCC |
+|---|---:|---:|---:|
+| mode-2 night plateau rate | **0.490** | 0.643 | −0.035 |
+| per-night energy spread (≥3 nights) | 0.556 | — | — |
+| ramp ≥9 kW **OR** mode-2 | 0.566 | 0.743 | 0.123 |
+| ramp ≥9 kW alone (headline) | 0.686 | 0.363 | **0.342** |
+
+It flags 64% of households against a 21% base rate, and unioning it with the headline rule
+makes that rule *worse* — recall 0.68 → 0.85 bought with precision 0.40 → 0.24.
+
+The cause is the confound the rule was designed to survive: a **night-tariff hot-water
+boiler** draws ~2 kW for hours after midnight, and most of this population has one. The
+intended discriminator was the spread of energy delivered per night — a boiler reheats the
+same tank to the same setpoint, a car takes back whatever the day's driving used — but that
+scores 0.556, barely above chance. A relay-switched boiler starting at exactly 00:00 also
+explains the clock-locked start better than a charging timer does.
+
+This is the same lesson as ①–③ in a new place: at 15-minute resolution, a plateau's shape,
+band and regularity carry no EV information that the switch-on step does not already carry.
+Treat the question as closed unless higher-resolution data arrives.
+
 ### Sanity check on verified negatives
 
 The ramp rule at 9 kW flags **2 of the 7** `augmented_before` samples — windows recorded

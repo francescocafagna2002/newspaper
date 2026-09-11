@@ -61,9 +61,9 @@ def select_rows(gp_year: pd.DataFrame, labels: pd.DataFrame,
     )
     df = gp_year.merge(hh, on="gp_nr", how="left")
     df = df.merge(universe[["gp_nr", "in_universe"]], on="gp_nr", how="left")
-    df["battery_positive"] = df["battery_positive"].fillna(False)
-    df["audit_negative"] = df["audit_negative"].fillna(False)
-    df["in_universe"] = df["in_universe"].fillna(False)
+    df["battery_positive"] = df["battery_positive"].fillna(False).astype(bool)
+    df["audit_negative"] = df["audit_negative"].fillna(False).astype(bool)
+    df["in_universe"] = df["in_universe"].fillna(False).astype(bool)
 
     df = df[(df["n_months"] >= C.MIN_MONTHS_PER_YEAR) & df["in_universe"]].copy()
     df = df[~df["audit_negative"]].copy()   # held out entirely, never P or U
@@ -78,7 +78,7 @@ def select_rows(gp_year: pd.DataFrame, labels: pd.DataFrame,
 
     undated = df["battery_positive"] & comm_year.isna()
     if undated.any():
-        recent = df.loc[undated].groupby("gp_nr")["year"].transform("max")
+        recent = df.loc[undated].groupby("gp_nr")["year"].transform("max").reindex(df.index)
         label.loc[undated & (df["year"] == recent)] = "P"
         label.loc[undated & (df["year"] < recent)] = "U"
 
@@ -133,6 +133,12 @@ def train(only: list[str] | None = None, out_dir=None) -> dict:
     groups = df["gp_nr"].to_numpy()
     X, feat_cols = _feature_matrix(df, only)
     X = X.fillna(X.median(numeric_only=True))
+    degenerate = [c for c in feat_cols if X[c].nunique(dropna=True) < 2]
+    if degenerate:
+        print(f"[UNVALIDATED] dropping {len(degenerate)} all-NaN/constant features "
+              f"(insufficient months in this fast subset run): {degenerate}")
+        feat_cols = [c for c in feat_cols if c not in degenerate]
+        X = X[feat_cols]
     print(f"features ({len(feat_cols)}): {feat_cols}")
     print(f"household-years: {len(df)}   households: {df['gp_nr'].nunique()}   "
           f"P: {s.sum()}   U: {(s == 0).sum()}")
@@ -177,7 +183,7 @@ def train(only: list[str] | None = None, out_dir=None) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     pd.to_pickle(final, out_dir / "model.pkl")
 
-    oof = df[["gp_nr", "mp_id", "year", "plz", "kanton", "pu_label", "n_meters",
+    oof = df[["gp_nr", "year", "plz", "kanton", "pu_label", "n_meters",
               "n_months"]].copy()
     oof["g"] = g_oof
     oof["pu_score"] = p_oof

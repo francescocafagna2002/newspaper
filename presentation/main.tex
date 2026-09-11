@@ -167,6 +167,25 @@
 \end{columns}
 \end{frame}
 
+\begin{frame}{EV detection has a 2.3\,kW blind spot}
+\begin{columns}[T,onlytextwidth]
+\column{.56\textwidth}
+\tagline{THE GAP IN THE SPEC}\par\vspace{.3cm}
+\begin{itemize}\itemsep.5em
+  \item L1 is 1.4--1.8\,kW. L2 starts at 3.6\,kW. A Swiss wall socket charges at \alert{2.3\,kW} --- in between.
+  \item Charging without a wallbox is invisible to every published rule.
+  \item We built the detector for that gap.
+\end{itemize}
+\column{.38\textwidth}
+\centering\vspace{.2cm}
+{\Large\textcolor{rose}{\textbf{AUC 0.49}}}\\[2pt]
+{\small it finds hot-water boilers}\\[10pt]
+{\scriptsize\textcolor{muted}{ramp rule: 0.686 \quad $n=342$}}
+\end{columns}
+\vspace{.45cm}
+\rulebaseline{.95\linewidth}{At 15 minutes, a boiler and a granny-charger are the \emph{same signal}.}{\textbf{For AEW:} needs sub-minute data, or the boiler's tariff-relay channel}
+\end{frame}
+
 \begin{frame}{Heat-pump boiler: a physical detector, not a classifier}
 \begin{columns}[T,onlytextwidth]
 \column{.58\textwidth}
@@ -217,8 +236,8 @@
 \begin{itemize}\itemsep.10em
   \item Features: flat import, feed-in shaping, ramp smoothing, evening recovery, and energy balance.
   \item 82 GIGI no-battery households are a held-out audit set, never training negatives.
-  \item The export-register gate was corrected: 222/222 usable known batteries are retained.
-  \item Training and scoring remain unimplemented; the rule opposite is the standing baseline.
+  \item The label-blind universe gate needs 95\% of known batteries admissible. Measured: \alert{93.7\%} (208/222).
+  \item We \textbf{halted the pipeline} rather than weaken the gate to produce a number we could not defend.
 \end{itemize}
 \column{.41\textwidth}
 \centering
