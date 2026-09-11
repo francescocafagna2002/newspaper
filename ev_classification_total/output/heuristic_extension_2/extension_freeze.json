@@ -1,0 +1,20 @@
+{
+  "direction": "positive_rescue",
+  "amplitude_kw": 5.0,
+  "minimum_duration_hours": 2.0,
+  "rise_kw_per_15min": 4.0,
+  "relative_mad_max": 0.2,
+  "paired_edge_required": true,
+  "minimum_events": 3,
+  "minimum_evidence_weeks": 2,
+  "score_floor": 0.7,
+  "score_ceiling": 0.3,
+  "base_model": "E22_lgbm_total",
+  "base_threshold": 0.39199775953588806,
+  "baseline": "daily_q20",
+  "history": "latest 12 eligible weeks, label-independent",
+  "selection": "best direction by validation balanced accuracy, then PR-AUC and precision",
+  "accepted": false,
+  "deployment_direction": "none; retain base LightGBM",
+  "test_status": "opened_once_after_extension_2_freeze; reused from original study"
+}

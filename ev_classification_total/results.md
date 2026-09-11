@@ -39,6 +39,20 @@ balanced accuracy **0.6410**, F1 **0.4444**,
 and Brier score **0.2044**. The confusion matrix is
 `[[32, 20], [5, 10]]` in `[[TN, FP], [FN, TP]]` order.
 
+### LightGBM confusion matrices
+
+Rows are the actual labels. Percentages are calculated within each actual class.
+
+| Cohort | Actual class | Correctly predicted | Incorrectly predicted |
+|---|---|---:|---:|
+| Validation | Non-EV/unlabelled (53) | **71.7% non-EV** (38) | 28.3% EV (15 false alarms) |
+| Validation | EV-labelled (14) | **78.6% EV** (11) | 21.4% non-EV (3 missed EVs) |
+| Held-out test | Non-EV/unlabelled (52) | **61.5% non-EV** (32) | 38.5% EV (20 false alarms) |
+| Held-out test | EV-labelled (15) | **66.7% EV** (10) | 33.3% non-EV (5 missed EVs) |
+
+On the held-out test, LightGBM detected about two-thirds of the EV-labelled
+properties and falsely flagged about two-fifths of the non-EV/unlabelled properties.
+
 ## Interpretation and limitations
 
 The source contains annual aggregates and mean hourly profiles, so the original
@@ -51,3 +65,41 @@ and negative labels are contaminated. Do not interpret individual high-load peri
 confirmed EV charging events.
 
 Runtime: 171.3 seconds.
+
+## Post-model heuristic extension
+
+A research-grounded positive-only override was tested after LightGBM using repeated
+3 kW, two-hour plateau events with paired start/end edges. On validation it increased
+accuracy from 0.7313 to 0.7463 and balanced accuracy from 0.7513 to 0.7871 by recovering
+one false negative. On the already-open test cohort it instead decreased accuracy from
+0.6269 to 0.6119 by adding one false positive and no true positives. The base LightGBM
+therefore remains the recommended classifier; the heuristic is retained as review
+evidence. See `output/heuristic_extension/results.md` for the frozen rule, bounded
+search, paired uncertainty, and reused-test caveat.
+
+Combined LightGBM-plus-heuristic confusion matrices (rows are actual labels and
+columns are predictions):
+
+| Cohort | Actual class | Correctly predicted | Incorrectly predicted |
+|---|---|---:|---:|
+| Validation | Non-EV/unlabelled (53) | **71.7% non-EV** (38) | 28.3% EV (15 false alarms) |
+| Validation | EV-labelled (14) | **85.7% EV** (12) | 14.3% non-EV (2 missed EVs) |
+| Reused test | Non-EV/unlabelled (52) | **59.6% non-EV** (31) | 40.4% EV (21 false alarms) |
+| Reused test | EV-labelled (15) | **66.7% EV** (10) | 33.3% non-EV (5 missed EVs) |
+
+Thus, on the reused test data the combined model found about two-thirds of the
+EV-labelled properties, but incorrectly flagged about two-fifths of the
+non-EV/unlabelled properties.
+
+## Heuristic extension 2: steep slopes
+
+Research supports a sharp start edge followed by a sustained plateau as part of an EV
+charging signature. The extension tested positive rescue, negative veto, and two-way
+correction after LightGBM. None improved validation balanced accuracy. Positive rescue
+changed eight validation predictions, all into false positives, and recovered no EV.
+Negative veto increased ordinary accuracy to 76.1% by favoring the majority class, but
+EV detection fell from 78.6% to 50.0% and balanced accuracy fell from 75.1% to 66.5%.
+
+The steep-slope extension is therefore rejected. The deployed result remains the base
+LightGBM; slope evidence is retained only for review. The detailed direction comparison
+and reused-test diagnostic are in `output/heuristic_extension_2/results.md`.

@@ -1,0 +1,64 @@
+{
+  "status": "reused test diagnostic; not an unbiased new estimate",
+  "base": {
+    "n": 67,
+    "positives": 15,
+    "accuracy": 0.6268656716417911,
+    "balanced_accuracy": 0.641025641025641,
+    "pr_auc": 0.3889666423838063,
+    "roc_auc": 0.6679487179487179,
+    "precision": 0.3333333333333333,
+    "recall": 0.6666666666666666,
+    "f1": 0.4444444444444444,
+    "brier": 0.2043729650677338,
+    "confusion_matrix": [
+      [
+        32,
+        20
+      ],
+      [
+        5,
+        10
+      ]
+    ],
+    "threshold": 0.39199775953588806
+  },
+  "extended": {
+    "n": 67,
+    "positives": 15,
+    "accuracy": 0.6119402985074627,
+    "balanced_accuracy": 0.6314102564102564,
+    "pr_auc": 0.34822297788889045,
+    "roc_auc": 0.6538461538461539,
+    "precision": 0.3225806451612903,
+    "recall": 0.6666666666666666,
+    "f1": 0.43478260869565216,
+    "brier": 0.21487350392193102,
+    "confusion_matrix": [
+      [
+        31,
+        21
+      ],
+      [
+        5,
+        10
+      ]
+    ],
+    "threshold": 0.39199775953588806
+  },
+  "paired_bootstrap": {
+    "draws": 2000,
+    "delta_accuracy_ci95": [
+      -0.04477611940298509,
+      0.0
+    ],
+    "delta_balanced_accuracy_ci95": [
+      -0.03125,
+      0.0
+    ],
+    "delta_pr_auc_ci95": [
+      -0.15192236775494453,
+      0.0
+    ]
+  }
+}

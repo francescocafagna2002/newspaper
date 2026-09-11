@@ -1,0 +1,19 @@
+{
+  "base_model": "E22_lgbm_total",
+  "base_threshold": 0.39199775953588806,
+  "baseline": "daily_q20",
+  "amplitude_kw": 3.0,
+  "minimum_duration_hours": 2.0,
+  "family": "plateau",
+  "plateau_relative_mad_max": 0.2,
+  "edge_kw": 0.5,
+  "edge_symmetry": 0.3,
+  "repeat_tolerance_kw": 0.5,
+  "repeat_days": 3,
+  "weekly_score_cutoff": 0.9,
+  "minimum_evidence_weeks": 2,
+  "score_floor": 0.9,
+  "selection": "validation balanced accuracy, then PR-AUC, precision, fewer flags; precision may not fall",
+  "history": "latest 12 eligible weeks selected without labels or project dates",
+  "test_status": "opened_once_after_extension_freeze; reused from original study"
+}
