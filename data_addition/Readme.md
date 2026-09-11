@@ -71,6 +71,10 @@ To reshape for a model: group by `sample_id`, and each sample becomes a
 
 ### Baseline results
 
+Rule-based benchmarks on the same samples (no learning) are in
+`../docs/heuristics_baseline.md`: PV **0.808** AUC from one threshold, EV **0.727** —
+both match or beat the models below.
+
 `HistGradientBoostingClassifier(max_iter=200)`, 5-fold grouped CV, 63 numeric features:
 
 | target | pos | ROC-AUC | PR-AUC | base rate |
