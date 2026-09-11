@@ -8,16 +8,16 @@ from ..pv.io import gp_to_mpid
 
 
 def build_universe() -> pd.DataFrame:
-    """Admit every household whose export register is confirmed present, not
-    only those that ever read a positive value.
+    """Admit households that demonstrably feed in (>=MIN_EXPORT_DAYS days of
+    positive export), which is a validated label-blind proxy for "has PV".
 
-    A working register that reads exactly zero on every measured day is a
-    real, physically meaningful class: a battery run under a greedy
-    self-consumption or feed-in-limiting strategy can eliminate export
-    entirely (battery_evidence_base.md S1, S C). The previous rule required
-    >=MIN_EXPORT_DAYS *positive* days even for meters with a confirmed
-    working register, which silently excluded that class as if its register
-    were missing. It admits it as ``measured_zero_export`` instead.
+    Do not weaken this to "the export register was read at all": every meter
+    in the export files has 2.29 rows (mostly exact zeros), so that test is
+    true for 100% of meters and would admit the whole population -- which
+    makes the model relearn "has PV" instead of the battery (plan D3).
+    Measured: positive export covers 11.3% of meters, matching the ~12% ElPA
+    PV base rate, and pv_probability separates exporters from non-exporters
+    at AUC 0.904.
     """
     stats = pd.read_csv(C.METER_EXPORT_DAYS, dtype={"mp_id": str})
     flags = pd.read_csv(C.PV_METER_FLAGS, dtype={"mp_id": str})
@@ -34,11 +34,9 @@ def build_universe() -> pd.DataFrame:
     pv = pd.read_csv(C.PV_OOF, dtype={"gp_nr": str})[["gp_nr", "pv_probability"]]
     agg = agg.merge(pv, on="gp_nr", how="outer")
     measured = agg["exp_rows_seen"].fillna(False).astype(bool)
-    has_export_days = agg["exp_days_positive"].fillna(0) >= C.MIN_EXPORT_DAYS
     fallback = ~measured & (agg["pv_probability"].fillna(0) >= 0.8)
     agg["admission_rule"] = "excluded"
-    agg.loc[measured & ~has_export_days, "admission_rule"] = "measured_zero_export"
-    agg.loc[measured & has_export_days, "admission_rule"] = "measured_export"
+    agg.loc[measured & (agg["exp_days_positive"].fillna(0) >= C.MIN_EXPORT_DAYS), "admission_rule"] = "measured_export"
     agg.loc[fallback, "admission_rule"] = "pv_probability_fallback"
     agg["in_universe"] = agg["admission_rule"] != "excluded"
     return agg
@@ -47,21 +45,25 @@ def build_universe() -> pd.DataFrame:
 def retention_upper_bound() -> tuple[int, int, float]:
     """Upper bound for the gate from the prior complete all-meter scan.
 
-    A household whose export register was never read at all (no reading on
-    any day) truly has no export evidence. One that was read every day but
-    always logged zero has a *confirmed working* register -- that is the
-    real, admissible ``measured_zero_export`` class build_universe() now
-    keeps, so the bound checks register presence (>=1 reading, any value),
-    not a positive reading. This check rejects an impossible gate without
-    repeating 77 GB of I/O.
+    A household with zero export energy over the record cannot have ten
+    positive-export days.  This check can therefore reject an impossible gate
+    without repeating 77 GB of I/O.
+
+    Checked 2026-09-11 and left as-is: relaxing ``exp_kwh > 0`` to "the
+    export register was read at all" does NOT fix the gate, it destroys it.
+    Every one of the 93,279 meters has 2.29 rows, so that test is true for
+    everyone and admits the whole population. The 14 households it would
+    "rescue" also score pv_probability 0.012-0.482 on the import side, i.e.
+    they show no PV signature either -- they are unobservable in this data,
+    not mismeasured.
     """
     prior = pd.read_csv(
         C.PV_METER_FLAGS.parent / "feedin_meter_stats.csv", dtype={"mp_id": str}
     )
-    register_present = set(prior.loc[prior["exp_days"] > 0, "mp_id"])
+    ever_exported = set(prior.loc[prior["exp_kwh"] > 0, "mp_id"])
     labels = pd.read_csv(C.LABELS, dtype={"gp_nr": str, "mp_id": str})
     positives = labels[labels.battery_positive & labels.has_meter]
-    gps = positives.groupby("gp_nr")["mp_id"].apply(lambda s: s.isin(register_present).any())
+    gps = positives.groupby("gp_nr")["mp_id"].apply(lambda s: s.isin(ever_exported).any())
     kept, total = int(gps.sum()), int(len(gps))
     return kept, total, kept / total
 
@@ -71,16 +73,8 @@ def main() -> None:
     print(f"known battery retention upper bound: {upper_kept}/{upper_total} = {upper:.1%}")
     if upper < 0.95:
         raise RuntimeError(
-            "universe acceptance gate is mathematically impossible: even "
-            f"admitting every household with a confirmed export register "
-            f"retains only {upper:.1%}"
-        )
-    if not C.METER_EXPORT_DAYS.exists():
-        raise RuntimeError(
-            f"gate pre-check passed ({upper_kept}/{upper_total} = {upper:.1%}); "
-            f"{C.METER_EXPORT_DAYS} is missing, so build_universe() cannot run yet "
-            "-- run `python -m models.battery.build_features` (Step 3, the full "
-            "streaming pass) first"
+            "universe acceptance gate is mathematically impossible: even the "
+            f"weaker any-export rule retains only {upper:.1%}; >=10 days cannot retain more"
         )
     out = build_universe()
     out.to_csv(C.UNIVERSE, index=False)

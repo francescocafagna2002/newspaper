@@ -2,9 +2,8 @@
 
 Rows are parsed by position through the unchanged PV stream reader.  To keep
 the pass tractable, the completed PV scan supplies a label-blind candidate
-superset (any meter with a working export register, plus the documented
-missing-register fallback). Exact positive-export day counts are recomputed
-here.
+superset (any measured export, plus the documented missing-register fallback).
+Exact positive-export day counts are recomputed here.
 """
 from __future__ import annotations
 
@@ -22,27 +21,23 @@ from ..pv.io import gp_to_mpid
 
 
 def _candidate_meters() -> set[str] | None:
-    """Label-blind candidate superset for the full streaming pass: any meter
-    with a *working* export register (>=1 reading, whatever the value), plus
-    -- for meters with no register at all -- PV-likely households via the
-    offline pv_probability fallback.
+    """Label-blind candidate superset for the full streaming pass: meters that
+    demonstrably feed in, plus the documented missing-register fallback.
 
-    Filtering the primary set on ``exp_kwh > 0`` instead of register
-    presence would silently drop every meter whose register works but reads
-    exactly zero on every day: a greedy self-consumption or feed-in-limited
-    battery leaves no export signature at all, so that is a real class of
-    battery household, not a missing meter (see define_universe.build_universe).
+    Do not widen ``exp_kwh > 0`` to ``exp_days > 0`` ("has any 2.29 row"):
+    every meter has 2.29 rows, so that admits all 93,279 meters instead of
+    the 10,890 that ever export, making the pass ~8x longer and the universe
+    meaningless. See define_universe.retention_upper_bound.
     """
     prior = C.PV_METER_FLAGS.parent / "feedin_meter_stats.csv"
     if not prior.exists():
         return None
     s = pd.read_csv(prior, dtype={"mp_id": str})
-    has_register = s["exp_days"] > 0
-    ids = set(s.loc[has_register, "mp_id"])
+    ids = set(s.loc[s["exp_kwh"] > 0, "mp_id"])
     if C.PV_OOF.exists():
         pv = pd.read_csv(C.PV_OOF, dtype={"gp_nr": str})
         gps = set(pv.loc[pv["pv_probability"] >= 0.8, "gp_nr"])
-        missing_register = set(s.loc[~has_register, "mp_id"])
+        missing_register = set(s.loc[s["exp_days"] == 0, "mp_id"])
         ids.update(
             gp_to_mpid().loc[lambda x: x.gp_nr.isin(gps) & x.mp_id.isin(missing_register), "mp_id"].dropna()
         )

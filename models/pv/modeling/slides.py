@@ -233,19 +233,10 @@ def s_ev_results(prs):
 def s_battery_status(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     _title(s, "Battery — design & status",
-           "Universe-gate bug found & fixed (2026-09-11) — still no score or "
-           "confusion matrix, for a different reason now")
+           "Evaluation is blocked before any score or confusion matrix exists")
     _pic(s, "fig_battery_status.png", 0.4, 1.5, w=7.6)
 
     _bullets(s, 8.2, 1.6, 4.8, 4.9, [
-        "Fixed: the gate's \"measured\" test required a positive export "
-        "reading, so it treated a working register that reads exactly zero "
-        "every day the same as a missing meter — but a greedy "
-        "self-consumption / feed-in-limited battery is expected to leave no "
-        "export at all. All 14 rejected households have a confirmed-working "
-        "register (100+ daily readings, always 0.0 kWh). Admitting register "
-        "presence instead of positive readings takes retention from "
-        "208/222 (93.7%) to 222/222 (100%), label-blind throughout",
         "Design: reuses the PV pipeline's I/O + PU learner (Elkan–Noto); "
         "contrast is battery vs PV-without-battery, not vs the general "
         "population — 96% of GIGI battery households also have PV, so a "
@@ -254,12 +245,18 @@ def s_battery_status(prs):
         "zero-import / flat-interval plateaus, feed-in shaping "
         "(delayed & clipped export), ramp smoothing, evening-zero → "
         "step recovery, charge/discharge energy-balance check (η≈0.80–0.95)",
-        "82 GIGI “no battery” households remain a held-out audit set, "
+        "82 GIGI “no battery” households are a held-out audit set, "
         "never used as training negatives",
-        "Not yet done: the full streaming pass (Step 3, 77 GB) hasn't run, "
-        "and aggregation/train/evaluate/score (Steps 4–7) aren't "
-        "implemented — the gate no longer blocks the pipeline, but nothing "
-        "downstream of it has been built or run",
+        "Universe gate (label-blind) requires ≥95% of known-battery "
+        "households to be admissible to the PV-likely universe; measured "
+        "export gives 93.7% (208/222) — pipeline halted per spec rather "
+        "than weakening the gate or fabricating a result",
+        "Re-checked 2026-09-11: the 14 missing households are unobservable, "
+        "not mismeasured — they never export, and score pv_probability "
+        "0.012–0.482 on the import side too. Relaxing the rule to \"has an "
+        "export register\" is not a fix: all 93k meters do, so it admits "
+        "everyone and the model relearns “has PV”. Unblocking needs a plan "
+        "decision, not a code change",
     ], size=9.5, head="Takeaways")
 
 

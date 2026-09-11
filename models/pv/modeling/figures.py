@@ -319,40 +319,36 @@ def fig_ev_results():
 
 
 def fig_battery_status():
-    """The universe-gate retention rule was fixed 2026-09-11 (a positive-
-    export requirement was silently excluding register-present-but-always-
-    zero households — a real feed-in-limited-battery signature, not missing
-    data; see models/battery/REPORT.md). Retention is now 100%, but no
-    trained model or confusion matrix exists yet — Step 3 (the full 77 GB
-    streaming pass) hasn't been run, and Steps 4-7 aren't implemented."""
+    """The universe gate blocks battery training: only 93.7% of known-battery
+    households ever export, below the 95% the gate requires. Re-investigated
+    2026-09-11 — the rule is right and the limitation is real (see
+    models/battery/REPORT.md), so there is still no model and no confusion
+    matrix, and this figure says so rather than fabricating one."""
     fig, (ax, ax2) = plt.subplots(1, 2, figsize=(11.6, 4.3),
                                    gridspec_kw={"width_ratios": [1.5, 1]})
-    labels = ["Required\n(spec §4.1)",
-              "Before fix\n(positive-export rule)",
-              "After fix\n(register-present rule)"]
-    vals = [0.95, 0.937, 1.00]
-    colors = [SUB, REST, PV]
-    ax.barh(labels, vals, color=colors, height=0.5)
+    labels = ["Required retention\n(implementation spec §4.1)",
+              "Achieved retention\n(ever exports — a PV proxy\nvalidated at AUC 0.904)"]
+    vals = [0.95, 0.937]
+    ax.barh(labels, vals, color=[SUB, REST], height=0.45)
     ax.axvline(0.95, color=INK, lw=1, ls="--")
     for y, v in enumerate(vals):
         ax.text(v + 0.012, y, f"{v:.1%}", va="center", fontsize=11, color=INK)
-    ax.set_xlim(0, 1.1)
-    ax.set_xlabel("known-battery household retention\n(usable meter history, n=222)")
+    ax.set_xlim(0, 1.08)
+    ax.set_xlabel("share of usable known-battery households (n=222)\n"
+                  "admissible to the PV-likely universe")
     ax.grid(axis="y", visible=False)
-    ax.set_title("Universe gate — bug found & fixed", loc="left",
+    ax.set_title("Universe gate — halted before training", loc="left",
                  fontsize=12, fontweight="bold", pad=10)
 
     ax2.axis("off")
     ax2.set_title("Confusion matrix", loc="left", fontsize=12, fontweight="bold", pad=10)
     ax2.text(0.5, 0.5,
-              "Still none.\n\nGate now passes (222/222), but\n"
-              "training never ran: the full\n"
-              "streaming pass (Step 3, 77 GB)\n"
-              "hasn't been executed, and\n"
-              "aggregation/train/eval/score\n"
-              "(Steps 4–7) aren't implemented.\n\n"
+              "None.\n\nTraining, evaluation and scoring\n"
+              "did not run — the label-blind\n"
+              "universe gate failed\n"
+              "(208/222 = 93.7% < 95% required).\n\n"
               "No battery probabilities were\nfabricated to fill this panel.",
-              ha="center", va="center", fontsize=10, color=INK)
+              ha="center", va="center", fontsize=10.5, color=INK)
 
     fig.tight_layout()
     fig.savefig(FIG / "fig_battery_status.png", dpi=150)
