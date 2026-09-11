@@ -59,6 +59,19 @@
   \node[fill=rose!28,minimum width=.92cm,minimum height=.62cm,align=center] at (.5,.85) {\scriptsize FP\\\bfseries #3};
   \node[fill=blue!20,minimum width=.92cm,minimum height=.62cm,align=center] at (1.5,.85) {\scriptsize TN\\\bfseries #4};
 }}
+% #1 width, #2 the rule in words, #3 headline metrics, #4 the caveat.
+% Flat: a single accent rule at the left edge, no box, per DESIGN_PREFERENCES.
+% Built from plain LaTeX boxes rather than a TikZ node -- a node with `text width`
+% sets its own paragraph and spaces words far more loosely than body copy.
+\newsavebox{\rbbox}
+\newcommand{\rulebaseline}[4]{\par\smallskip\noindent
+\sbox{\rbbox}{\parbox{#1}{\raggedright
+  {\sffamily\scriptsize\bfseries\color{blue}RULE BASELINE}\\[2.5pt]
+  {\sffamily\footnotesize\color{ink}#2}\\[3pt]
+  {\sffamily\scriptsize\bfseries\color{ink}#3}\\[1.5pt]
+  {\sffamily\scriptsize\color{muted}#4}}}%
+\textcolor{mint}{\rule[-\dp\rbbox]{1.4pt}{\dimexpr\ht\rbbox+\dp\rbbox\relax}}%
+\hspace{7pt}\usebox{\rbbox}\par\smallskip}
 \newcommand{\confusiontable}[6]{%
 \scriptsize\renewcommand{\arraystretch}{1.35}\setlength{\tabcolsep}{3pt}%
 \begin{tabular}{@{}lrr@{}}
@@ -122,34 +135,38 @@
 \end{center}
 \vspace{.5cm}
 \begin{columns}[T,onlytextwidth]
-\column{.28\textwidth}\tagline{EV}\par\small Charging plateaus and sharp start edges.
+\column{.28\textwidth}\tagline{EV}\par\small Sharp switch-on steps in grid import.
 \column{.28\textwidth}\tagline{Heat pump}\par\small Cold-weather and persistent heating signatures.
 \column{.28\textwidth}\tagline{Rooftop PV}\par\small Sunny-day midday import depression.
 \end{columns}
 \vspace{.35cm}
 \begin{columns}[T,onlytextwidth]
-\column{.28\textwidth}\tagline{Battery}\par\small Solar-linked charge/discharge behaviour.
+\column{.28\textwidth}\tagline{Battery}\par\small Export displaced past solar noon.
 \column{.28\textwidth}\tagline{Other devices}\par\small Repeated distinctive load motifs.
 \column{.28\textwidth}\placeholder{demo evidence view}
 \end{columns}
 \end{frame}
 
-\begin{frame}{EV classifier: a frozen LightGBM benchmark}
+\begin{frame}{EV: the model, and the rule it must beat}
 \begin{columns}[T,onlytextwidth]
-\column{.58\textwidth}
-\tagline{E22 LIGHTGBM · HELD-OUT TEST}\par\vspace{.25cm}
-\small The selected model detects EV-labelled properties from the total net-load profile; it does \alert{not} localise individual charging events.
-\vspace{.18cm}
-\begin{itemize}\itemsep.18em
-  \item 45 features: annual load aggregates, 24-hour mean profile, and windowed multi-meter context.
-  \item Selected by validation PR-AUC among 9 candidates; threshold frozen at 0.392 before the test was opened.
-  \item Test (67 properties; 15 EV-labelled): ROC-AUC 0.67, recall 67\%, precision 33\%.
-  \item Caveat: ``non-EV'' means subsidy-register-unlabelled, not confirmed EV-absent.
+\column{.55\textwidth}
+\tagline{E22 LIGHTGBM · HELD-OUT TEST}\par\vspace{.18cm}
+\scriptsize 45 features, threshold frozen before the test was opened. Test (67 properties, 15 EV-labelled): \textbf{ROC-AUC 0.67}. Detects EV \emph{households}, not charging events.
+\vspace{.10cm}
+\rulebaseline{.52\textwidth}{Flag EV if grid import ever steps up by $\geq$\,9\,kW within one quarter-hour.}{\mbox{ROC-AUC 0.686}\enspace\mbox{F1 0.50}\enspace\mbox{n = 342}}{Threshold selected out-of-fold: 9.2\,kW in $\sim$100/100 grouped folds.}
+\vspace{.04cm}
+\scriptsize
+\begin{itemize}\itemsep.04em
+  \item The full plateau detector --- band, duration, edge --- scores 0.688: $\Delta$AUC \textbf{$-0.002$}\,$[-0.033,+0.029]$ over one line of $\max(\Delta P)$.
+  \item \alert{$\sim$75\% of $\geq$9\,kW ramp days fall in Nov--Mar for EV owners \emph{and} non-owners.} Much of what every method here reads is winter heating, not charging.
 \end{itemize}
-\column{.37\textwidth}
-\centering\textbf{Held-out evaluation}\\[4pt]
-\confusiontable{\shortstack[l]{EV-labelled\\(GIGI)}}{\shortstack[l]{Unlabelled\\properties}}{10}{5}{20}{32}\\[5pt]
-\scriptsize\textcolor{muted}{Rows are actual labels. $p \geq 0.392$; test $n=67$.}
+\column{.40\textwidth}
+\centering\scriptsize\textbf{LightGBM · held-out test}\\[2pt]
+\confusiontable{\shortstack[l]{EV-labelled\\(GIGI)}}{\shortstack[l]{Unlabelled\\properties}}{10}{5}{20}{32}\\[2pt]
+{\scriptsize\textcolor{muted}{$p \geq 0.392$; $n=67$.}}\\[8pt]
+\textbf{Rule · 342 labelled samples}\\[2pt]
+\confusiontable{\shortstack[l]{EV-labelled\\(GIGI)}}{\shortstack[l]{Unlabelled\\properties}}{49}{23}{75}{195}\\[2pt]
+{\scriptsize\textcolor{muted}{Precision 0.40 is a \emph{floor}.}}
 \end{columns}
 \end{frame}
 
@@ -175,45 +192,49 @@
 
 \begin{frame}{Rooftop PV: SolarPrint reads the solar imprint in demand}
 \begin{columns}[T,onlytextwidth]
-\column{.58\textwidth}
-\tagline{HISTGRADIENTBOOSTING · 5-FOLD OOF}\par\vspace{.25cm}
-\scriptsize SolarPrint estimates rooftop-PV probability from grid-import shape; feed-in is used offline for silver labels, never as a feature.
-\vspace{.12cm}
-\begin{itemize}\itemsep.10em
-  \item 23 features: summer daytime near-zero import, evening-to-midday contrast, solar coupling, seasonality, and night base load.
-  \item Positive--Unlabelled learning with Elkan--Noto correction, calibrated to the 12\% canton base rate.
-  \item GIGI result: ROC-AUC 0.92; recall 92\% at $p \geq 0.5$; 6.6\% of the population flagged.
-  \item No confirmed non-PV households: the ranking is stronger than absolute probabilities.
+\column{.55\textwidth}
+\tagline{HISTGRADIENTBOOSTING · 5-FOLD OOF}\par\vspace{.18cm}
+\scriptsize 23 import-shape features; feed-in is used offline for silver labels, never as a feature. \textbf{GIGI ROC-AUC 0.92}.
+\vspace{.10cm}
+\rulebaseline{.52\textwidth}{Flag PV if the meter ever exported. You cannot inject what you do not generate.}{\mbox{F1 0.920}\enspace\mbox{recall 0.922}\enspace\mbox{n = 342}}{Zero tuned constants. A 0.2\,kW deadband changed 0 of 342 calls, so it was removed.}
+\vspace{.04cm}
+\scriptsize
+\begin{itemize}\itemsep.04em
+  \item Import-only variant --- midday draw $\div$ night draw --- scores \textbf{0.800} against a gradient-boosted model's 0.806 on the same samples.
+  \item \alert{The rule's 23 false positives mostly \emph{have} PV}: median export 17.0\,kWh/day vs 19.6 for labelled PV homes; true negatives export exactly zero.
 \end{itemize}
-\column{.37\textwidth}
-\centering\textbf{Evaluation snapshot}\\[4pt]
-\scriptsize\renewcommand{\arraystretch}{1.35}\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}lrr@{}}
-\textbf{Actual cohort} & \textbf{Flagged} & \textbf{Not flagged} \\\hline
-\shortstack[l]{GIGI PV\\(confirmed)} & 260 & 24 \\
-\shortstack[l]{Strictly\\unlabelled} & 4.6k & 65.6k \\
-\end{tabular}\\[5pt]
-\scriptsize\textcolor{muted}{Rows are actual labels. $p \geq 0.5$; silver positives excluded.}
+\column{.40\textwidth}
+\centering\scriptsize\textbf{SolarPrint · population}\\[2pt]
+\confusiontable{\shortstack[l]{GIGI PV\\(confirmed)}}{\shortstack[l]{Strictly\\unlabelled}}{260}{24}{4.6k}{65.6k}\\[2pt]
+{\scriptsize\textcolor{muted}{$p \geq 0.5$; silver excluded.}}\\[8pt]
+\textbf{Rule · 342 labelled samples}\\[2pt]
+\confusiontable{\shortstack[l]{GIGI PV\\(confirmed)}}{\shortstack[l]{Unlabelled\\properties}}{259}{22}{23}{38}\\[2pt]
+{\scriptsize\textcolor{muted}{Different denominators --- not\\comparable cell for cell.}}
 \end{columns}
 \end{frame}
 
-\begin{frame}{Battery: the model gate is clear; training is next}
+\begin{frame}{Battery: a physical rule already reads storage}
 \begin{columns}[T,onlytextwidth]
-\column{.58\textwidth}
-\tagline{PV-CONDITIONED PU DESIGN · NOT YET TRAINED}\par\vspace{.20cm}
-\small The intended contrast is battery versus PV-without-battery---not the full population, which would mostly relearn ``has PV.''
-\vspace{.12cm}
-\begin{itemize}\itemsep.10em
-  \item Features: flat import, feed-in shaping, ramp smoothing, evening recovery, and energy balance.
-  \item 82 GIGI no-battery households are a held-out audit set, never training negatives.
-  \item The export-register gate was corrected: 222/222 usable known batteries are retained.
-  \item Training, evaluation, and scoring remain unimplemented: no battery probability or headline metric yet.
+\column{.55\textwidth}
+\rulebaseline{.52\textwidth}{Of the solar exported in the shoulder months, what share leaves the house \emph{after} solar noon?}{\mbox{ROC-AUC 0.855}\enspace\mbox{F1 0.892}\enspace\mbox{n = 242}}{Flag a battery above 0.50. Nothing here is fitted to the labels.}
+\vspace{.08cm}
+\scriptsize
+\begin{itemize}\itemsep.04em
+  \item \textbf{Why 0.50.} The sun is symmetric about noon: a home \emph{without} storage exports half before, half after. A battery eats the morning surplus and spills only once full. Non-battery homes measure 0.466, battery 0.561.
+  \item \textbf{The trap we avoid.} 96\% of batteries sit in a PV home, so \texttt{has\_PV} alone scores 0.700 against battery. Every number here is measured \alert{within PV homes}, where \texttt{has\_PV} is worth 0.500.
 \end{itemize}
-\column{.37\textwidth}
-\centering\textbf{Evaluation status}\\[4pt]
-\metric{222 / 222}{Known batteries retained}\par\vspace{.22cm}
-\metric{0}{Trained models / confusion matrices}\par\vspace{.22cm}
-\small\textcolor{muted}{The gate correction unblocks the pipeline; it is not a model result.}
+\column{.40\textwidth}
+\centering\scriptsize\textbf{Rule · 242 PV households}\\[2pt]
+\confusiontable{\shortstack[l]{GIGI battery\\(confirmed)}}{\shortstack[l]{Unlabelled\\PV homes}}{170}{20}{21}{31}\\[2pt]
+{\scriptsize\textcolor{muted}{Share after noon $\geq 0.50$. This is\\the rule baseline --- the trained\\PV-conditioned model is still to come.}}\\[7pt]
+\textbf{The seasonal test}\\[1pt]
+{\scriptsize\renewcommand{\arraystretch}{1.3}\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrr@{}}
+ & \textbf{No batt.} & \textbf{Battery} \\\hline
+Jun--Aug & 0.459 & 0.529 \\
+Mar/Apr/Sep/Oct & 0.483 & \textbf{0.632} \\
+\end{tabular}}\\[3pt]
+{\scriptsize\textcolor{muted}{\textbf{Not west-facing roofs.} A battery\\saturates in high summer so the skew\\shrinks --- and it does, by 0.103.\\Non-battery homes move 0.024.\\A fixed roof cannot change azimuth.}}
 \end{columns}
 \end{frame}
 
