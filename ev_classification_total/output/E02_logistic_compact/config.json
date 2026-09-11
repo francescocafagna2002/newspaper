@@ -1,0 +1,22 @@
+{
+  "id": "E02_logistic_compact",
+  "family": "logistic",
+  "features": "compact",
+  "params": {
+    "C": 0.1
+  },
+  "hypothesis": "Robust annual load statistics separate repeated EV demand from household scale.",
+  "columns": [
+    "bezug_mean_kwh_d",
+    "bezug_median_kwh_d",
+    "bezug_p95_kwh_d",
+    "bezug_peak_kw",
+    "frac_qh_above_6kw",
+    "night_share",
+    "midday_share",
+    "evening_share",
+    "winter_summer_ratio",
+    "weekend_weekday_ratio"
+  ],
+  "threshold": 0.5137309801610814
+}

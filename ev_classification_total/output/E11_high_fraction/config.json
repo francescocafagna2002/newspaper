@@ -1,0 +1,5 @@
+{
+  "kind": "high_fraction",
+  "threshold": 0.5,
+  "feedin_features": false
+}

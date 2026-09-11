@@ -1,0 +1,25 @@
+{
+  "id": "E20_hgb_compact",
+  "family": "hist_gradient_boosting",
+  "features": "compact",
+  "params": {
+    "learning_rate": 0.05,
+    "max_iter": 200,
+    "max_leaf_nodes": 7,
+    "l2_regularization": 5.0
+  },
+  "hypothesis": "Nonlinear interactions improve on the compact linear baseline.",
+  "columns": [
+    "bezug_mean_kwh_d",
+    "bezug_median_kwh_d",
+    "bezug_p95_kwh_d",
+    "bezug_peak_kw",
+    "frac_qh_above_6kw",
+    "night_share",
+    "midday_share",
+    "evening_share",
+    "winter_summer_ratio",
+    "weekend_weekday_ratio"
+  ],
+  "threshold": 0.682801455097468
+}
