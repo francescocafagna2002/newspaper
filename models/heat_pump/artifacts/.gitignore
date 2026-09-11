@@ -1,0 +1,5 @@
+# large regenerable outputs - rebuild with the commands in ../README.md
+*.pkl
+population_predictions.csv
+# small outputs (leaderboard, metrics, feature importance, the GWR comparison,
+# figures and the slide) are kept in git as the record of a run.

@@ -1,0 +1,174 @@
+[
+  {
+    "id": "H21_hgb_compact",
+    "family": "hist_gradient_boosting",
+    "features": "compact",
+    "hypothesis": "Nonlinear interactions between winter-heavy load and dedicated-meter flags.",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 0.7171728076828146,
+    "accuracy": 0.7164179104477612,
+    "confusion_matrix": [
+      [
+        43,
+        3
+      ],
+      [
+        16,
+        5
+      ]
+    ],
+    "rank": 1
+  },
+  {
+    "id": "H12_winter_summer_ratio",
+    "family": "heuristic",
+    "features": "winter_summer_ratio",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 1.0,
+    "accuracy": 0.7014925373134329,
+    "confusion_matrix": [
+      [
+        46,
+        0
+      ],
+      [
+        20,
+        1
+      ]
+    ],
+    "rank": 2
+  },
+  {
+    "id": "H20_logistic_compact",
+    "family": "logistic",
+    "features": "compact",
+    "hypothesis": "Regularized linear model on scalar seasonality/shape/meter-aux features.",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 0.7205076623264516,
+    "accuracy": 0.7014925373134329,
+    "confusion_matrix": [
+      [
+        43,
+        3
+      ],
+      [
+        17,
+        4
+      ]
+    ],
+    "rank": 3
+  },
+  {
+    "id": "E00_dummy_majority",
+    "family": "dummy",
+    "features": "none",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 0.5,
+    "accuracy": 0.6865671641791045,
+    "confusion_matrix": [
+      [
+        46,
+        0
+      ],
+      [
+        21,
+        0
+      ]
+    ],
+    "rank": 4
+  },
+  {
+    "id": "H10_wpb_score",
+    "family": "heuristic",
+    "features": "wpb_score",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 1.0,
+    "accuracy": 0.6865671641791045,
+    "confusion_matrix": [
+      [
+        46,
+        0
+      ],
+      [
+        21,
+        0
+      ]
+    ],
+    "rank": 5
+  },
+  {
+    "id": "H22_hgb_shape",
+    "family": "hist_gradient_boosting",
+    "features": "load_shape",
+    "hypothesis": "The mean hourly profile adds heating-cycle timing evidence.",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 0.8382110124400937,
+    "accuracy": 0.6865671641791045,
+    "confusion_matrix": [
+      [
+        44,
+        2
+      ],
+      [
+        19,
+        2
+      ]
+    ],
+    "rank": 6
+  },
+  {
+    "id": "H23_lgbm_shape",
+    "family": "lightgbm",
+    "features": "load_shape",
+    "hypothesis": "Gradient-boosted trees over the full compact+shape feature set.",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 1.0,
+    "accuracy": 0.6865671641791045,
+    "confusion_matrix": [
+      [
+        46,
+        0
+      ],
+      [
+        21,
+        0
+      ]
+    ],
+    "rank": 7
+  },
+  {
+    "id": "H11_dedicated_meter",
+    "family": "heuristic",
+    "features": "dedicated_hp_meter",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 1.0,
+    "accuracy": 0.6716417910447762,
+    "confusion_matrix": [
+      [
+        42,
+        4
+      ],
+      [
+        18,
+        3
+      ]
+    ],
+    "rank": 8
+  }
+]

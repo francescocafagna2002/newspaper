@@ -1,0 +1,17 @@
+{
+  "n": 67,
+  "positives": 21,
+  "prevalence": 0.31343283582089554,
+  "threshold": 1.0,
+  "accuracy": 0.7014925373134329,
+  "confusion_matrix": [
+    [
+      46,
+      0
+    ],
+    [
+      20,
+      1
+    ]
+  ]
+}

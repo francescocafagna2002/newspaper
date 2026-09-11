@@ -1,15 +1,19 @@
 {
   "source": "https://public.madd.bfs.admin.ch/ag.zip",
   "catalogue": "https://www.housing-stat.ch/catalog/data/4.3/de.html",
-  "accessed_utc": "2026-09-10T22:10:48.557181+00:00",
-  "sha256": "b02984708bca2f37e48069166cd1655755c2681102076b22faef333d808853b2",
+  "accessed_utc": "2026-09-11T07:53:09.567149+00:00",
+  "sha256": "8264c68aa551a765dc95c998751c7e68ac4349ac5115f7d083f8831e62537ea7",
   "export_dates": [
-    "2026-09-10"
+    "2026-09-11"
   ],
-  "n_existing_residential_buildings": 157046,
+  "n_existing_residential_buildings": 157047,
   "n_postcodes": 250,
   "n_ambiguous_postcode_buildings_excluded": 1,
   "generator_field": "GWAERZW1",
   "generator_code": 7610,
-  "caution": "Includes combined space-heating/DHW systems; ecological comparison, not WPB accuracy."
+  "generator_code_label": "W\u00e4rmepumpe",
+  "n_hotwater_hp": 32945,
+  "n_separate_wpb": 1195,
+  "share_of_7610_that_is_combined": 0.9637274244953711,
+  "caution": "GWR has no W\u00e4rmepumpenboiler code. 7610 is plain \"W\u00e4rmepumpe\" and mostly marks combined space-heating/DHW machines; gwr_separate_wpb_rate is the like-for-like comparator and is itself a lower bound. Ecological comparison, not WPB accuracy."
 }

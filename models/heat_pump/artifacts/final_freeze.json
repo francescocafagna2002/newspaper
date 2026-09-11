@@ -1,0 +1,72 @@
+{
+  "champion": "H21_hgb_compact",
+  "selection": "highest validation accuracy among supervised models",
+  "threshold": 0.7171728076828146,
+  "features": [
+    "bezug_mean_kwh_d",
+    "bezug_median_kwh_d",
+    "bezug_p95_kwh_d",
+    "bezug_peak_kw",
+    "frac_qh_above_6kw",
+    "night_share",
+    "midday_share",
+    "evening_share",
+    "winter_summer_ratio",
+    "weekend_weekday_ratio",
+    "w_n_meters",
+    "w_n_meters_with_data",
+    "w_is_multi_meter",
+    "w_is_multi_unit",
+    "w_meter_max_winter_summer_ratio",
+    "w_meter_min_summer_share",
+    "w_meter_concentration",
+    "w_n_heat_pump_like_meters",
+    "w_is_winter_dominant",
+    "w_has_dedicated_hp_meter",
+    "w_n_months_in_window",
+    "wpb_score",
+    "wpb_flag",
+    "winter_share_over_night_share"
+  ],
+  "validation_metrics": {
+    "id": "H21_hgb_compact",
+    "family": "hist_gradient_boosting",
+    "features": "compact",
+    "hypothesis": "Nonlinear interactions between winter-heavy load and dedicated-meter flags.",
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 0.7171728076828146,
+    "accuracy": 0.7164179104477612,
+    "confusion_matrix": [
+      [
+        43,
+        3
+      ],
+      [
+        16,
+        5
+      ]
+    ],
+    "rank": 1
+  },
+  "test_metrics": {
+    "n": 67,
+    "positives": 21,
+    "prevalence": 0.31343283582089554,
+    "threshold": 0.7171728076828146,
+    "accuracy": 0.7611940298507462,
+    "confusion_matrix": [
+      [
+        44,
+        2
+      ],
+      [
+        14,
+        7
+      ]
+    ]
+  },
+  "top_feature": "evening_share",
+  "test_status": "opened_once"
+}

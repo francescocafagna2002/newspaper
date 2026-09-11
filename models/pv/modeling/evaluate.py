@@ -86,6 +86,24 @@ def main(model_dir=None, metrics_path=None) -> dict:
         "target_base_rate": PI,
     }
 
+    # confusion matrix @0.5 — GIGI-confirmed PV (trustworthy positive) vs the
+    # strictly unlabelled population (negative); silver feed-in-derived
+    # positives are excluded from both classes so they don't contaminate the
+    # negative pool. tp/fn reproduce recall@0.5_gigi_positives, fp/tn
+    # reproduce population_flag_rate@0.5.
+    flagged = score >= 0.5
+    neg = ~is_pos
+    metrics["confusion_matrix_gigi_vs_unlabelled@0.5"] = {
+        "threshold": 0.5,
+        "tp": int((gigi & flagged).sum()),
+        "fn": int((gigi & ~flagged).sum()),
+        "fp": int((neg & flagged).sum()),
+        "tn": int((neg & ~flagged).sum()),
+        "n_excluded_silver_positives": int((is_pos & ~gigi).sum()),
+        "note": "rows = GIGI-confirmed PV vs strictly unlabelled population; "
+                "silver feed-in-derived positives excluded from both classes",
+    }
+
     # flag-rate vs per-PLZ base rate
     try:
         br = pd.read_csv(C.PV_BASERATE_PLZ, dtype={"plz": str})

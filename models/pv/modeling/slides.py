@@ -164,9 +164,124 @@ def s_results(prs, metrics):
     _bullets(s, 8.2, 4.4, 4.8, 2.4, [
         f"Flags {m_flag:.0%} of the population (ElPA base rate ≈ 12 %) and "
         f"catches {m_rec:.0%} of held-out known PV homes.",
+        "Confusion matrix (right): GIGI-confirmed PV vs strictly unlabelled "
+        "households; ~6.2k silver feed-in-derived positives excluded from "
+        "both classes so they don't skew the negative pool.",
         "Weak spots: geographic agreement with the PV register modest "
         "(ρ≈0.1); change-point feature does not track install dates yet.",
     ], size=10.5)
+
+
+def s_pv_summary(prs, metrics):
+    m_roc = metrics["roc_auc_gigi_vs_rest"]; m_rec = metrics["recall@0.5_gigi_positives"]
+    m_flag = metrics["population_flag_rate@0.5"]
+    s = prs.slides.add_slide(prs.slide_layouts[6])
+    _title(s, "PV — results & takeaways",
+           "HistGradientBoosting, Positive–Unlabeled (Elkan–Noto) · 5-fold "
+           "out-of-fold; held-out GIGI positives as ground truth")
+    _pic(s, "fig_pv_summary.png", 0.4, 1.5, w=7.6)
+
+    _bullets(s, 8.2, 1.6, 4.8, 4.9, [
+        "23 features from the grid-import load shape only (feed-in register "
+        "used offline, for silver labels, never as a feature): midday "
+        "depression / duck curve, weather–solar coupling, seasonality, "
+        "night base load, year-on-year change-point",
+        "No confirmed non-PV households exist, so the model is trained "
+        "Positive–Unlabeled with Elkan–Noto correction and calibrated to "
+        "the 12% ElPA canton base rate rather than fit as ordinary binary "
+        "classification",
+        f"ROC-AUC {m_roc:.2f} (GIGI vs rest), recall {m_rec:.0%} on "
+        f"held-out known PV, flags {m_flag:.0%} of the unlabelled "
+        f"population at threshold 0.5",
+        "Confusion matrix (right): GIGI-confirmed PV vs strictly "
+        "unlabelled households; ~6.2k silver feed-in-derived positives "
+        "excluded from both classes so they don't skew the negative pool",
+        "Weak spots: geographic agreement with the PV register modest "
+        "(ρ≈0.1); change-point feature does not track install dates yet",
+    ], size=10.5, head="Takeaways")
+
+
+def s_ev_results(prs):
+    ev_dir = C.NEWSPAPER / "ev_classification_total" / "output" / "best"
+    test = json.loads((ev_dir / "metrics_test.json").read_text())
+    s = prs.slides.add_slide(prs.slide_layouts[6])
+    _title(s, "EV — results & takeaways",
+           f"LightGBM (E22_lgbm_total, all-net-load features) · held-out "
+           f"test, n={test['n']} properties, {test['positives']} GIGI-labelled EV")
+    _pic(s, "fig_ev_results.png", 0.4, 1.5, w=7.6)
+
+    _bullets(s, 8.2, 1.6, 4.8, 4.9, [
+        "45 features: annual load aggregates + 24-hr mean hourly profile + "
+        "windowed multi-meter context (heat-pump-like meters, "
+        "winter-dominance) for the property",
+        "Picked by validation PR-AUC among 9 candidates (dummy, 3 heuristic "
+        "rules, 2 logistic, 2 gradient-boosted, LightGBM); threshold frozen "
+        "on validation, refit on dev+val, test opened once",
+        f"Held-out test: ROC-AUC {test['roc_auc']:.2f}, recall "
+        f"{test['recall']:.0%}, precision {test['precision']:.0%} "
+        f"(n={test['n']}, prevalence {test['prevalence']:.0%} — small "
+        f"sample, wide CIs)",
+        "Negative class is subsidy-register-unlabelled, not verified "
+        "EV-absent — reported false-positive rate likely overstates "
+        "the true one",
+        "Post-hoc plateau-rescue / steep-slope heuristics tested on top of "
+        "LightGBM and rejected (no test-set improvement); base model "
+        "remains deployed",
+    ], size=10.5, head="Takeaways")
+
+
+def s_battery_status(prs):
+    s = prs.slides.add_slide(prs.slide_layouts[6])
+    _title(s, "Battery — design & status",
+           "Evaluation is blocked before any score or confusion matrix exists")
+    _pic(s, "fig_battery_status.png", 0.4, 1.5, w=7.6)
+
+    _bullets(s, 8.2, 1.6, 4.8, 4.9, [
+        "Design: reuses the PV pipeline's I/O + PU learner (Elkan–Noto); "
+        "contrast is battery vs PV-without-battery, not vs the general "
+        "population — 96% of GIGI battery households also have PV, so a "
+        "population-wide model would just relearn “has PV”",
+        "Intended feature families (literature-grounded, not yet scored): "
+        "zero-import / flat-interval plateaus, feed-in shaping "
+        "(delayed & clipped export), ramp smoothing, evening-zero → "
+        "step recovery, charge/discharge energy-balance check (η≈0.80–0.95)",
+        "82 GIGI “no battery” households are a held-out audit set, "
+        "never used as training negatives",
+        "Universe gate (label-blind) requires ≥95% of known-battery "
+        "households to show any export energy; current exports give 93.7% "
+        "(208/222) — pipeline halted per spec rather than weakening the "
+        "gate or fabricating a result",
+    ], size=10.5, head="Takeaways")
+
+
+def s_wpb_status(prs):
+    s = prs.slides.add_slide(prs.slide_layouts[6])
+    _title(s, "Heat-pump boiler (WPB) — design & status",
+           "Label-free physical rule on 15-min grid import — no supervised "
+           "classifier, so no confusion matrix")
+    _pic(s, "fig_wpb_status.png", 0.4, 1.5, w=7.6)
+
+    _bullets(s, 8.2, 1.6, 4.8, 4.9, [
+        "Design: per meter-month p10 (10th-percentile) envelope across all "
+        "days — a load must repeat on ≥90% of days to show up, which "
+        "structurally rules out irregular loads like a part-time EV",
+        "Plateau ≥0.25 kW above the quietest rolling hour; flagged only if "
+        "amplitude 0.25–1.2 kW and duration 1.5–9 h (physical bands from "
+        "COP≈3, not fit to labels), and it must reappear in both January "
+        "and July to reject seasonal confounders (dehumidifiers, floor "
+        "heating, part-load heat pumps)",
+        "Only 4 GIGI-labelled households have meter data and zero are "
+        "confirmed negatives, so precision, recall, ROC-AUC and accuracy "
+        "cannot be estimated (WPB_REPORT.md)",
+        "Closest available validation (left): inject a real resistance "
+        "boiler's energy at WPB power/duration into 150 real households per "
+        "amplitude and see if the rule recovers it — recall only, no "
+        "negatives tested",
+        "838 of 75,094 households flagged (1.1%); rank correlation with "
+        "the BFS building register is weak and inconsistent (ρ=+0.27, "
+        "p=0.03 at ≥100 meters/postcode; ρ=+0.12, p=0.30 at ≥30) — not a "
+        "validation, just the same order of magnitude",
+    ], size=10, head="Takeaways")
 
 
 def main():
@@ -177,6 +292,8 @@ def main():
     s_features(prs)
     s_signal(prs)
     s_results(prs, metrics)
+    s_ev_results(prs)
+    s_battery_status(prs)
     out = C.NEWSPAPER / "docs" / "pv_model_slides.pptx"
     prs.save(out)
     print(f"wrote {out}  ({len(prs.slides.__iter__.__self__._sldIdLst)} slides)")

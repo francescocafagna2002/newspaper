@@ -153,22 +153,30 @@ def fig_top_feature(gp):
     plt.close(fig)
 
 
-def fig_importance(gp):
+PV_IMPORTANCE_NICE = {
+    **KEY_FEATURES,
+    "n_meters": "# metering points", "n_months": "# months of history",
+    "pv_rate": "per-PLZ PV base rate", "load_irr_corr": "load–irradiance corr.",
+    "daytime_zero_winter": "winter daytime near-zero share",
+    "midday_std_summer": "midday load day-to-day scatter",
+    "below_night_summer": "daytime min below night base",
+}
+
+
+def _pv_importance(gp):
     from sklearn.inspection import permutation_importance
     meta = json.loads((C.MODEL_DIR / "meta.json").read_text())
     model = pd.read_pickle(C.MODEL_DIR / "model.pkl")
     s = gp["is_pv"].astype(int).to_numpy()
     X = gp[meta["features"]].astype(float)
     r = permutation_importance(model, X, s, n_repeats=5, random_state=0, scoring="roc_auc")
-    imp = pd.Series(r.importances_mean, index=meta["features"]).sort_values().tail(8)
-    nice = {**KEY_FEATURES,
-            "n_meters": "# metering points", "n_months": "# months of history",
-            "pv_rate": "per-PLZ PV base rate", "load_irr_corr": "load–irradiance corr.",
-            "daytime_zero_winter": "winter daytime near-zero share",
-            "midday_std_summer": "midday load day-to-day scatter",
-            "below_night_summer": "daytime min below night base"}
+    return pd.Series(r.importances_mean, index=meta["features"]).sort_values().tail(8)
+
+
+def fig_importance(gp):
+    imp = _pv_importance(gp)
     fig, ax = plt.subplots(figsize=(8.4, 4.2))
-    ax.barh([nice.get(i, i) for i in imp.index], imp.values, color=PV, height=0.6)
+    ax.barh([PV_IMPORTANCE_NICE.get(i, i) for i in imp.index], imp.values, color=PV, height=0.6)
     ax.set_xlabel("permutation importance  (ROC-AUC drop when shuffled)")
     ax.grid(axis="y", visible=False)
     ax.set_title("Trained model: feature importance", loc="left", fontsize=12,
@@ -190,8 +198,11 @@ def fig_results():
     rec = [0.12,
            single["recall@0.5_gigi_positives"] if single else np.nan,
            full["recall@0.5_gigi_positives"]]
+    cm = full.get("confusion_matrix_gigi_vs_unlabelled@0.5")
 
-    fig, ax = plt.subplots(figsize=(8.6, 4.3))
+    fig, axes = plt.subplots(1, 2, figsize=(11.6, 4.3),
+                              gridspec_kw={"width_ratios": [1.55, 1]})
+    ax, ax2 = axes
     y = np.arange(len(models))
     h = 0.34
     gap = 0.03
@@ -207,8 +218,185 @@ def fig_results():
     ax.legend(frameon=False, fontsize=10, loc="lower right")
     ax.set_title("SolarPrint vs baselines  (5-fold out-of-fold)", loc="left",
                  fontsize=12, fontweight="bold", pad=10)
+
+    if cm:
+        _confusion_panel(ax2, cm["tp"], cm["fn"], cm["fp"], cm["tn"],
+                          ["GIGI PV\n(confirmed)", "unlabelled\npopulation"],
+                          "Confusion matrix @0.5")
+    else:
+        ax2.axis("off")
+
     fig.tight_layout()
     fig.savefig(FIG / "fig_results.png", dpi=150)
+    plt.close(fig)
+
+
+EV_NICE = {
+    "bezug_peak_kw": "peak import power",
+    "weekend_weekday_ratio": "weekend ÷ weekday load",
+    "w_meter_max_winter_summer_ratio": "meter-level winter÷summer (max)",
+    "evening_share": "evening load share",
+    "winter_summer_ratio": "winter ÷ summer load",
+    "midday_share": "midday load share",
+    "frac_qh_above_6kw": "share of 15-min intervals > 6 kW",
+    "night_share": "night load share",
+    **{f"hb{h:02d}": f"hour {h:02d}:00 load share" for h in range(24)},
+}
+
+
+def _confusion_panel(ax2, tp, fn, fp, tn, row_labels, title):
+    mat = np.array([[tp, fn], [fp, tn]], dtype=float)
+    pct = mat / mat.sum(axis=1, keepdims=True)
+    ax2.imshow(pct, cmap="Blues", vmin=0, vmax=1, aspect="equal")
+    tag = [["TP", "FN"], ["FP", "TN"]]
+    for i in range(2):
+        for j in range(2):
+            c = "white" if pct[i, j] > 0.6 else INK
+            ax2.text(j, i - 0.13, tag[i][j], ha="center", va="center",
+                      fontsize=10.5, fontweight="bold", color=c)
+            ax2.text(j, i + 0.15, f"{int(mat[i, j]):,}  ({pct[i, j]:.0%})",
+                      ha="center", va="center", fontsize=9, color=c)
+    ax2.set_xticks([0, 1]); ax2.set_xticklabels(["flagged", "not flagged"], fontsize=9.5)
+    ax2.set_yticks([0, 1]); ax2.set_yticklabels(row_labels, fontsize=9.5)
+    ax2.tick_params(length=0)
+    for sp in ax2.spines.values():
+        sp.set_visible(False)
+    ax2.grid(False)
+    ax2.set_title(title, loc="left", fontsize=11, fontweight="bold", pad=10)
+
+
+def fig_pv_summary(gp):
+    """One-slide takeaway panel for PV: feature importance + confusion matrix."""
+    full = json.loads((C.ARTIFACTS / "metrics.json").read_text())
+    cm = full["confusion_matrix_gigi_vs_unlabelled@0.5"]
+    imp = _pv_importance(gp)
+
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(11.6, 4.3),
+                                   gridspec_kw={"width_ratios": [1.5, 1]})
+    ax.barh([PV_IMPORTANCE_NICE.get(i, i) for i in imp.index], imp.values, color=PV, height=0.6)
+    ax.set_xlabel("permutation importance  (ROC-AUC drop when shuffled)")
+    ax.grid(axis="y", visible=False)
+    ax.set_title("PV model — feature importance", loc="left", fontsize=12,
+                 fontweight="bold", pad=10)
+
+    _confusion_panel(ax2, cm["tp"], cm["fn"], cm["fp"], cm["tn"],
+                      ["GIGI PV\n(confirmed)", "unlabelled\npopulation"],
+                      "Confusion matrix @0.5")
+
+    fig.tight_layout()
+    fig.savefig(FIG / "fig_pv_summary.png", dpi=150)
+    plt.close(fig)
+
+
+def fig_ev_results():
+    """Feature importance + held-out confusion matrix for the EV model
+    (ev_classification_total/output/best — run E22_lgbm_total, LightGBM)."""
+    ev_dir = C.NEWSPAPER / "ev_classification_total" / "output" / "best"
+    cfg = json.loads((ev_dir / "config.json").read_text())
+    test = json.loads((ev_dir / "metrics_test.json").read_text())
+    model = pd.read_pickle(ev_dir / "pipeline.pkl")
+
+    imp = pd.Series(model.feature_importances_, index=cfg["columns"]).sort_values().tail(8)
+
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(11.6, 4.3),
+                                   gridspec_kw={"width_ratios": [1.5, 1]})
+    ax.barh([EV_NICE.get(i, i) for i in imp.index], imp.values, color=PV, height=0.6)
+    ax.set_xlabel("LightGBM split-count importance")
+    ax.grid(axis="y", visible=False)
+    ax.set_title("EV model — feature importance", loc="left", fontsize=12,
+                 fontweight="bold", pad=10)
+
+    tn, fp = test["confusion_matrix"][0]
+    fn, tp = test["confusion_matrix"][1]
+    _confusion_panel(ax2, tp, fn, fp, tn,
+                      ["EV-labelled\n(GIGI)", "unlabelled\npopulation"],
+                      f"Confusion matrix @{test['threshold']:.2f}\n"
+                      f"(held-out test, n={test['n']})")
+
+    fig.tight_layout()
+    fig.savefig(FIG / "fig_ev_results.png", dpi=150)
+    plt.close(fig)
+
+
+def fig_battery_status():
+    """The universe-gate retention rule was fixed 2026-09-11 (a positive-
+    export requirement was silently excluding register-present-but-always-
+    zero households — a real feed-in-limited-battery signature, not missing
+    data; see models/battery/REPORT.md). Retention is now 100%, but no
+    trained model or confusion matrix exists yet — Step 3 (the full 77 GB
+    streaming pass) hasn't been run, and Steps 4-7 aren't implemented."""
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(11.6, 4.3),
+                                   gridspec_kw={"width_ratios": [1.5, 1]})
+    labels = ["Required\n(spec §4.1)",
+              "Before fix\n(positive-export rule)",
+              "After fix\n(register-present rule)"]
+    vals = [0.95, 0.937, 1.00]
+    colors = [SUB, REST, PV]
+    ax.barh(labels, vals, color=colors, height=0.5)
+    ax.axvline(0.95, color=INK, lw=1, ls="--")
+    for y, v in enumerate(vals):
+        ax.text(v + 0.012, y, f"{v:.1%}", va="center", fontsize=11, color=INK)
+    ax.set_xlim(0, 1.1)
+    ax.set_xlabel("known-battery household retention\n(usable meter history, n=222)")
+    ax.grid(axis="y", visible=False)
+    ax.set_title("Universe gate — bug found & fixed", loc="left",
+                 fontsize=12, fontweight="bold", pad=10)
+
+    ax2.axis("off")
+    ax2.set_title("Confusion matrix", loc="left", fontsize=12, fontweight="bold", pad=10)
+    ax2.text(0.5, 0.5,
+              "Still none.\n\nGate now passes (222/222), but\n"
+              "training never ran: the full\n"
+              "streaming pass (Step 3, 77 GB)\n"
+              "hasn't been executed, and\n"
+              "aggregation/train/eval/score\n"
+              "(Steps 4–7) aren't implemented.\n\n"
+              "No battery probabilities were\nfabricated to fill this panel.",
+              ha="center", va="center", fontsize=10, color=INK)
+
+    fig.tight_layout()
+    fig.savefig(FIG / "fig_battery_status.png", dpi=150)
+    plt.close(fig)
+
+
+def fig_wpb_status():
+    """Synthetic-injection recovery curve for the heat-pump-boiler (WPB)
+    detector, plus why it has no confusion matrix: the detector is a
+    label-free physical rule, not a trained classifier — see
+    models/heat_pump_boiler/WPB_REPORT.md §Limitations."""
+    wpb_dir = C.NEWSPAPER / "models" / "heat_pump_boiler" / "artifacts"
+    det = pd.read_csv(wpb_dir / "wpb_detectability.csv")
+    rate = det.groupby("target_kw")["recovered"].mean().sort_index()
+
+    fig, (ax, ax2) = plt.subplots(1, 2, figsize=(11.6, 4.3),
+                                   gridspec_kw={"width_ratios": [1.5, 1]})
+    labels = [f"{kw:.1f} kW\ninjected" for kw in rate.index]
+    ax.barh(labels, rate.values, color=PV, height=0.55)
+    for y, v in enumerate(rate.values):
+        ax.text(v + 0.012, y, f"{v:.0%}", va="center", fontsize=10.5, color=INK)
+    ax.set_xlim(0, 1.05)
+    ax.set_xlabel(f"synthetic-injection recovery rate  (n={len(det)} "
+                  f"donor-based retrofits, all recovered={det['recovered'].mean():.0%})")
+    ax.grid(axis="y", visible=False)
+    ax.set_title("Counterfactual retrofit test — recall on synthetic events",
+                 loc="left", fontsize=12, fontweight="bold", pad=10)
+
+    ax2.axis("off")
+    ax2.set_title("Confusion matrix", loc="left", fontsize=12, fontweight="bold", pad=10)
+    ax2.text(0.5, 0.5,
+              "None.\n\nFour labelled positives, zero\n"
+              "confirmed negatives — precision,\n"
+              "recall, ROC-AUC and accuracy\n"
+              "cannot be estimated (WPB_REPORT.\n"
+              "md §Limitations). The rule is\n"
+              "label-free physics, not a trained\n"
+              "classifier. The chart at left tests\n"
+              "recall only, on synthetic positives\n"
+              "— no negatives were injected.",
+              ha="center", va="center", fontsize=10, color=INK)
+
+    fig.tight_layout()
+    fig.savefig(FIG / "fig_wpb_status.png", dpi=150)
     plt.close(fig)
 
 
@@ -220,7 +408,11 @@ def main():
     fig_top_feature(gp)
     fig_importance(gp)
     fig_results()
-    print(f"wrote 5 figures -> {FIG}")
+    fig_pv_summary(gp)
+    fig_ev_results()
+    fig_battery_status()
+    fig_wpb_status()
+    print(f"wrote 9 figures -> {FIG}")
 
 
 if __name__ == "__main__":

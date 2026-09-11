@@ -1,0 +1,9 @@
+id,family,features,hypothesis,n,positives,prevalence,threshold,accuracy,rank
+H21_hgb_compact,hist_gradient_boosting,compact,Nonlinear interactions between winter-heavy load and dedicated-meter flags.,67,21,0.31343283582089554,0.7171728076828146,0.7164179104477612,1
+H12_winter_summer_ratio,heuristic,winter_summer_ratio,,67,21,0.31343283582089554,1.0,0.7014925373134329,2
+H20_logistic_compact,logistic,compact,Regularized linear model on scalar seasonality/shape/meter-aux features.,67,21,0.31343283582089554,0.7205076623264516,0.7014925373134329,3
+E00_dummy_majority,dummy,none,,67,21,0.31343283582089554,0.5,0.6865671641791045,4
+H10_wpb_score,heuristic,wpb_score,,67,21,0.31343283582089554,1.0,0.6865671641791045,5
+H22_hgb_shape,hist_gradient_boosting,load_shape,The mean hourly profile adds heating-cycle timing evidence.,67,21,0.31343283582089554,0.8382110124400937,0.6865671641791045,6
+H23_lgbm_shape,lightgbm,load_shape,Gradient-boosted trees over the full compact+shape feature set.,67,21,0.31343283582089554,1.0,0.6865671641791045,7
+H11_dedicated_meter,heuristic,dedicated_hp_meter,,67,21,0.31343283582089554,1.0,0.6716417910447762,8

@@ -1,0 +1,166 @@
+{
+  "surrogate_model": {
+    "note": "population-scoreable surrogate on PV-pipeline household features, NOT the frozen champion of run_classification.py",
+    "features": [
+      "day_kwh_mean",
+      "night_kwh_mean",
+      "day_kwh_winter",
+      "day_kwh_summer",
+      "summer_winter_kwh_ratio",
+      "midday_seasonality",
+      "evening_midday_summer",
+      "n_meters",
+      "pv_probability"
+    ],
+    "n_labelled_households": 329,
+    "n_positives": 104,
+    "validation": {
+      "n": 99,
+      "positives": 31,
+      "prevalence": 0.31313131313131315,
+      "threshold": 0.5192508742337569,
+      "accuracy": 0.7878787878787878,
+      "confusion_matrix": [
+        [
+          60,
+          8
+        ],
+        [
+          13,
+          18
+        ]
+      ]
+    }
+  },
+  "population": {
+    "n_unlabelled_households_scored": 79727,
+    "n_flagged_heat_pumps": 66982,
+    "flag_rate": 0.8401419845221819,
+    "threshold": 0.5192508742337569
+  },
+  "gwr_reference": {
+    "source": "https://public.madd.bfs.admin.ch/ag.zip",
+    "accessed_utc": "2026-09-11T07:57:54.534954+00:00",
+    "sha256": "8264c68aa551a765dc95c998751c7e68ac4349ac5115f7d083f8831e62537ea7",
+    "export_dates": [
+      "2026-09-11"
+    ],
+    "generator_field": "GWAERZH1",
+    "generator_codes": [
+      "7410",
+      "7411"
+    ],
+    "n_existing_residential_buildings": 157047,
+    "n_heat_pump_buildings": 49124,
+    "canton_hp_rate": 0.31279807955580174,
+    "canton_hp_rate_known": 0.31324486841853555
+  },
+  "comparison": {
+    "gwr_hp_rate_all_buildings": 0.31279807955580174,
+    "gwr_hp_rate_known_generator": 0.31324486841853555,
+    "expected_count_at_gwr_rate": 24938,
+    "expected_count_at_gwr_rate_known": 24974,
+    "predicted_over_expected": 2.685892399707986,
+    "per_plz_spearman": [
+      {
+        "min_households": 1,
+        "reference": "gwr_hp_rate",
+        "n_postcodes": 113,
+        "rho": -0.3777009378869622,
+        "pvalue": 3.720029323010391e-05
+      },
+      {
+        "min_households": 1,
+        "reference": "gwr_hp_rate_known",
+        "n_postcodes": 113,
+        "rho": -0.3765492803358218,
+        "pvalue": 3.9459171773070156e-05
+      },
+      {
+        "min_households": 30,
+        "reference": "gwr_hp_rate",
+        "n_postcodes": 81,
+        "rho": -0.4006120179152486,
+        "pvalue": 0.00021059619651509441
+      },
+      {
+        "min_households": 30,
+        "reference": "gwr_hp_rate_known",
+        "n_postcodes": 81,
+        "rho": -0.4004652239518657,
+        "pvalue": 0.00021183287109000177
+      },
+      {
+        "min_households": 100,
+        "reference": "gwr_hp_rate",
+        "n_postcodes": 78,
+        "rho": -0.42059472550269456,
+        "pvalue": 0.00012604305841661334
+      },
+      {
+        "min_households": 100,
+        "reference": "gwr_hp_rate_known",
+        "n_postcodes": 78,
+        "rho": -0.420430331893809,
+        "pvalue": 0.00012689400300041885
+      }
+    ],
+    "rate_matched_threshold": 0.8927757970406981,
+    "per_plz_spearman_at_gwr_matched_rate": [
+      {
+        "min_households": 1,
+        "reference": "gwr_hp_rate",
+        "n_postcodes": 113,
+        "rho": 0.07062521600295667,
+        "pvalue": 0.45727716276142466
+      },
+      {
+        "min_households": 30,
+        "reference": "gwr_hp_rate",
+        "n_postcodes": 81,
+        "rho": 0.31287262872628724,
+        "pvalue": 0.004457109656189174
+      },
+      {
+        "min_households": 100,
+        "reference": "gwr_hp_rate",
+        "n_postcodes": 78,
+        "rho": 0.39445364761820456,
+        "pvalue": 0.0003521959433860547
+      }
+    ],
+    "threshold_sweep": [
+      {
+        "threshold": 0.3,
+        "flag_rate": 0.9292836805599107,
+        "n_flagged": 74089
+      },
+      {
+        "threshold": 0.5,
+        "flag_rate": 0.846802212550328,
+        "n_flagged": 67513
+      },
+      {
+        "threshold": 0.7,
+        "flag_rate": 0.7843892282413737,
+        "n_flagged": 62537
+      },
+      {
+        "threshold": 0.8,
+        "flag_rate": 0.6858028020620367,
+        "n_flagged": 54677
+      },
+      {
+        "threshold": 0.9,
+        "flag_rate": 0.27190286853888895,
+        "n_flagged": 21678
+      },
+      {
+        "threshold": 0.95,
+        "flag_rate": 0.08861489834058725,
+        "n_flagged": 7065
+      }
+    ],
+    "caveat": "GWR counts buildings with a heat pump as primary space-heating generator; the model scores electricity metering customers (gp_nr). A multi-family building is one GWR row but several customers, so rates are the comparable quantity and the implied count is an illustration, not an identity."
+  }
+}
