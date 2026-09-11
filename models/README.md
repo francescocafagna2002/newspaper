@@ -31,6 +31,7 @@ extract_feedin_labels, build_features_agg, train, evaluate, score`.
 | `train.py` | Positive-Unlabeled model (Elkan-Noto) + base-rate calibration |
 | `evaluate.py` | PU metrics, base-rate check, figures |
 | `score.py` | `artifacts/pv_predictions.csv` (the deliverable) |
+| `heuristics.py` | rule-based PV/EV baselines — see `../docs/heuristics_baseline.md` |
 
 Artifacts (git-ignored) land in `artifacts/`. Environment: Python 3.13 +
 pandas / numpy / scikit-learn / scipy / matplotlib (no pyarrow → pickle).
