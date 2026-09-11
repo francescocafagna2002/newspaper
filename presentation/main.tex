@@ -1,0 +1,262 @@
+% Energy Fingerprints — Energy Data Hackdays 2026 pitch deck
+% Replace all values marked TBD before presenting.
+\documentclass[10pt,aspectratio=169]{beamer}
+
+\usepackage[T1]{fontenc}
+% `sourcesans` is the maintained TeX package for the Source Sans Pro family.
+% Medium copy and Black display text make the type system visibly intentional.
+\usepackage[default,medium,black,scale=1.03]{sourcesans}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit}
+
+% Springer Nature Elements palette: blue-led, with restrained teal/orange accents.
+\definecolor{ink}{HTML}{01324B}
+\definecolor{inksoft}{HTML}{025E8D}
+\definecolor{paper}{HTML}{F8F8F8}
+\definecolor{muted}{HTML}{555555}
+\definecolor{mint}{HTML}{00A69D}
+\definecolor{sun}{HTML}{F58220}
+\definecolor{blue}{HTML}{0070A8}
+\definecolor{rose}{HTML}{BE1818}
+\definecolor{line}{HTML}{DADADA}
+
+\setbeamercolor{normal text}{fg=ink,bg=paper}
+\setbeamercolor{frametitle}{fg=ink,bg=paper}
+\setbeamercolor{title}{fg=paper}
+\setbeamercolor{subtitle}{fg=mint}
+\setbeamercolor{structure}{fg=blue}
+\setbeamercolor{alerted text}{fg=rose}
+\setbeamercolor{footline}{fg=muted,bg=paper}
+\usefonttheme{professionalfonts}
+\setbeamerfont{title}{family=\sffamily,series=\bfseries,size=\fontsize{28}{32}}
+\setbeamerfont{subtitle}{family=\sffamily,size=\large}
+\setbeamerfont{frametitle}{family=\sffamily,series=\bfseries,size=\fontsize{19}{23}}
+\setbeamerfont{normal text}{family=\sffamily,size=\small}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+\setbeamersize{text margin left=0.9cm,text margin right=0.9cm}
+\setbeamertemplate{footline}{\hfill\insertshorttitle\quad\textcolor{line}{|}\quad\insertframenumber/\inserttotalframenumber\hspace{0.9cm}\vspace{0.25cm}}
+\setbeamertemplate{frametitle}{\vspace{0.35cm}\insertframetitle\par\vspace{0.18cm}\textcolor{mint}{\rule{1.1cm}{1.3pt}}\vspace{0.18cm}}
+\setlength{\leftmargini}{1em}
+
+\newcommand{\tagline}[1]{\tikz[baseline=(tag.base)]\node[rounded corners=2pt,fill=mint!18,text=ink,inner xsep=5pt,inner ysep=2pt,font=\sffamily\scriptsize\bfseries] (tag) {#1};}
+\newcommand{\placeholder}[1]{\tikz[baseline=(tag.base)]\node[rounded corners=2pt,draw=muted!45,dashed,text=muted,inner xsep=5pt,inner ysep=2pt,font=\scriptsize] (tag) {TBD: #1};}
+\newcommand{\metric}[2]{\begin{tikzpicture}[baseline]
+  \node[fill=ink,rounded corners=2pt,minimum width=2.2cm,minimum height=1.05cm,text width=1.85cm,align=left,inner sep=7pt,text=paper] {\textcolor{mint}{\sffamily\small\bfseries #1}\\[-1pt]\sffamily\scriptsize #2};
+\end{tikzpicture}}
+
+% #1 TP, #2 FN, #3 FP, #4 TN. Keep all four on the same held-out split.
+\newcommand{\confusionmatrix}[4]{%
+\tikz[x=0.92cm,y=0.62cm,baseline=(current bounding box.north)]{
+  \node[font=\scriptsize\bfseries,text=muted] at (1,3.25) {PREDICTED};
+  \node[font=\scriptsize] at (0.5,2.82) {Asset};
+  \node[font=\scriptsize] at (1.5,2.82) {No asset};
+  \node[font=\scriptsize\bfseries,text=muted,rotate=90] at (-0.72,1.45) {ACTUAL};
+  \node[font=\scriptsize] at (-0.05,2.05) {Asset};
+  \node[font=\scriptsize] at (-0.12,0.85) {No asset};
+  \node[fill=mint!32,minimum width=.92cm,minimum height=.62cm,align=center] at (.5,2.05) {\scriptsize TP\\\bfseries #1};
+  \node[fill=sun!35,minimum width=.92cm,minimum height=.62cm,align=center] at (1.5,2.05) {\scriptsize FN\\\bfseries #2};
+  \node[fill=rose!28,minimum width=.92cm,minimum height=.62cm,align=center] at (.5,.85) {\scriptsize FP\\\bfseries #3};
+  \node[fill=blue!20,minimum width=.92cm,minimum height=.62cm,align=center] at (1.5,.85) {\scriptsize TN\\\bfseries #4};
+}}
+\newcommand{\confusiontable}[6]{%
+\scriptsize\renewcommand{\arraystretch}{1.35}\setlength{\tabcolsep}{3pt}%
+\begin{tabular}{@{}lrr@{}}
+\textbf{Actual cohort} & \textbf{Flagged} & \textbf{Not flagged} \\\hline
+#1 & #3 & #4 \\
+#2 & #5 & #6 \\
+\end{tabular}}
+
+\title{Energy Fingerprints}
+\subtitle{Make the invisible energy system visible}
+\author{newspaper}
+\institute{Energy Data Hackdays 2026 \enspace | \enspace AEW Energie}
+\date{[TBD: pitch date]}
+\newcommand{\decktitle}{Energy Fingerprints}
+\titlegraphic{}
+
+\begin{document}
+
+{\setbeamercolor{background canvas}{bg=ink}
+\begin{frame}[plain]
+  \vspace{1.05cm}
+  {\color{mint}\sffamily\large\bfseries ENERGY DATA HACKDAYS 2026}\par\vspace{0.35cm}
+  {\color{paper}\sffamily\fontsize{34}{40}\selectfont\bfseries Energy Fingerprints}\par\vspace{0.25cm}
+  {\color{mint}\sffamily\Large Make the invisible energy system visible.}\par\vspace{0.85cm}
+  {\color{paper}\large From 15-minute smart-meter data to explainable household asset intelligence.}\par\vfill
+  {\color{paper}\small newspaper \hfill AEW Energie challenge}
+\end{frame}}
+
+\begin{frame}{The grid sees one number. We reveal the causes.}
+\begin{columns}[T,onlytextwidth]
+\column{.52\textwidth}
+\large A household's net load hides the assets that shape flexibility, infrastructure demand, and solar potential.
+\vspace{0.45cm}
+\begin{itemize}\itemsep0.45em
+  \item 4 years of anonymised, 15-minute readings
+  \item $\sim$90k households; $\sim$1k labelled customers
+  \item Privacy-preserving: no appliance sensors, no customer intervention
+\end{itemize}
+\column{.43\textwidth}
+\begin{tikzpicture}[node distance=7mm]
+  \node[fill=ink,text=paper,minimum width=4.0cm,minimum height=.9cm,align=center] (meter) {Smart-meter signal};
+  \node[below=of meter,fill=mint!20,minimum width=4.0cm,minimum height=1.15cm,align=center] (engine) {Explainable signal engine\\\scriptsize patterns $\rightarrow$ evidence $\rightarrow$ probability};
+  \node[fill=sun!34,minimum width=1.7cm,minimum height=.65cm,align=center,font=\scriptsize] (asset) at ($(engine.south)+(-1.05cm,-1.0cm)$) {Asset detected};
+  \node[fill=blue!18,minimum width=1.7cm,minimum height=.65cm,align=center,font=\scriptsize] (activity) at ($(engine.south)+(1.05cm,-1.0cm)$) {When it acts};
+  \draw[-{Latex[length=2mm]},thick,mint] (meter)--(engine);
+  \draw[-{Latex[length=2mm]},thick,mint] (engine.south)--(asset.north);
+  \draw[-{Latex[length=2mm]},thick,mint] (engine.south)--(activity.north);
+\end{tikzpicture}
+\end{columns}
+\end{frame}
+
+\begin{frame}{One interpretable workflow, five asset lenses}
+\begin{center}
+\begin{tikzpicture}[node distance=5mm]
+  \node[fill=ink,rounded corners=5pt,text=paper,minimum width=2.5cm,minimum height=.85cm,align=center] (a) {15-min load};
+  \node[right=of a,fill=blue!16,rounded corners=5pt,minimum width=2.5cm,minimum height=.85cm,align=center] (b) {Feature fingerprints};
+  \node[right=of b,fill=mint!22,rounded corners=5pt,minimum width=2.5cm,minimum height=.85cm,align=center] (c) {Asset probability};
+  \node[right=of c,fill=sun!35,rounded corners=5pt,minimum width=2.5cm,minimum height=.85cm,align=center] (d) {Inspectable evidence};
+  \draw[-{Latex[length=2mm]},thick,mint] (a)--(b); \draw[-{Latex[length=2mm]},thick,mint] (b)--(c); \draw[-{Latex[length=2mm]},thick,mint] (c)--(d);
+\end{tikzpicture}
+\end{center}
+\vspace{.5cm}
+\begin{columns}[T,onlytextwidth]
+\column{.28\textwidth}\tagline{EV}\par\small Charging plateaus and sharp start edges.
+\column{.28\textwidth}\tagline{Heat pump}\par\small Cold-weather and persistent heating signatures.
+\column{.28\textwidth}\tagline{Rooftop PV}\par\small Sunny-day midday import depression.
+\end{columns}
+\vspace{.35cm}
+\begin{columns}[T,onlytextwidth]
+\column{.28\textwidth}\tagline{Battery}\par\small Solar-linked charge/discharge behaviour.
+\column{.28\textwidth}\tagline{Other devices}\par\small Repeated distinctive load motifs.
+\column{.28\textwidth}\placeholder{demo evidence view}
+\end{columns}
+\end{frame}
+
+\begin{frame}{EV classifier: a frozen LightGBM benchmark}
+\begin{columns}[T,onlytextwidth]
+\column{.58\textwidth}
+\tagline{E22 LIGHTGBM · HELD-OUT TEST}\par\vspace{.25cm}
+\small The selected model detects EV-labelled properties from the total net-load profile; it does \alert{not} localise individual charging events.
+\vspace{.18cm}
+\begin{itemize}\itemsep.18em
+  \item 45 features: annual load aggregates, 24-hour mean profile, and windowed multi-meter context.
+  \item Selected by validation PR-AUC among 9 candidates; threshold frozen at 0.392 before the test was opened.
+  \item Test (67 properties; 15 EV-labelled): ROC-AUC 0.67, recall 67\%, precision 33\%.
+  \item Caveat: ``non-EV'' means subsidy-register-unlabelled, not confirmed EV-absent.
+\end{itemize}
+\column{.37\textwidth}
+\centering\textbf{Held-out evaluation}\\[4pt]
+\confusiontable{\shortstack[l]{EV-labelled\\(GIGI)}}{\shortstack[l]{Unlabelled\\properties}}{10}{5}{20}{32}\\[5pt]
+\scriptsize\textcolor{muted}{Rows are actual labels. $p \geq 0.392$; test $n=67$.}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Heat-pump boiler: a physical detector, not a classifier}
+\begin{columns}[T,onlytextwidth]
+\column{.58\textwidth}
+\tagline{WPB DETECTOR · LABEL-FREE}\par\vspace{.25cm}
+\scriptsize The detector identifies heat-pump water-heater candidates from persistent plateaus in 15-minute grid-import data.
+\vspace{.12cm}
+\begin{itemize}\itemsep.10em
+  \item p10 daily envelope: an event must recur on at least 90\% of days, rejecting irregular loads such as part-time EV charging.
+  \item Plateau band: 0.25--1.2 kW for 1.5--9 h; it must recur in both January and July.
+  \item Population sweep: 838 of 75,094 households flagged (1.1\%) as candidates.
+  \item 4 labelled positives and 0 confirmed negatives: no confusion matrix or accuracy estimate.
+\end{itemize}
+\column{.37\textwidth}
+\centering\textbf{Counterfactual recovery test}\\[3pt]
+\metric{79.6\%}{Recovery at 0.3 kW injected}\par\vspace{.18cm}
+\metric{94.2\%}{Recovery at 0.5 kW injected}\par\vspace{.18cm}
+\small\textcolor{muted}{Synthetic events test sensitivity only; they do not establish precision.}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Rooftop PV: SolarPrint reads the solar imprint in demand}
+\begin{columns}[T,onlytextwidth]
+\column{.58\textwidth}
+\tagline{HISTGRADIENTBOOSTING · 5-FOLD OOF}\par\vspace{.25cm}
+\scriptsize SolarPrint estimates rooftop-PV probability from grid-import shape; feed-in is used offline for silver labels, never as a feature.
+\vspace{.12cm}
+\begin{itemize}\itemsep.10em
+  \item 23 features: summer daytime near-zero import, evening-to-midday contrast, solar coupling, seasonality, and night base load.
+  \item Positive--Unlabelled learning with Elkan--Noto correction, calibrated to the 12\% canton base rate.
+  \item GIGI result: ROC-AUC 0.92; recall 92\% at $p \geq 0.5$; 6.6\% of the population flagged.
+  \item No confirmed non-PV households: the ranking is stronger than absolute probabilities.
+\end{itemize}
+\column{.37\textwidth}
+\centering\textbf{Evaluation snapshot}\\[4pt]
+\scriptsize\renewcommand{\arraystretch}{1.35}\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrr@{}}
+\textbf{Actual cohort} & \textbf{Flagged} & \textbf{Not flagged} \\\hline
+\shortstack[l]{GIGI PV\\(confirmed)} & 260 & 24 \\
+\shortstack[l]{Strictly\\unlabelled} & 4.6k & 65.6k \\
+\end{tabular}\\[5pt]
+\scriptsize\textcolor{muted}{Rows are actual labels. $p \geq 0.5$; silver positives excluded.}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Battery: the model gate is clear; training is next}
+\begin{columns}[T,onlytextwidth]
+\column{.58\textwidth}
+\tagline{PV-CONDITIONED PU DESIGN · NOT YET TRAINED}\par\vspace{.20cm}
+\small The intended contrast is battery versus PV-without-battery---not the full population, which would mostly relearn ``has PV.''
+\vspace{.12cm}
+\begin{itemize}\itemsep.10em
+  \item Features: flat import, feed-in shaping, ramp smoothing, evening recovery, and energy balance.
+  \item 82 GIGI no-battery households are a held-out audit set, never training negatives.
+  \item The export-register gate was corrected: 222/222 usable known batteries are retained.
+  \item Training, evaluation, and scoring remain unimplemented: no battery probability or headline metric yet.
+\end{itemize}
+\column{.37\textwidth}
+\centering\textbf{Evaluation status}\\[4pt]
+\metric{222 / 222}{Known batteries retained}\par\vspace{.22cm}
+\metric{0}{Trained models / confusion matrices}\par\vspace{.22cm}
+\small\textcolor{muted}{The gate correction unblocks the pipeline; it is not a model result.}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Other-device classifier: turn unknown load shapes into leads}
+\begin{columns}[T,onlytextwidth]
+\column{.58\textwidth}
+\tagline{OTHER DISTINCTIVE DEVICE}\par\vspace{.25cm}
+\small The model flags repeated, unusual load motifs for review, then groups them into candidate device classes as labels mature.
+\vspace{.18cm}
+\begin{itemize}\itemsep.18em
+  \item Input: recurring event shape, power, duration, timing, and seasonality
+  \item Output: device-class probability or ``novel pattern'' candidate
+  \item Evidence: a small set of representative events a human can inspect
+\end{itemize}
+\vspace{.12cm}\placeholder{cluster of recurring appliance signatures}
+\column{.37\textwidth}
+\centering\textbf{Evaluation placeholder}\\[4pt]
+\confusiontable{\shortstack[l]{Asset present\\(TBD)}}{\shortstack[l]{Asset absent\\(TBD)}}{TBD}{TBD}{TBD}{TBD}\\[5pt]
+\scriptsize\textcolor{muted}{Define the class and held-out split before reporting results.}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Trust is a feature, not a footnote}
+\begin{columns}[T,onlytextwidth]
+\column{.28\textwidth}\metric{Explainable}{Every score links to its evidence.}\par\vspace{.25cm}\small ``Why was this home flagged?'' has a visible answer.
+\column{.28\textwidth}\metric{Honest}{Validation is held out and limitations stay visible.}\par\vspace{.25cm}\small We do not invent accuracy where labels are missing.
+\column{.28\textwidth}\metric{Scalable}{One workflow can score the full population.}\par\vspace{.25cm}\small Designed for multi-year, 15-minute data.
+\end{columns}
+\vspace{.55cm}
+\begin{center}\placeholder{insert one anonymised household evidence card here}\end{center}
+\end{frame}
+
+{\setbeamercolor{background canvas}{bg=ink}
+\begin{frame}[plain]
+  \vspace{1.2cm}\color{paper}
+  {\sffamily\fontsize{30}{36}\selectfont\bfseries From meter data to better grid decisions.}\par\vspace{.35cm}
+  {\color{mint}\sffamily\Large Asset intelligence, activity windows, and evidence---at population scale.}\par\vspace{.8cm}
+  \begin{columns}[T,onlytextwidth]
+  \column{.29\textwidth}\color{paper}\textbf{Forecasting}\\\small Better demand expectations
+  \column{.29\textwidth}\color{paper}\textbf{Planning}\\\small Target infrastructure investment
+  \column{.29\textwidth}\color{paper}\textbf{Flexibility}\\\small Find the right homes for the right programme
+  \end{columns}
+  \vfill\color{paper}\large\bfseries \placeholder{closing ask / next experiment}\hfill\color{mint} Thank you
+\end{frame}}
+
+\end{document}
